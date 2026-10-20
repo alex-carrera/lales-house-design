@@ -37,4 +37,4 @@ Las fotografías originales y los modelos editables se conservan en el proyecto 
 El cerramiento frontal de la propuesta deja una apertura libre de 3 m, alineada
 con el paso. Altura de 2,80 m y espesor de 15 cm provisionales.
 Las caras interiores de los muros permanecen blancas para cualquier paleta;
-los colores exteriores están por decidir y la vista inicial usa blanco.
+las dos paletas exteriores se conservan y la vista inicial usa Agreeable Gray / Dovetail.
