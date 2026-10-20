@@ -48,9 +48,12 @@ provisionales. El estado actual mantiene sus puertas y su cajón de gas.
 ## Patio, asadero y parqueadero
 
 La propuesta añade un asadero posterior de unos 4 × 2,8 m, con parrilla de
-ladrillo, campana, estufa de leña y mesón con fregadero bajo estructura oscura
-y cielo de madera. La vista de patio retira visualmente esa cubierta; la vista
-de asadero conserva el techo. Se mantienen las vistas anteriores.
+ladrillo, campana, estufa de leña y mesón con fregadero bajo una cubierta continua para todo el terreno de 6 × 11 m (66 m² en planta),
+con estructura oscura y cielo con acabado de madera. Los cinco apoyos se sitúan
+en el perímetro, fuera de la trayectoria de la Captiva. Se muestran pasos de
+chimenea, canal y bajante de referencia. Las secciones y anclajes son provisionales.
+La cubierta aparece al abrir el recorrido; «Mostrar cubierta del patio» permite
+ocultarla para revisar la distribución. Se mantienen las vistas anteriores.
 
 Se reservan 5,50 × 3,10 m delante para una Captiva y 2,30 × 1,10 m al lateral
 para una Husqvarna 401 de 2021. El plano interactivo muestra entrada de frente,
