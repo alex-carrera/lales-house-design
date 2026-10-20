@@ -44,3 +44,23 @@ otra ventana alta y retira el cajón de gas. La entrada baja se reubica allí
 con su grada de 25 cm, y una ventana queda a su derecha vista desde el patio.
 Los huecos se han modelado en paredes y acabados interiores; sus medidas son
 provisionales. El estado actual mantiene sus puertas y su cajón de gas.
+
+## Patio, asadero y parqueadero
+
+La propuesta añade un asadero posterior de unos 4 × 2,8 m, con parrilla de
+ladrillo, campana, estufa de leña y mesón con fregadero bajo estructura oscura
+y cielo de madera. La vista de patio retira visualmente esa cubierta; la vista
+de asadero conserva el techo. Se mantienen las vistas anteriores.
+
+Se reservan 5,50 × 3,10 m delante para una Captiva y 2,30 × 1,10 m al lateral
+para una Husqvarna 401 de 2021. El plano interactivo muestra entrada de frente,
+desplazamiento hacia el patio, giro en reversa y alineación final.
+La comprobación geométrica usa una envolvente conservadora de 4,65 × 2,15 m
+y un radio supuesto de 4,80 m en el eje trasero, contra los muros, cocina,
+asadero, postes y plaza de moto del modelo. Las cotas y el giro real requieren
+comprobación en sitio antes de ejecutar la obra.
+
+Referencia del automóvil: Captiva Sport MY2010, longitud 4,576 m, ancho de
+carrocería 1,850 m, con espejos 2,085 m y batalla 2,707 m. No se ha confirmado
+la variante del vehículo del propietario. La moto es aproximada.
+[Manual oficial Chevrolet](https://www.chevrolet.com.br/content/dam/chevrolet/south-america/brazil/portuguese/index/services/owner-manuals/05-pdf/captiva/manual-captiva-2010.pdf).
