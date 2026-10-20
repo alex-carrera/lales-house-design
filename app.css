@@ -8,3 +8,4 @@
 /* Comfortable reading sizes for the daily organizer. */
 .intro,.context-panel>p:not(.eyebrow){font-size:12px}.sidebar nav a{font-size:13px}.project-label{font-size:12px}.tour-caption{font-size:11px}.house-facts span{font-size:11px}.page-footer{font-size:10px}.filters label,.dialog-form label{font-size:12px}table,td strong{font-size:12px}td small{font-size:11px}.summary-grid .metric>small{font-size:11px}.gate-panel p:not(.eyebrow){font-size:13px}.gate-features small{font-size:12px}
 @media(max-width:700px){.sidebar nav a{font-size:11px}.tour-caption{font-size:10px}.context-panel>p:not(.eyebrow){font-size:11px}.house-facts span{font-size:10px}.page-footer{font-size:9px}}
+@media(max-width:700px){.sidebar nav{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));overflow:visible;gap:4px 8px}.sidebar nav a{min-width:0;white-space:normal}.sidebar nav a .nav-icon{flex:none}}
