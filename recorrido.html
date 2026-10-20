@@ -6,7 +6,7 @@
 <meta name="referrer" content="no-referrer">
 <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline' 'unsafe-eval' 'wasm-unsafe-eval' blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; style-src 'unsafe-inline' blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; img-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; font-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; media-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; worker-src blob:; connect-src blob: data:; frame-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
 <title>Casa Lales · Estado actual</title>
-<style>:root{color-scheme:light dark;background:light-dark(rgb(255 255 255), rgb(24 24 24))}html,body{margin:0}body{box-sizing:border-box;padding:1rem;background:inherit}iframe{display:block;width:100%;height:calc(100vh - 2rem);margin:0 auto;border:0}</style>
+<style>:root{color-scheme:light dark;background:light-dark(rgb(255 255 255), rgb(24 24 24))}html,body{margin:0}body{box-sizing:border-box;padding:1rem;background:inherit}iframe{display:block;width:100%;height:calc(100vh - 2rem)!important;margin:0 auto;border:0}</style>
 
 </head>
 <body>
@@ -2170,9 +2170,15 @@ function crearMotorMateriales(gl, triangles, math) {
 &lt;style&gt;
 :root{color-scheme:light!important}
 #exterior-lales-actual .ex-title{display:none}
-#exterior-lales-actual canvas{height:max(270px,calc(100vh - 148px))}
+#exterior-lales-actual{height:100vh;display:flex;flex-direction:column}
+#exterior-lales-actual canvas{height:0;min-height:220px;flex:1 1 0%}
 #exterior-lales-actual .ex-footer{font-size:10px;line-height:1.5}
-@media(max-width:600px){#exterior-lales-actual canvas{height:max(250px,calc(100vh - 218px))}}
+#exterior-lales-actual .viz-controls,#exterior-lales-actual .ex-footer{flex:none}
+@media(max-width:600px){
+ #exterior-lales-actual .viz-controls{display:grid;grid-template-columns:minmax(130px,1fr) auto auto;gap:8px;align-items:end}
+ #exterior-lales-actual .viz-controls&gt;.form-label:last-child{grid-column:1/-1;display:flex;gap:8px;align-items:center}
+ #exterior-lales-actual .viz-controls&gt;.form-label:last-child input{flex:1;min-width:0}
+}
 &lt;/style&gt;
 &lt;script&gt;
 (() =&gt; {
