@@ -1,5 +1,5 @@
-import {ProjectStore} from './data.js?v=02e5e9fd33a8';
-import {CATEGORIES,AREAS,UNITS,money,cents,expenseData,materialData,totals,filterExpenses,csv,today} from './domain.js?v=02e5e9fd33a8';
+import {ProjectStore} from './data.js?v=bc54f07fd64c';
+import {CATEGORIES,AREAS,UNITS,money,cents,expenseData,materialData,totals,filterExpenses,csv,today} from './domain.js?v=bc54f07fd64c';
 const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const store=new ProjectStore();let session=null,configured=false,loading=false,loadSerial=0,edit=null,deleting=null,toastTimer,remoteTimer;
@@ -74,7 +74,7 @@ function download(name,content,type){const a=document.createElement('a'),url=URL
 $('#export-expenses').addEventListener('click',()=>{if(!session)return;const rows=filterExpenses(records.expenses,filterState());download('casa-lales-gastos-'+today()+'.csv',csv([['Fecha','Concepto','Categoría','Ambiente','Estado','Importe USD','Proveedor','Notas'],...rows.map(x=>[x.spent_on,x.concept,x.category,x.area,x.status,(x.amount_cents/100).toFixed(2),x.supplier,x.notes])]),'text/csv;charset=utf-8');});
 $('#export-backup').addEventListener('click',()=>{if(!session)return;download('casa-lales-respaldo-'+today()+'.json',JSON.stringify({format:'casa-lales-v1',exported_at:new Date().toISOString(),...records},null,2),'application/json');});
 $('#logout').addEventListener('click',async()=>{try{await store.signOut();$('#account-dialog').close();toast('Sesión cerrada.');}catch(e){message($('#account-dialog'),friendly(e));}});
-$('#fullscreen').addEventListener('click',async()=>{try{if(document.fullscreenElement)await document.exitFullscreen();else await $('#tour-stage').requestFullscreen();}catch{toast('Tu navegador no permite ampliar esta vista.');}});
+$$('#fullscreen,[data-fullscreen]').forEach(button=>button.addEventListener('click',async()=>{try{if(document.fullscreenElement)await document.exitFullscreen();else await $('#'+(button.dataset.fullscreen||'tour-stage')).requestFullscreen();}catch{toast('Tu navegador no permite ampliar esta vista.');}}));
 window.addEventListener('focus',()=>{if(session&&!loading)load();});document.addEventListener('visibilitychange',()=>{if(document.visibilityState==='visible'&&session&&!loading)load();});
 // Reconcile deletions and interrupted realtime connections without storing records locally.
 setInterval(()=>{if(session&&!loading&&document.visibilityState==='visible'&&!document.querySelector('dialog[open]'))load();},60000);

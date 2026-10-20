@@ -5,7 +5,7 @@ https://alex-carrera.github.io/lales-house-design/
 Un espacio para documentar y organizar la remodelación de la casa:
 
 - **Estado actual:** recorrido 3D basado en fotografías y medidas aproximadas.
-- **Diseño futuro:** espacio reservado para la propuesta que se acordará después.
+- **Diseño futuro:** copia de la casa con paredes y cielos rasos blancos, y 66 m² aproximados de adoquines en el terreno lateral.
 - **Materiales:** cantidades, ambientes, cotizaciones y estado de compra.
 - **Presupuesto y gastos:** pagos realizados y pendientes, saldo y exportación CSV.
 
@@ -25,7 +25,8 @@ El disponible se calcula como presupuesto menos pagos realizados y pendientes.
 ## Publicación
 
 GitHub Pages publica desde la raíz de `main`. La aplicación usa HTML, CSS y
-JavaScript modular. `recorrido.html` conserva el visor 3D independiente.
+JavaScript modular. `recorrido.html` conserva el visor del estado actual. `propuesta.html` contiene
+la primera propuesta independiente.
 Se requiere WebGL para los materiales y sombras del recorrido, e Internet
 para acceder al organizador y cargar la biblioteca oficial de Supabase.
 
