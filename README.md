@@ -11,12 +11,14 @@ Un espacio para documentar y organizar la remodelación de la casa:
 
 ## Acceso privado
 
-El recorrido es público. Materiales y gastos requieren una cuenta de usuario.
+El recorrido es público. Materiales y gastos están reservados a una única cuenta autorizada.
 Los registros se guardan en Supabase con políticas de seguridad por propietario
 (RLS), y se sincronizan al ingresar con la misma cuenta desde otro dispositivo.
 Las claves incluidas en `config.js` son públicas y no otorgan acceso administrativo.
 
-Al crear una cuenta, confirma el correo recibido y vuelve a ingresar.
+El registro de nuevas cuentas está deshabilitado en Supabase. La web verifica
+la autorización del propietario mediante `lales_is_owner`; las tres tablas
+aplican la misma restricción mediante RLS. No basta con tener una sesión.
 Las cotizaciones de materiales no se suman automáticamente a los gastos.
 El disponible se calcula como presupuesto menos pagos realizados y pendientes.
 
