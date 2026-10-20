@@ -38,3 +38,9 @@ El cerramiento frontal de la propuesta deja una apertura libre de 3 m, alineada
 con el paso. Altura de 2,80 m y espesor de 15 cm provisionales.
 Las caras interiores de los muros permanecen blancas para cualquier paleta;
 las dos paletas exteriores se conservan y la vista inicial usa Agreeable Gray / Dovetail.
+
+La fachada propuesta reemplaza la puerta alta por un ventanal, conserva la
+otra ventana alta y retira el cajón de gas. La entrada baja se reubica allí
+con su grada de 25 cm, y una ventana queda a su derecha vista desde el patio.
+Los huecos se han modelado en paredes y acabados interiores; sus medidas son
+provisionales. El estado actual mantiene sus puertas y su cajón de gas.
