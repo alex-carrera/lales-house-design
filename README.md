@@ -39,10 +39,11 @@ con el paso. Altura de 2,80 m y espesor de 15 cm provisionales.
 Las caras interiores de los muros permanecen blancas para cualquier paleta;
 las dos paletas exteriores se conservan y la vista inicial usa Agreeable Gray / Dovetail.
 
-La fachada propuesta reemplaza la puerta alta por un ventanal, une las dos ventanas altas en un ventanal continuo y añade una ventana lateral y retira el cajón de gas. La entrada baja se reubica allí
-con su grada de 25 cm, y una ventana queda a su derecha vista desde el patio.
-Los huecos se han modelado en paredes y acabados interiores; sus medidas son
-provisionales. El estado actual mantiene sus puertas y su cajón de gas.
+La fachada del dormitorio tiene un ventanal continuo y una ventana lateral
+amplia. La entrada baja ocupa el antiguo cajón de gas, con su grada de 25 cm
+y una ventana a su derecha vista desde el patio. Los huecos atraviesan paredes
+y acabados interiores; sus medidas son provisionales. El estado actual mantiene
+sus puertas, ventanas originales y cajón de gas.
 
 ## Patio, asadero y parqueadero
 
@@ -96,3 +97,22 @@ con paso nominal de 80 cm y hueco de obra aproximado de 90 × 210 cm.
 Los huecos atraviesan la mampostería y los acabados de ambos recintos.
 La distribución de los sanitarios y la calle de tres metros se conservan.
 Las medidas, los dinteles y los refuerzos se deben definir en obra.
+
+## Cocina luminosa y lavandería ampliadas
+
+El antiguo cuarto blanco se amplía 2 m hacia la franja lateral: el bloque mide
+unos 6 × 3 m (18 m² brutos), sin ocupar la calle libre de 3 m. Se retiran su
+baño, los muebles de dormitorio y el Eternit de ese bloque. Una losa plana
+conceptual permite una altura libre aproximada de 2,60 m desde el piso actual.
+
+La cocina ocupa las dos fachadas con ventanas. El lavaplatos y la preparación
+se sitúan bajo los ventanales del frente y de la calle; la cocción con campana
+queda al fondo, sin bloquearlos. Incluye refrigerador, despensa y muebles bajos.
+La lavandería se sitúa en el extremo derecho con lavadora y secadora lado a lado,
+mesón, alacena, lavadero y una separación con puerta corrediza.
+
+Se conserva el acceso desde la sala y provisionalmente su bajada de 15 cm.
+Las ventanas y el paso se cortan en la geometría; los marcos quedan dentro
+del límite de propiedad. El plano de maniobra también incluye la ampliación.
+La losa, su apoyo, el desagüe, la impermeabilización y las redes son conceptuales
+y requieren dimensionamiento. El estado actual sigue independiente.
