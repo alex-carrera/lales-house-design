@@ -50,32 +50,39 @@ provisionales. El estado actual mantiene sus puertas y su cajón de gas.
 La propuesta añade un asadero posterior de unos 4 × 2,8 m, con parrilla de
 ladrillo, campana, estufa de leña y mesón con fregadero bajo una cubierta continua para todo el terreno de 6 × 11 m (66 m² en planta),
 con estructura oscura y cielo con acabado de madera. Los cinco apoyos se sitúan
-en el perímetro, fuera de la trayectoria de la Captiva. Se muestran pasos de
+en el perímetro, fuera de la trayectoria del SUV. Se muestran pasos de
 chimenea, canal y bajante de referencia. Las secciones y anclajes son provisionales.
 La cubierta aparece al abrir el recorrido; «Mostrar cubierta del patio» permite
 ocultarla para revisar la distribución. Se mantienen las vistas anteriores.
 
-Se reservan 5,50 × 3,10 m delante para una Captiva y 2,30 × 1,10 m al lateral
+Se reservan 5,50 × 3,10 m delante para un SUV y 2,30 × 1,10 m al lateral
 para una Husqvarna 401 de 2021. El plano interactivo muestra entrada de frente,
 desplazamiento hacia el patio, giro en reversa y alineación final.
 La comprobación geométrica usa una envolvente conservadora de 4,65 × 2,15 m
-y un radio supuesto de 4,80 m en el eje trasero, contra los muros, cocina,
+y un radio supuesto de 4,80 m en el eje trasero, contra los muros, baño social,
 asadero, postes y plaza de moto del modelo. Las cotas y el giro real requieren
 comprobación en sitio antes de ejecutar la obra.
 
-Referencia del automóvil: Captiva Sport MY2010, longitud 4,576 m, ancho de
+SUV de referencia: longitud 4,576 m, ancho de
 carrocería 1,850 m, con espejos 2,085 m y batalla 2,707 m. No se ha confirmado
 la variante del vehículo del propietario. La moto es aproximada.
 [Manual oficial Chevrolet](https://www.chevrolet.com.br/content/dam/chevrolet/south-america/brazil/portuguese/index/services/owner-manuals/05-pdf/captiva/manual-captiva-2010.pdf).
 
-## Calle hasta el fondo y cocina reducida
+## Baño social y baño principal privado
 
-El recorte aprobado libera la franja de 1 × 3 m que la cocina ocupaba sobre la
-calle. La cocina de PB pasa de 3 a 2 m de ancho; se adaptan puerta, ventana,
-piso, cielo y mesones, y se retira el mueble central para liberar el paso.
-La calle queda con 3 m de ancho hasta el fondo y la franja liberada se adoquina.
-El baño, la terraza y la losa superiores mantienen su geometría: queda una
-franja de aproximadamente 1 m en volado sobre la calle, sin columnas nuevas
-en ese espacio. El volado es conceptual y requiere cálculo estructural.
-La vista inicial «Calle y volado» muestra el cambio; las vistas del patio
-cubierto, parqueadero, asadero y el estado actual permanecen disponibles.
+El antiguo bloque de cocina reducido pasa a ser un baño social de 2 × 3 m
+aproximados, con inodoro, lavabo y acceso interior desde el comedor. No tiene
+puerta exterior; dos ventanas altas permiten luz y privacidad.
+
+En la planta alta, el antiguo balcón y el baño pequeño se unen en un baño
+privado de 3 × 3 m aproximados. Se completan las paredes y la cubierta y se
+retira la división interior. Incluye tina, inodoro, ducha independiente con
+mampara y lavabo, con acceso desde la planta alta. Las paredes y cielos
+interiores siguen blancos; se conservan las paletas exteriores.
+
+La calle conserva 3 m hasta el fondo. La losa superior mantiene 1 m de volado,
+sin columnas nuevas en el paso. Es una propuesta conceptual; estructura,
+instalaciones, cotas y distribución deben comprobarse en obra.
+
+El selector del recorrido incluye «Baño social» y «Baño privado».
+El estado actual permanece independiente y conserva su distribución original.
