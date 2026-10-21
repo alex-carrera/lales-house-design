@@ -67,3 +67,15 @@ Referencia del automóvil: Captiva Sport MY2010, longitud 4,576 m, ancho de
 carrocería 1,850 m, con espejos 2,085 m y batalla 2,707 m. No se ha confirmado
 la variante del vehículo del propietario. La moto es aproximada.
 [Manual oficial Chevrolet](https://www.chevrolet.com.br/content/dam/chevrolet/south-america/brazil/portuguese/index/services/owner-manuals/05-pdf/captiva/manual-captiva-2010.pdf).
+
+## Calle hasta el fondo y cocina reducida
+
+El recorte aprobado libera la franja de 1 × 3 m que la cocina ocupaba sobre la
+calle. La cocina de PB pasa de 3 a 2 m de ancho; se adaptan puerta, ventana,
+piso, cielo y mesones, y se retira el mueble central para liberar el paso.
+La calle queda con 3 m de ancho hasta el fondo y la franja liberada se adoquina.
+El baño, la terraza y la losa superiores mantienen su geometría: queda una
+franja de aproximadamente 1 m en volado sobre la calle, sin columnas nuevas
+en ese espacio. El volado es conceptual y requiere cálculo estructural.
+La vista inicial «Calle y volado» muestra el cambio; las vistas del patio
+cubierto, parqueadero, asadero y el estado actual permanecen disponibles.
