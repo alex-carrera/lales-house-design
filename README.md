@@ -22,7 +22,7 @@ En la esquina de los dos ventanales de arriba se añade un escritorio rectangula
 
 ## Últimos ajustes de mobiliario
 
-Muebles altos en baño principal (armario con espejo y módulos posteriores), escritorio (L sobre paredes ciegas) y cocina. Ventanal del baño hacia calle ampliado a unos 2,10 × 0,85 m; los dos frontales crecen a 75 cm de altura. Las aperturas son provisionales y sus dinteles y apoyos deben revisarse en sitio.
+Muebles altos en baño principal (armario con espejo y módulos posteriores), escritorio (L sobre paredes ciegas) y cocina. Las ventanas de ambos baños hacia calle se centran en sus paredes de 3 m y comparten el eje longitudinal: 75 cm a cada lado abajo y 45 cm a cada lado arriba. La inferior se amplía de 1,20 × 0,65 m a 1,50 × 0,75 m, con antepecho de 1,10 m y borde superior conservado a 1,85 m; la superior conserva 2,10 × 0,85 m. Se conserva el vidrio de privacidad. Los dos frontales del baño superior mantienen 75 cm de altura. Las aperturas son provisionales y sus dinteles y apoyos deben revisarse en sitio.
 
 TV del dormitorio de referencia de 55 pulgadas, 16:9 (aprox. 1,218 × 0,685 m), colgada en pared. Consola baja alargada a 2 m. Se conserva la TV existente de planta baja.
 
