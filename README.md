@@ -145,3 +145,19 @@ la calle: social 1,20 × 0,65 m y principal 1,60 × 0,70 m sobre la tina.
 Las carpinterías quedan dentro del cerramiento y se conservan las ventanas
 del retorno. Los huecos atraviesan la geometría de las paredes y sus acabados;
 dimensiones y dinteles siguen siendo propuestas pendientes de medir en obra.
+
+## Entrada de madera y luz cálida
+
+La entrada principal sigue la referencia del usuario: acabado nogal, paneles
+horizontales, marco de madera, tirador negro largo, fijo lateral de vidrio,
+tres focos bajo el remate superior y un aplique negro junto al ventanal.
+El vidrio queda hacia el comedor para respetar la división interior.
+La puerta se representa cerrada y puede abrirse 90 grados hacia dentro
+con «Abrir puerta principal» en la vista «Entrada · Madera y luz cálida».
+
+Se conserva la altura interior de 2 m y la grada de 25 cm. El hueco de entrada
+mide unos 89 × 200 cm, con hoja aproximada de 80 × 195 cm; el remate exterior
+alcanza unos 2,14 m. Son proporciones conceptuales por medir en sitio.
+La apertura se comprueba contra la división y el mobiliario de la propuesta;
+la calle libre de tres metros, el ventanal ampliado y las ventanas de baños
+se conservan. El estado actual permanece independiente.
