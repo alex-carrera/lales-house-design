@@ -171,3 +171,12 @@ El sitio usa una navegación horizontal compacta, tipografía sans serif y tonos
 ## Recorrido depurado
 
 El selector del diseño futuro conserva 18 vistas. Se retiraron las nueve tomas redundantes de patio cubierto, asadero, entorno, ampliación de cocina, vista elevada, escritorio, planta de la suite, ventanales del dormitorio y ventanas de baños. Anterior y siguiente recorren únicamente las vistas conservadas. Se eliminaron sus cámaras, leyendas y lógica exclusiva; el visor carga solo los datos necesarios para renderizar. El modelo editable y toda la geometría de la propuesta se conservan.
+
+
+### Sala y comedor con los muebles existentes
+
+Se conservan las paredes y aberturas del modelo anterior. El sofá de 190 × 90 cm y el módulo de 145 × 90 cm forman la L; la mesa de centro mide 73 × 70 cm. La TV permanece sobre el mueble de 173 × 40 × 60 cm, con listones decorativos de madera y luz cálida.
+
+El comedor de 120 × 70 cm se coloca junto al acceso existente a la cocina. Los dos sillones de 90 × 90 cm forman un rincón de conversación en ese ambiente. Se mantienen el mueble del equipo de 80 × 50 × 120 cm y el de moto de 68 × 33 × 115 cm. El reclinable de 100 × 85 cm pasa al dormitorio para liberar la sala.
+
+El ancho de la TV se estima en 165 cm a partir de los 93 cm de alto y una proporción 16:9; las sillas y alturas no recibidas son orientativas. Los pasos más estrechos modelados rondan 68–73 cm y deben contrastarse con medidas en sitio. Se comprobaron sólidos, medidas, apertura de entrada y colisiones. El estado actual se conserva idéntico y siguen disponibles 18 vistas.
