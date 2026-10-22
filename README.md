@@ -71,7 +71,7 @@ la variante del vehículo del propietario. La moto es aproximada.
 ## Baño social y baño principal privado
 
 El antiguo bloque de cocina reducido pasa a ser un baño social de 2 × 3 m
-aproximados, con inodoro, lavabo y acceso interior desde el comedor. No tiene
+aproximados, con inodoro, lavabo y acceso interior desde la sala. No tiene
 puerta exterior; dos ventanas altas permiten luz y privacidad.
 
 En la planta alta, el antiguo balcón y el baño pequeño se unen en un baño
@@ -114,7 +114,7 @@ ciega. Incluye refrigerador, despensa y muebles bajos.
 La lavandería se sitúa en el extremo derecho con lavadora y secadora lado a lado,
 mesón, alacena, lavadero y una separación con puerta corrediza.
 
-Se conserva el acceso desde la sala y provisionalmente su bajada de 15 cm.
+El acceso a la cocina queda desde el comedor y conserva provisionalmente su bajada de 15 cm.
 Las ventanas y el paso se cortan en la geometría; los marcos quedan dentro
 del límite de propiedad. El plano de maniobra también incluye la ampliación.
 La losa, su apoyo, el desagüe, la impermeabilización y las redes son conceptuales
@@ -131,3 +131,17 @@ La vista «Entorno · Construcciones adosadas» permite revisar su ubicación;
 «Mostrar construcciones adosadas» permite ocultarlas para inspeccionar la casa.
 No se abren ventanas hacia esas medianeras. La lavandería conserva iluminación
 artificial y su extracción hacia un espacio libre queda pendiente de definir.
+
+## Comedor junto a cocina y ventanas adicionales
+
+El comedor se traslada al ambiente y=3..7 contiguo a la cocina; la sala pasa
+al ambiente de la entrada principal, conservando la división central. Mesa,
+cuatro sillas y aparador se reubican; el sofá, el sillón y la TV dejan un paso
+lateral continuo hacia el baño social y las gradas. El estado actual no cambia.
+
+El ventanal de planta baja junto a la entrada se amplía a aproximadamente
+2,80 × 1,20 m. Cada baño añade una ventana alta de vidrio traslúcido hacia
+la calle: social 1,20 × 0,65 m y principal 1,60 × 0,70 m sobre la tina.
+Las carpinterías quedan dentro del cerramiento y se conservan las ventanas
+del retorno. Los huecos atraviesan la geometría de las paredes y sus acabados;
+dimensiones y dinteles siguen siendo propuestas pendientes de medir en obra.
