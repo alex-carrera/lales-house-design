@@ -4,9 +4,11 @@
 
 Modelo representativo de la vivienda y organizador de remodelación. Las cotas de obra son aproximadas: requiere levantamiento y cálculo profesional antes de ejecutar cambios.
 
-## Minibar junto a las gradas
+## Minibar con lavavasos y plantas junto a las gradas
 
-El rincón posterior se convierte en minibar de madera y negro, conservando la huella de 1,34 × 0,46 m. Mesón a unos 90 cm, botellero inferior para seis botellas, guardado cerrado, bandeja, repisas con botellas, copero y luz cálida. Los libros se retiran de ese mueble. Se conserva el paso al baño y a las gradas; el resto del modelo permanece igual. Medidas de carpintería provisionales.
+El rincón posterior se convierte en minibar de madera y negro, conservando la huella de 1,34 × 0,46 m. Mesón a unos 90 cm, botellero inferior para seis botellas, guardado cerrado, bandeja, repisas con botellas, copero y luz cálida. Lavavasos compacto de unos 34 × 28 cm y 17 cm de profundidad en el lado derecho, con grifo negro; bandeja y vasos a la izquierda. El mueble cerrado queda hueco para alojar la cubeta y sus futuras conexiones. Toma de agua, sifón, desagüe e impermeabilización por definir en sitio. Los libros se retiran de ese mueble. Se conserva el paso al baño y a las gradas; el resto del modelo permanece igual. Medidas de carpintería provisionales.
+
+Dos maceteros de grafito y crema, de unos 38 y 27 cm de alto, incorporan vegetación ornamental bajo el tramo alto de las gradas, contra la pared derecha. Se comprobaron cruces con peldaños, soportes y barandas, así como las reservas de paso a gradas y baño. Las plantas son representativas; especie por elegir.
 
 ## Últimos ajustes de mobiliario
 
