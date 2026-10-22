@@ -4,11 +4,21 @@
 
 Modelo representativo de la vivienda y organizador de remodelación. Las cotas de obra son aproximadas: requiere levantamiento y cálculo profesional antes de ejecutar cambios.
 
+## Últimos ajustes de mobiliario
+
+Muebles altos en baño principal (armario con espejo y módulos posteriores), escritorio (L sobre paredes ciegas) y cocina. Ventanal del baño hacia calle ampliado a unos 2,10 × 0,85 m; los dos frontales crecen a 75 cm de altura. Las aperturas son provisionales y sus dinteles y apoyos deben revisarse en sitio.
+
+TV del dormitorio de referencia de 55 pulgadas, 16:9 (aprox. 1,218 × 0,685 m), colgada en pared. Consola baja alargada a 2 m. Se conserva la TV existente de planta baja.
+
+Alfombra de sala ampliada a 3,25 × 3,25 m. El sillón que estaba a la izquierda pasa al lado derecho mirando a la TV; el otro conserva el giro diagonal. El sofá se adelanta 15 cm para dejar la aproximación. Se comprueba un recorrido de giro representativo de 65 cm hacia el arranque de 1 m, con una envolvente de cabeza sentado bajo el tramo alto; no es certificación de accesibilidad.
+
+Comedor con orientación conservada y desplazado 25 cm a la derecha. Cocción y campana se acercan al extremo de la ventana, manteniéndose en pared ciega. Altos, mueble de unión bajo y composición continua de despensa/refri: paneles laterales, altillo y tapajuntas cierran el espacio visible. Las holguras, ventilación y apertura definitivas de la refri deben ajustarse a su equipo real.
+
 ## Propuesta vigente
 
 - Entrada de nogal junto a cocina, con fijo lateral, tirador negro y apertura interior. Acceso anterior cerrado y ventanal de sala de 2,80 × 1,20 m reubicado.
 - Cocina y comedor en el bloque de 6 × 3 m. Mesa existente de 1,20 × 0,70 m girada 90° respecto a la propuesta anterior, con sus cuatro sillas. Se conservan los mesones y las ventanas hacia calle y retorno libre; medianeras ciegas.
-- Sala con sofá de 190 × 90 cm y módulo de 145 × 90 cm en L, dos sillones de 90 × 90 cm y mesa de centro de 73 × 70 cm. Un sillón queda a la izquierda y el cercano a la TV en diagonal de 45° hacia ella. Se conservan el mueble de TV y el equipo de audio.
+- Sala con sofá de 190 × 90 cm y módulo de 145 × 90 cm en L, dos sillones de 90 × 90 cm y mesa de centro de 73 × 70 cm. Ambos sillones quedan al lado derecho, uno orientado hacia la TV y otro en diagonal de 45°. Se conservan el mueble de TV y el equipo de audio.
 - Mueble de cascos de 68 × 33 × 115 cm junto a entrada y puerta de cocina. El rincón posterior junto a gradas incorpora un mueble bajo, repisas de madera y luz cálida, dejando libre el acceso al baño.
 - Reclinable existente en la esquina de los dos ventanales de arriba; escritorio en L, cama y clóset en L conservados con los ajustes de posición necesarios para la escalera.
 
@@ -32,7 +42,7 @@ Los equipos del boceto suponen **60 × 66 × 86 cm** cada uno. Se comprobaron cr
 
 Inspiración cálida de las referencias del propietario: mueble de madera, espejo con iluminación, grifería negra, mampara transparente, cielo con acabado de madera y piso con representación tipo madera. Se mantiene la tina, el inodoro y la ducha independiente. Paredes claras y ventanas conservadas.
 
-El lavabo se adapta a 70 cm de ancho y se reubica en el tramo interior junto al acceso, para liberar las ventanas frontales. El piso tipo madera es una representación visual; revestimiento apto para zona húmeda, impermeabilización y detalles constructivos por definir.
+El lavabo con armario de espejo se adapta a 70 cm de ancho y se reubica en el tramo interior junto al acceso, para liberar las ventanas frontales. El piso tipo madera es una representación visual; revestimiento apto para zona húmeda, impermeabilización y detalles constructivos por definir.
 
 ## Patio y exterior
 
