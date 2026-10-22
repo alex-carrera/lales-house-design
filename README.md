@@ -1,5 +1,12 @@
 # Casa Lales · Proyecto de remodelación
 
+## Distribución social · Entrada junto a cocina
+
+La propuesta traslada la entrada de nogal junto a la cocina y cierra el acceso anterior. El ventanal de sala conserva 2,80 × 1,20 m y cambia de posición. La mesa existente de 1,20 × 0,70 m queda horizontal con sus cuatro sillas dentro del bloque de cocina de 6 × 3 m, en el espacio de la antigua lavandería. El sofá en L y los dos sillones pequeños se agrupan en la sala; el mueble de moto se reubica en la zona del acceso cerrado.
+
+Lavadora y secadora van juntas, sin apilar, en el lateral del baño social, conservando inodoro y lavabo. Los equipos del boceto suponen 60 × 66 × 86 cm cada uno: faltan las medidas reales, acometidas y ventilación de secadora. Se comprobaron cruces geométricos, giro de la puerta, paso lateral de sala de 90 cm y frente a máquinas de 95 cm con las medidas provisionales. No es un plano de ejecución. La planta alta y la escalera de giro compensado se conservan; la alternativa de escalera cuadrada aún no se aplica.
+
+
 https://alex-carrera.github.io/lales-house-design/
 
 Un espacio para documentar y organizar la remodelación de la casa:
