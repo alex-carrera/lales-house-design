@@ -123,7 +123,9 @@ y requieren dimensionamiento. El estado actual sigue independiente.
 ## Construcciones adosadas
 
 Se representa al tío junto al cuarto original, con altura similar a ese bloque,
-y a la tía con dos pisos al otro lado del muro lateral del parqueadero.
+y a la tía con dos pisos adosados al frente del parqueadero, frente a la casa
+del tío al otro lado de la calle de tres metros. El adosamiento se sitúa
+en el cerramiento frontal del terreno, conservando la entrada de tres metros.
 Son volúmenes de contexto: sus huellas y alturas no están medidas.
 La vista «Entorno · Construcciones adosadas» permite revisar su ubicación;
 «Mostrar construcciones adosadas» permite ocultarlas para inspeccionar la casa.
