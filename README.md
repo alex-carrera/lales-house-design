@@ -161,3 +161,9 @@ alcanza unos 2,14 m. Son proporciones conceptuales por medir en sitio.
 La apertura se comprueba contra la división y el mobiliario de la propuesta;
 la calle libre de tres metros, el ventanal ampliado y las ventanas de baños
 se conservan. El estado actual permanece independiente.
+
+## Planta alta y visor amplio
+
+La propuesta organiza la planta alta como una suite abierta: escritorio en L de 1,90 × 1,50 m y 65 cm de fondo junto a los dos ventanales, cama con colchón provisional de 1,60 × 2,00 m, clósets corredizos grafito de 2,55 m con nicho iluminado, y cómoda con espejo. Paredes y techo blancos; carpintería roble, textiles arena y carbón y luz cálida. La medida comercial de 2½ plazas debe confirmarse con el colchón seleccionado. El CAD comprueba pasos libres al baño y a la llegada de las gradas.
+
+El sitio usa una navegación horizontal compacta, tipografía sans serif y tonos carbón, piedra y bronce. Los textos laterales se retiraron y el visor ocupa todo el ancho; paleta y estancia comparten una barra de controles. El plano del patio queda desplegable. Materiales y Presupuesto y gastos permanecen ocultos hasta recibir una sesión de propietario autorizada por el servidor; los enlaces directos sin sesión regresan al recorrido público. Se conserva el acceso privado existente.

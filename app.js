@@ -1,13 +1,13 @@
-import {ProjectStore} from './data.js?v=73e19c6f113f';
-import {CATEGORIES,AREAS,UNITS,money,cents,expenseData,materialData,totals,filterExpenses,csv,today} from './domain.js?v=73e19c6f113f';
+import {ProjectStore} from './data.js?v=9f42300ac179';
+import {CATEGORIES,AREAS,UNITS,money,cents,expenseData,materialData,totals,filterExpenses,csv,today} from './domain.js?v=9f42300ac179';
 const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-const store=new ProjectStore();let session=null,configured=false,loading=false,loadSerial=0,edit=null,deleting=null,toastTimer,remoteTimer;
+const store=new ProjectStore();let authResolved=false;let session=null,configured=false,loading=false,loadSerial=0,edit=null,deleting=null,toastTimer,remoteTimer;
 let records={expenses:[],materials:[],settings:null};
 const names={actual:'Estado actual',propuesta:'Diseño futuro',materiales:'Materiales',gastos:'Presupuesto y gastos'};
 const route=()=>Object.hasOwn(names,location.hash.slice(1))?location.hash.slice(1):'actual';
 function toast(message){$('#toast').textContent=message;$('#toast').hidden=false;clearTimeout(toastTimer);toastTimer=setTimeout(()=>$('#toast').hidden=true,4500);}
-function showRoute(focus=false){const r=route();if(r==='propuesta'){const viewer=$('#proposal-viewer');if(!viewer.getAttribute('src'))viewer.src=viewer.dataset.src;}$$('.page').forEach(p=>p.hidden=p.id!=='view-'+r);$$('[data-nav]').forEach(a=>{if(a.dataset.nav===r)a.setAttribute('aria-current','page');else a.removeAttribute('aria-current');});$('#breadcrumb').textContent=names[r];document.title=`${names[r]} · Casa Lales`;if(focus)$('#main').focus({preventScroll:true});}
+function showRoute(focus=false){let r=route();if(!session&&['materiales','gastos'].includes(r)){if(authResolved)history.replaceState(null,'','#propuesta');r='propuesta';}if(r==='propuesta'){const viewer=$('#proposal-viewer');if(!viewer.getAttribute('src'))viewer.src=viewer.dataset.src;}$$('.page').forEach(p=>p.hidden=p.id!=='view-'+r);$$('[data-nav]').forEach(a=>{if(a.dataset.nav===r)a.setAttribute('aria-current','page');else a.removeAttribute('aria-current');});$('#breadcrumb').textContent=names[r];document.title=`${names[r]} · Casa Lales`;if(focus)$('#main').focus({preventScroll:true});}
 window.addEventListener('hashchange',()=>showRoute(true));showRoute();
 function options(list,value=''){return list.map(v=>`<option value="${esc(v)}"${value===v?' selected':''}>${esc(v)}</option>`).join('');}
 $('#material-area').insertAdjacentHTML('beforeend',options(AREAS));$('#expense-category-filter').insertAdjacentHTML('beforeend',options(CATEGORIES));
@@ -15,9 +15,11 @@ function message(form,text,success=false){const e=form.querySelector('[data-form
 function friendly(error){const msg=error?.message||String(error);if(/Invalid login credentials/i.test(msg))return 'El correo o la contraseña no coinciden. Revisa tus datos.';if(/Email not confirmed/i.test(msg))return 'Primero confirma tu correo con el enlace que recibiste.';if(/rate.limit|too many|security purposes/i.test(msg))return 'Hay un límite temporal de intentos. Espera unos minutos antes de volver a intentar.';if(/fetch|network|Load failed/i.test(msg))return 'No se pudo conectar. Revisa tu conexión; tu formulario sigue abierto.';if(/email.*invalid|email.*not.allowed|not authorized/i.test(msg))return 'No se pudo enviar el correo. Usa el correo de tu cuenta de Supabase o revisa la configuración de acceso.';return msg;}
 function gateHTML(){return `<div class="gate-panel"><div><p class="eyebrow">SOLO PARA TI</p><h2>Tu remodelación,<br>en un mismo lugar.</h2><p>Guarda tus materiales, registra los gastos y consulta cómo va el presupuesto desde tus dispositivos. Acceso reservado al propietario de Casa Lales.</p><button class="button primary" data-login>Acceder a mi organizador <span aria-hidden="true">→</span></button></div><div class="gate-features"><div><span class="feature-number">01</span><div><strong>Un presupuesto claro</strong><small>Pagado, pendiente y disponible.</small></div></div><div><span class="feature-number">02</span><div><strong>Materiales por ambiente</strong><small>Cantidades y cotizaciones de la obra.</small></div></div><div><span class="feature-number">03</span><div><strong>Acceso privado y sincronizado</strong><small>Tus registros, con la misma cuenta.</small></div></div></div></div>`;}
 function renderAccount(){
+ $$('[data-private-nav]').forEach(e=>e.hidden=!session);
+ showRoute();
  $$('.private-gate').forEach(e=>{e.hidden=!!session;if(!session)e.innerHTML=gateHTML();});
  $$('.private-content,.private-action').forEach(e=>e.hidden=!session);
- $('#account-button').innerHTML=session?'Mi organizador <span aria-hidden="true">↗</span>':'Acceder al organizador <span aria-hidden="true">↗</span>';
+ $('#account-button').innerHTML=session?'Mi organizador <span aria-hidden="true">↗</span>':'Ingresar <span aria-hidden="true">↗</span>';
  $('#sync-state').textContent=session?(loading?'Sincronizando…':'Cuenta privada'):'Recorrido público';
  $('#account-email').textContent=session?.user.email||'';
 }
@@ -79,7 +81,7 @@ window.addEventListener('focus',()=>{if(session&&!loading)load();});document.add
 // Reconcile deletions and interrupted realtime connections without storing records locally.
 setInterval(()=>{if(session&&!loading&&document.visibilityState==='visible'&&!document.querySelector('dialog[open]'))load();},60000);
 renderAccount();
-(async()=>{try{configured=await store.initialize(s=>{const changed=session?.user.id!==s?.user.id;session=s;loadSerial++;if(changed||!session){records={expenses:[],materials:[],settings:null};renderData();$('#record-fields').innerHTML='';$('#delete-description').textContent='';$('#account-email').textContent='';for(const id of ['record-dialog','delete-dialog','account-dialog'])$('#'+id).close();}$('#page-error').hidden=true;renderAccount();if(session)load();},()=>{clearTimeout(remoteTimer);remoteTimer=setTimeout(load,400);},error=>{toast(friendly(error));});if(!configured)$('#sync-state').textContent='Organizador en preparación';}catch(error){$('#sync-state').textContent='Acceso temporalmente no disponible';toast('El recorrido sigue disponible. No se pudo iniciar el acceso privado.');console.warn('No se pudo iniciar la conexión del organizador.');}})();
+(async()=>{try{configured=await store.initialize(s=>{const changed=session?.user.id!==s?.user.id;authResolved=true;session=s;loadSerial++;if(changed||!session){records={expenses:[],materials:[],settings:null};renderData();$('#record-fields').innerHTML='';$('#delete-description').textContent='';$('#account-email').textContent='';for(const id of ['record-dialog','delete-dialog','account-dialog'])$('#'+id).close();}$('#page-error').hidden=true;renderAccount();if(session)load();},()=>{clearTimeout(remoteTimer);remoteTimer=setTimeout(load,400);},error=>{toast(friendly(error));});if(!configured){authResolved=true;showRoute();$('#sync-state').textContent='Organizador en preparación';}}catch(error){authResolved=true;showRoute();$('#sync-state').textContent='Acceso temporalmente no disponible';toast('El recorrido sigue disponible. No se pudo iniciar el acceso privado.');console.warn('No se pudo iniciar la conexión del organizador.');}})();
 
 // Patio: measured-in-model maneuver, separate from the fixed 3D parked vehicle.
 (()=>{
