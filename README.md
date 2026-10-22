@@ -28,6 +28,8 @@ TV del dormitorio de referencia de 55 pulgadas, 16:9 (aprox. 1,218 × 0,685 m), 
 
 Alfombra de sala de 3,25 × 3,25 m. Las dos piezas de la L se desplazan juntas otros 30 cm hacia la derecha de la imagen de referencia, es decir, hacia el fondo/gradas (90 cm acumulados respecto a la posición anterior a las gradas redondas). La mesa de centro conserva su posición reciente. El sillón pequeño del ventanal se acerca 50 cm y se alinea 3 cm con el sofá largo de la L, cerrando la separación entre ambos sin superponerlos, orientado hacia la TV; el sillón diagonal retrocede 45 cm acumulados sobre su eje y el reclinable se adelanta 40 cm, ambos a 45° hacia la TV. Con la hoja de cocina recogida, se comprueba un recorrido representativo de 65 cm por la sala hacia el arranque libre de 1 m; no es certificación de accesibilidad.
 
+Lavaplatos de cocina desplazado 25 cm a la derecha, centrado bajo el ventanal del retorno. Grifo completo trasladado con la cubeta; hueco anterior cerrado y nuevo alojamiento ajustado en mesón y mueble inferior. Instalaciones definitivas por resolver en sitio.
+
 Comedor con orientación conservada y desplazado 25 cm a la derecha. Cocción y campana se acercan al extremo de la ventana, manteniéndose en pared ciega. Altos, mueble de unión bajo y composición continua de despensa/refri: paneles laterales, altillo y tapajuntas cierran el espacio visible. Las holguras, ventilación y apertura definitivas de la refri deben ajustarse a su equipo real.
 
 ## Propuesta vigente
