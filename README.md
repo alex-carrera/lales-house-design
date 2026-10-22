@@ -167,3 +167,7 @@ se conservan. El estado actual permanece independiente.
 La propuesta organiza la planta alta como una suite abierta: escritorio en L de 1,90 × 1,50 m y 65 cm de fondo junto a los dos ventanales, cama con colchón provisional de 1,60 × 2,00 m, clósets corredizos grafito de 2,55 m con nicho iluminado, y cómoda con espejo. Paredes y techo blancos; carpintería roble, textiles arena y carbón y luz cálida. La medida comercial de 2½ plazas debe confirmarse con el colchón seleccionado. El CAD comprueba pasos libres al baño y a la llegada de las gradas.
 
 El sitio usa una navegación horizontal compacta, tipografía sans serif y tonos carbón, piedra y bronce. Los textos laterales se retiraron y el visor ocupa todo el ancho; paleta y estancia comparten una barra de controles. El plano del patio queda desplegable. Materiales y Presupuesto y gastos permanecen ocultos hasta recibir una sesión de propietario autorizada por el servidor; los enlaces directos sin sesión regresan al recorrido público. Se conserva el acceso privado existente.
+
+## Recorrido depurado
+
+El selector del diseño futuro conserva 18 vistas. Se retiraron las nueve tomas redundantes de patio cubierto, asadero, entorno, ampliación de cocina, vista elevada, escritorio, planta de la suite, ventanales del dormitorio y ventanas de baños. Anterior y siguiente recorren únicamente las vistas conservadas. Se eliminaron sus cámaras, leyendas y lógica exclusiva; el visor carga solo los datos necesarios para renderizar. El modelo editable y toda la geometría de la propuesta se conservan.
