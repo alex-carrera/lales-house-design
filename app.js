@@ -1,5 +1,5 @@
-import {ProjectStore} from './data.js?v=55d49a0d579e';
-import {CATEGORIES,AREAS,UNITS,money,cents,expenseData,materialData,totals,filterExpenses,csv,today} from './domain.js?v=55d49a0d579e';
+import {ProjectStore} from './data.js?v=3929ac1d94c5';
+import {CATEGORIES,AREAS,UNITS,money,cents,expenseData,materialData,totals,filterExpenses,csv,today} from './domain.js?v=3929ac1d94c5';
 const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const store=new ProjectStore();let authResolved=false;let session=null,configured=false,loading=false,loadSerial=0,edit=null,deleting=null,toastTimer,remoteTimer;
