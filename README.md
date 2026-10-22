@@ -26,7 +26,7 @@ Muebles altos en baño principal (armario con espejo y módulos posteriores), es
 
 TV del dormitorio de referencia de 55 pulgadas, 16:9 (aprox. 1,218 × 0,685 m), colgada en pared. Consola baja alargada a 2 m. Se conserva la TV existente de planta baja.
 
-Alfombra de sala de 3,25 × 3,25 m. La L se retrasa 60 cm hacia el fondo y la mesa de centro 75 cm. El sillón pequeño se ubica junto al ventanal en el espacio antes del sofá en L, orientado hacia la TV; el otro sillón diagonal se conserva. Se comprueba un recorrido continuo representativo de 65 cm por la sala hacia el arranque libre de 1 m; no es certificación de accesibilidad.
+Alfombra de sala de 3,25 × 3,25 m. Las dos piezas de la L se desplazan juntas otros 30 cm hacia la derecha de la imagen de referencia, es decir, hacia el fondo/gradas (90 cm acumulados respecto a la posición anterior a las gradas redondas). La mesa de centro conserva su posición reciente. El sillón pequeño se ubica junto al ventanal en el espacio antes del sofá en L, orientado hacia la TV; el otro sillón diagonal se conserva. Se comprueba un recorrido continuo representativo de 65 cm por la sala hacia el arranque libre de 1 m; no es certificación de accesibilidad.
 
 Comedor con orientación conservada y desplazado 25 cm a la derecha. Cocción y campana se acercan al extremo de la ventana, manteniéndose en pared ciega. Altos, mueble de unión bajo y composición continua de despensa/refri: paneles laterales, altillo y tapajuntas cierran el espacio visible. Las holguras, ventilación y apertura definitivas de la refri deben ajustarse a su equipo real.
 
@@ -44,7 +44,7 @@ Se recupera la alternativa de giro de 180° con seis peldaños compensados y bar
 
 Con altura provisional de 2,30 m: 13 contrahuellas de unos 17,7 cm, huellas rectas de 28,6 cm y ancho nominal de 1 m. El hueco del giro redondo ocupa **3,57 m²**, frente a los **5,75 m²** de la alternativa cuadrada: recupera aproximadamente **2,18 m² de piso alto** respecto a esa alternativa. Cama, TV de 55 pulgadas, escritorio y clóset L mantienen sus posiciones recientes.
 
-Se comprobaron sólidos, cruces de muebles, barrido de entrada, recorrido representativo de 65 cm en sala, arranque y salida de 1 × 1 m y una envolvente vertical de 2,10 m sobre la línea de los peldaños. Medidas supuestas: no es un plano de ejecución ni certificación de cumplimiento. Hay que medir altura piso a piso, espesores, hueco y apoyos, y revisar estructura, peldaños compensados y protecciones. Referencia geométrica: [RTAU Quito, Tomo 2, págs. 73 y 136](https://habitat.quito.gob.ec/wp-content/uploads/2026/04/Tomo-2-Edificabilidad.pdf); aplicabilidad local pendiente.
+Se comprobaron sólidos, cruces de muebles, barrido de entrada, recorrido representativo de 65 cm en sala y una envolvente vertical de 2,10 m sobre la línea de los peldaños. Tras el desplazamiento de la L, la aproximación al primer peldaño queda en unos 86 cm de fondo (reserva representada de 1 × 0,85 m); la salida de planta alta conserva 1 × 1 m. Medidas supuestas: no es un plano de ejecución ni certificación de cumplimiento. Hay que medir altura piso a piso, espesores, hueco y apoyos, y revisar estructura, peldaños compensados y protecciones. Referencia geométrica: [RTAU Quito, Tomo 2, págs. 73 y 136](https://habitat.quito.gob.ec/wp-content/uploads/2026/04/Tomo-2-Edificabilidad.pdf); aplicabilidad local pendiente.
 
 ## Baño social y lavandería
 
