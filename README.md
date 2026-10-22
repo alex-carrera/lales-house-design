@@ -16,7 +16,7 @@ Dos maceteros de grafito y crema, de unos 38 y 27 cm de alto, incorporan vegetac
 
 ## Reclinable en sala y escritorio adicional arriba
 
-El reclinable existente de 1 × 0,85 m baja del dormitorio a la sala, detrás del sillón a 45° por el lado de entrada/cocina, orientado hacia el sector de la TV. Se conserva el resto de los muebles y un recorrido representativo de 65 cm en sala y acceso a cocina. Se representa cerrado: para desplegar el reposapiés habría que mover el sillón diagonal; la huella abierta real está pendiente de medir.
+El reclinable existente de 1 × 0,85 m baja del dormitorio a la sala, detrás del sillón a 45° por el lado de entrada/cocina, orientado hacia el sector de la TV. Se conserva el resto de los muebles y un recorrido representativo de 65 cm en sala y acceso a cocina. El sillón diagonal retrocede unos 4,7 cm hasta tocar el reclinable, conservando su giro de 45° y sin superposición. El reclinable se representa cerrado: para desplegar el reposapiés habría que mover el sillón diagonal; la huella abierta real está pendiente de medir.
 
 En la esquina de los dos ventanales de arriba se añade un escritorio rectangular de exactamente 1,20 × 0,60 m, con su lado largo paralelo a la ventana oeste que da a la calle. Tablero de madera a 75 cm del piso, estructura negra, cajón, monitor y silla. Se conservan el escritorio en L, cama, TV, clóset y ventanas. Se comprobaron cruces, espacio de rodillas y un retiro provisional de silla de 20 cm.
 
