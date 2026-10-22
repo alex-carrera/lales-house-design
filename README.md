@@ -187,3 +187,16 @@ El ancho de la TV se estima en 165 cm a partir de los 93 cm de alto y una propor
 El clóset de 2,55 × 0,60 m cruza el cuarto delante del borde de las gradas, con frentes corredizos hacia el dormitorio y unos 1,07 m de paso lateral. La cama se gira hacia una TV de referencia de 75 pulgadas en la pared opuesta. El cabecero queda en el tramo ciego; su extremo bajo respeta el vidrio existente. El reclinable se orienta a la TV, y el escritorio en L de 1,90 × 1,50 m se refleja hacia la esquina sureste.
 
 Se comprueban unos 71 cm frente a los tiradores del clóset, 93 cm al pie de la cama, las familias de muebles sin colisiones y una extensión orientativa de 65 cm para el reclinable. Las medidas de la casa, colchón y TV siguen siendo referencias por confirmar. El clóset no sustituye una solución técnica para proteger el hueco de gradas. El estado actual y las 18 vistas se conservan.
+
+
+## Alternativa representativa de escalera y clóset en L
+
+Se sustituye solo en el diseño futuro la escalera de referencia por una de media vuelta: tres peldaños rectos iniciales, seis compensados en el giro y tres rectos finales, con el piso como última subida. Para la altura provisional de 2,30 m son 13 contrahuellas de unos 17,7 cm, huella recta de 28,6 cm y ancho nominal de 1 m. Madera cálida, estructura y barandas negras; las secciones metálicas no son un cálculo estructural. Hay espacio libre de 1 × 1 m al arranque y en el piso de salida, sin plataforma final independiente.
+
+Se restituye el entrepiso de la antigua abertura y se recorta la nueva forma curva. La parte recuperada de la abertura antigua es de 1,19 m², un 48,8 %. La abertura nueva completa mide unos 3,57 m², frente a 2,43 m² de la anterior: la superficie libre de piso alto disminuye unos 1,14 m². La ventaja de esta alternativa es la ubicación disponible para el clóset, no una reducción del hueco total. Este dato se muestra en el visor.
+
+El clóset en L queda en la esquina posterior izquierda, con brazos aproximados de 1,54 y 1,70 m, fondo de 60 cm y frentes grafito. Se conserva la cama, se adelanta la TV para liberar la salida y el reclinable pasa a la esquina de ambos ventanales. Abajo se redistribuyen todos los muebles existentes para despejar el arranque.
+
+Se verifican sólidos, conexión con el piso, paso vertical de 2,10 m sobre la línea de gradas, muebles, entrada, baño y aproximaciones. El modelo y la altura entre plantas son provisionales. Deben medirse altura piso a piso, hueco y espesor, y diseñarse la escalera, sus protecciones y el soporte del piso recuperado antes de una ejecución. Referencia geométrica consultada: [RTAU Quito, Tomo 2, págs. 73–74 y 136](https://habitat.quito.gob.ec/wp-content/uploads/2026/04/Tomo-2-Edificabilidad.pdf); su aplicabilidad local debe comprobarse.
+
+El estado actual permanece idéntico. Las 18 vistas se mantienen; la antigua vista genérica de planta alta se reutiliza como «Escalera · Giro de madera y metal». No se publican planos privados ni archivos CAD.
