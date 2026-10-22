@@ -14,6 +14,12 @@ La mininevera es un volumen representativo de unos 50 cm de ancho, 55 cm de fond
 
 Dos maceteros de grafito y crema, de unos 38 y 27 cm de alto, incorporan vegetación ornamental bajo el tramo alto de las gradas, contra la pared derecha. Se comprobaron cruces con peldaños, soportes y barandas, así como las reservas de paso a gradas y baño. Las plantas son representativas; especie por elegir.
 
+## Reclinable en sala y escritorio adicional arriba
+
+El reclinable existente de 1 × 0,85 m baja del dormitorio a la sala, detrás del sillón a 45° por el lado de entrada/cocina, orientado hacia el sector de la TV. Se conserva el resto de los muebles y un recorrido representativo de 65 cm en sala y acceso a cocina. Se representa cerrado: para desplegar el reposapiés habría que mover el sillón diagonal; la huella abierta real está pendiente de medir.
+
+En la esquina de los dos ventanales de arriba se añade un escritorio rectangular de exactamente 1,20 × 0,60 m, con su lado largo paralelo a la ventana oeste que da a la calle. Tablero de madera a 75 cm del piso, estructura negra, cajón, monitor y silla. Se conservan el escritorio en L, cama, TV, clóset y ventanas. Se comprobaron cruces, espacio de rodillas y un retiro provisional de silla de 20 cm.
+
 ## Últimos ajustes de mobiliario
 
 Muebles altos en baño principal (armario con espejo y módulos posteriores), escritorio (L sobre paredes ciegas) y cocina. Ventanal del baño hacia calle ampliado a unos 2,10 × 0,85 m; los dos frontales crecen a 75 cm de altura. Las aperturas son provisionales y sus dinteles y apoyos deben revisarse en sitio.
@@ -30,7 +36,7 @@ Comedor con orientación conservada y desplazado 25 cm a la derecha. Cocción y 
 - Cocina y comedor en el bloque de 6 × 3 m. Mesa existente de 1,20 × 0,70 m girada 90° respecto a la propuesta anterior, con sus cuatro sillas. Se conservan los mesones y las ventanas hacia calle y retorno libre; medianeras ciegas.
 - Sala con sofá de 190 × 90 cm y módulo de 145 × 90 cm en L, dos sillones de 90 × 90 cm y mesa de centro de 73 × 70 cm. Un sillón pequeño queda junto al ventanal y la L, orientado hacia la TV; el otro conserva su posición diagonal. La L se retrasa hacia el fondo. Se conservan el mueble de TV y el equipo de audio.
 - Mueble de cascos de 68 × 33 × 115 cm junto a entrada y puerta de cocina. El rincón posterior junto a gradas incorpora el minibar, dejando libre el acceso al baño.
-- Reclinable existente en la esquina de los dos ventanales de arriba; escritorio en L, cama y clóset en L conservados con los ajustes de posición necesarios para la escalera.
+- Reclinable existente abajo, detrás del sillón diagonal hacia entrada/cocina; escritorio rectangular de 120 × 60 cm en su antigua esquina junto a la ventana de calle de arriba. Escritorio en L, cama y clóset L conservados.
 
 ## Escalera de giro redondo representativa
 
