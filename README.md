@@ -14,7 +14,7 @@ Muebles altos en baño principal (armario con espejo y módulos posteriores), es
 
 TV del dormitorio de referencia de 55 pulgadas, 16:9 (aprox. 1,218 × 0,685 m), colgada en pared. Consola baja alargada a 2 m. Se conserva la TV existente de planta baja.
 
-Alfombra de sala ampliada a 3,25 × 3,25 m. El sillón que estaba a la izquierda pasa al lado derecho mirando a la TV; el otro conserva el giro diagonal. El sofá se adelanta 15 cm para dejar la aproximación. Se comprueba un recorrido de giro representativo de 65 cm hacia el arranque de 1 m, con una envolvente de cabeza sentado bajo el tramo alto; no es certificación de accesibilidad.
+Alfombra de sala de 3,25 × 3,25 m. La L se retrasa 60 cm hacia el fondo y la mesa de centro 75 cm. El sillón antes junto a gradas pasa al espacio delantero de la alfombra, mirando en diagonal hacia la TV; el otro sillón se conserva. Se comprueba un recorrido continuo representativo de 65 cm por la sala hacia el arranque libre de 1 m; no es certificación de accesibilidad.
 
 Comedor con orientación conservada y desplazado 25 cm a la derecha. Cocción y campana se acercan al extremo de la ventana, manteniéndose en pared ciega. Altos, mueble de unión bajo y composición continua de despensa/refri: paneles laterales, altillo y tapajuntas cierran el espacio visible. Las holguras, ventilación y apertura definitivas de la refri deben ajustarse a su equipo real.
 
@@ -22,19 +22,17 @@ Comedor con orientación conservada y desplazado 25 cm a la derecha. Cocción y 
 
 - Entrada de nogal junto a cocina, con fijo lateral, tirador negro y apertura interior. Acceso anterior cerrado y ventanal de sala de 2,80 × 1,20 m reubicado.
 - Cocina y comedor en el bloque de 6 × 3 m. Mesa existente de 1,20 × 0,70 m girada 90° respecto a la propuesta anterior, con sus cuatro sillas. Se conservan los mesones y las ventanas hacia calle y retorno libre; medianeras ciegas.
-- Sala con sofá de 190 × 90 cm y módulo de 145 × 90 cm en L, dos sillones de 90 × 90 cm y mesa de centro de 73 × 70 cm. Ambos sillones quedan al lado derecho, uno orientado hacia la TV y otro en diagonal de 45°. Se conservan el mueble de TV y el equipo de audio.
+- Sala con sofá de 190 × 90 cm y módulo de 145 × 90 cm en L, dos sillones de 90 × 90 cm y mesa de centro de 73 × 70 cm. Ambos sillones pequeños quedan delante de la mesa de centro, orientados en diagonal hacia la TV. La L se retrasa hacia el fondo. Se conservan el mueble de TV y el equipo de audio.
 - Mueble de cascos de 68 × 33 × 115 cm junto a entrada y puerta de cocina. El rincón posterior junto a gradas incorpora el minibar, dejando libre el acceso al baño.
 - Reclinable existente en la esquina de los dos ventanales de arriba; escritorio en L, cama y clóset en L conservados con los ajustes de posición necesarios para la escalera.
 
-## Escalera cuadrada representativa
+## Escalera de giro redondo representativa
 
-Dos tramos rectos en U, descanso rectangular posterior y salida directamente al piso alto. Se eliminan todos los peldaños compensados y las barandas curvas. Madera y metal negro de referencia, sin cálculo de secciones ni anclajes.
+Se recupera la alternativa de giro de 180° con seis peldaños compensados y baranda curva, en madera y metal negro. Se elimina el descanso rectangular de las gradas cuadradas; la llegada desemboca directamente al piso alto, con su salida despejada de 1 × 1 m.
 
-Con la altura provisional de 2,30 m, el modelo usa 13 contrahuellas de unos 17,7 cm y huellas rectas de 28,6 cm; ancho nominal de 1 m. Cinco peldaños inferiores, descanso a la sexta subida y seis peldaños superiores; el piso alto completa la subida 13. El descanso mide aproximadamente 2,06 × 1 m.
+Con altura provisional de 2,30 m: 13 contrahuellas de unos 17,7 cm, huellas rectas de 28,6 cm y ancho nominal de 1 m. El hueco del giro redondo ocupa **3,57 m²**, frente a los **5,75 m²** de la alternativa cuadrada: recupera aproximadamente **2,18 m² de piso alto** respecto a esa alternativa. Cama, TV de 55 pulgadas, escritorio y clóset L mantienen sus posiciones recientes.
 
-El hueco rectangular ocupa **5,75 m²**, frente a **3,57 m²** de la alternativa curva inmediatamente anterior: unos **2,18 m² más de abertura**. No se presenta como ahorro de superficie. Para encajarlo se adelantan la cama 65 cm y la TV 70 cm; el cabecero se adapta para no cubrir el ventanal y el clóset en L mantiene su posición.
-
-Se comprobaron sólidos, cruces de muebles, apertura de la entrada, aproximación y salida de 1 × 1 m y una envolvente vertical de 2,10 m sobre la línea de los peldaños. Son comprobaciones del modelo con medidas supuestas; no una certificación de cumplimiento ni un plano de ejecución. Hay que medir altura piso a piso, espesores, hueco y apoyos. Referencia geométrica consultada: [RTAU Quito, Tomo 2, págs. 73 y 136](https://habitat.quito.gob.ec/wp-content/uploads/2026/04/Tomo-2-Edificabilidad.pdf); aplicabilidad local pendiente de comprobar.
+Se comprobaron sólidos, cruces de muebles, barrido de entrada, recorrido representativo de 65 cm en sala, arranque y salida de 1 × 1 m y una envolvente vertical de 2,10 m sobre la línea de los peldaños. Medidas supuestas: no es un plano de ejecución ni certificación de cumplimiento. Hay que medir altura piso a piso, espesores, hueco y apoyos, y revisar estructura, peldaños compensados y protecciones. Referencia geométrica: [RTAU Quito, Tomo 2, págs. 73 y 136](https://habitat.quito.gob.ec/wp-content/uploads/2026/04/Tomo-2-Edificabilidad.pdf); aplicabilidad local pendiente.
 
 ## Baño social y lavandería
 
@@ -61,3 +59,5 @@ El recorrido público mantiene 18 vistas. Materiales y presupuesto/gastos solo a
 No se han contratado servicios de pago. Supabase usa el plan Free, sujeto a sus límites y posibles pausas por inactividad. Los planos privados continúan pendientes; esta actualización no cambia autenticación ni base de datos.
 
 GitHub Pages publica la raíz de `main`. Se necesita WebGL para el visor. La publicación contiene solo HTML, CSS, JavaScript, marca y este README; no incluye fotografías originales, modelos CAD ni estudios locales. `recorrido.html` conserva el estado actual y `propuesta.html` presenta el diseño futuro.
+
+La exportación compacta la iluminación de las mallas con una paleta sin pérdida: conserva todos los valores y reduce el tamaño del visor sin añadir vistas.
