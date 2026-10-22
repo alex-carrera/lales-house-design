@@ -14,7 +14,7 @@ Muebles altos en baño principal (armario con espejo y módulos posteriores), es
 
 TV del dormitorio de referencia de 55 pulgadas, 16:9 (aprox. 1,218 × 0,685 m), colgada en pared. Consola baja alargada a 2 m. Se conserva la TV existente de planta baja.
 
-Alfombra de sala de 3,25 × 3,25 m. La L se retrasa 60 cm hacia el fondo y la mesa de centro 75 cm. El sillón antes junto a gradas pasa al espacio delantero de la alfombra, mirando en diagonal hacia la TV; el otro sillón se conserva. Se comprueba un recorrido continuo representativo de 65 cm por la sala hacia el arranque libre de 1 m; no es certificación de accesibilidad.
+Alfombra de sala de 3,25 × 3,25 m. La L se retrasa 60 cm hacia el fondo y la mesa de centro 75 cm. El sillón pequeño se ubica junto al ventanal en el espacio antes del sofá en L, orientado hacia la TV; el otro sillón diagonal se conserva. Se comprueba un recorrido continuo representativo de 65 cm por la sala hacia el arranque libre de 1 m; no es certificación de accesibilidad.
 
 Comedor con orientación conservada y desplazado 25 cm a la derecha. Cocción y campana se acercan al extremo de la ventana, manteniéndose en pared ciega. Altos, mueble de unión bajo y composición continua de despensa/refri: paneles laterales, altillo y tapajuntas cierran el espacio visible. Las holguras, ventilación y apertura definitivas de la refri deben ajustarse a su equipo real.
 
@@ -22,7 +22,7 @@ Comedor con orientación conservada y desplazado 25 cm a la derecha. Cocción y 
 
 - Entrada de nogal junto a cocina, con fijo lateral, tirador negro y apertura interior. Acceso anterior cerrado y ventanal de sala de 2,80 × 1,20 m reubicado.
 - Cocina y comedor en el bloque de 6 × 3 m. Mesa existente de 1,20 × 0,70 m girada 90° respecto a la propuesta anterior, con sus cuatro sillas. Se conservan los mesones y las ventanas hacia calle y retorno libre; medianeras ciegas.
-- Sala con sofá de 190 × 90 cm y módulo de 145 × 90 cm en L, dos sillones de 90 × 90 cm y mesa de centro de 73 × 70 cm. Ambos sillones pequeños quedan delante de la mesa de centro, orientados en diagonal hacia la TV. La L se retrasa hacia el fondo. Se conservan el mueble de TV y el equipo de audio.
+- Sala con sofá de 190 × 90 cm y módulo de 145 × 90 cm en L, dos sillones de 90 × 90 cm y mesa de centro de 73 × 70 cm. Un sillón pequeño queda junto al ventanal y la L, orientado hacia la TV; el otro conserva su posición diagonal. La L se retrasa hacia el fondo. Se conservan el mueble de TV y el equipo de audio.
 - Mueble de cascos de 68 × 33 × 115 cm junto a entrada y puerta de cocina. El rincón posterior junto a gradas incorpora el minibar, dejando libre el acceso al baño.
 - Reclinable existente en la esquina de los dos ventanales de arriba; escritorio en L, cama y clóset en L conservados con los ajustes de posición necesarios para la escalera.
 
