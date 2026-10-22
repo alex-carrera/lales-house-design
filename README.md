@@ -4,9 +4,13 @@
 
 Modelo representativo de la vivienda y organizador de remodelación. Las cotas de obra son aproximadas: requiere levantamiento y cálculo profesional antes de ejecutar cambios.
 
-## Minibar con lavavasos y plantas junto a las gradas
+## Minibar en L con mininevera y lavavasos
 
-El rincón posterior se convierte en minibar de madera y negro, conservando la huella de 1,34 × 0,46 m. Mesón a unos 90 cm, botellero inferior para seis botellas, guardado cerrado, bandeja, repisas con botellas, copero y luz cálida. Lavavasos compacto de unos 34 × 28 cm y 17 cm de profundidad en el lado derecho, con grifo negro; bandeja y vasos a la izquierda. El mueble cerrado queda hueco para alojar la cubeta y sus futuras conexiones. Toma de agua, sifón, desagüe e impermeabilización por definir en sitio. Los libros se retiran de ese mueble. Se conserva el paso al baño y a las gradas; el resto del modelo permanece igual. Medidas de carpintería provisionales.
+Se aplica el boceto aprobado: mesón posterior de 1,34 × 0,46 m y retorno de unos 0,60 × 0,82 m junto a la puerta del baño, ambos a 90 cm de altura. La mininevera de referencia ocupa el retorno, con puerta hacia el pasillo de la sala. El botellero de seis botellas se traslada a la cara lateral del retorno para conservar su acceso. Se mantienen bandeja, vasos, repisas, copero y luz cálida.
+
+El lavavasos de unos 34 × 28 cm y 17 cm de profundidad permanece a la derecha, sobre el guardado cerrado. Toma de agua, sifón, desagüe e impermeabilización por definir en sitio.
+
+La mininevera es un volumen representativo de unos 50 cm de ancho, 55 cm de fondo y 64 cm de alto; no corresponde a un modelo elegido. Las rejillas son ilustrativas: ajustar ventilación, holguras e instalación al fabricante. Se verifica la apertura representativa a 90° sin choques y el barrido de la puerta del baño. El paso con la nevera cerrada ronda los 98 cm; se estrecha mientras su puerta está abierta. Se conservan el arranque de las gradas, el acceso al baño y el resto del mobiliario. Medidas provisionales.
 
 Dos maceteros de grafito y crema, de unos 38 y 27 cm de alto, incorporan vegetación ornamental bajo el tramo alto de las gradas, contra la pared derecha. Se comprobaron cruces con peldaños, soportes y barandas, así como las reservas de paso a gradas y baño. Las plantas son representativas; especie por elegir.
 
