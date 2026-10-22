@@ -151,20 +151,20 @@ dimensiones y dinteles siguen siendo propuestas pendientes de medir en obra.
 La entrada principal sigue la referencia del usuario: acabado nogal, paneles
 horizontales, marco de madera, tirador negro largo, fijo lateral de vidrio,
 tres focos bajo el remate superior y un aplique negro junto al ventanal.
-El vidrio queda hacia el comedor para respetar la división interior.
+El vidrio queda hacia el comedor; la propuesta social actual retira la división central.
 La puerta se representa cerrada y puede abrirse 90 grados hacia dentro
 con «Abrir puerta principal» en la vista «Entrada · Madera y luz cálida».
 
 Se conserva la altura interior de 2 m y la grada de 25 cm. El hueco de entrada
 mide unos 89 × 200 cm, con hoja aproximada de 80 × 195 cm; el remate exterior
 alcanza unos 2,14 m. Son proporciones conceptuales por medir en sitio.
-La apertura se comprueba contra la división y el mobiliario de la propuesta;
+La apertura se comprueba contra el mobiliario de la propuesta;
 la calle libre de tres metros, el ventanal ampliado y las ventanas de baños
 se conservan. El estado actual permanece independiente.
 
 ## Planta alta y visor amplio
 
-La propuesta organiza la planta alta como una suite abierta: escritorio en L de 1,90 × 1,50 m y 65 cm de fondo junto a los dos ventanales, cama con colchón provisional de 1,60 × 2,00 m, clósets corredizos grafito de 2,55 m con nicho iluminado, y cómoda con espejo. Paredes y techo blancos; carpintería roble, textiles arena y carbón y luz cálida. La medida comercial de 2½ plazas debe confirmarse con el colchón seleccionado. El CAD comprueba pasos libres al baño y a la llegada de las gradas.
+La propuesta organiza la planta alta como una suite abierta: escritorio en L de 1,90 × 1,50 m y 65 cm de fondo junto a los dos ventanales, cama con colchón provisional de 1,60 × 2,00 m, clósets corredizos grafito de 2,55 m con nicho iluminado, y cómoda como soporte de TV. Paredes y techo blancos; carpintería roble, textiles arena y carbón y luz cálida. La medida comercial de 2½ plazas debe confirmarse con el colchón seleccionado. El CAD comprueba pasos libres al baño y a la llegada de las gradas.
 
 El sitio usa una navegación horizontal compacta, tipografía sans serif y tonos carbón, piedra y bronce. Los textos laterales se retiraron y el visor ocupa todo el ancho; paleta y estancia comparten una barra de controles. El plano del patio queda desplegable. Materiales y Presupuesto y gastos permanecen ocultos hasta recibir una sesión de propietario autorizada por el servidor; los enlaces directos sin sesión regresan al recorrido público. Se conserva el acceso privado existente.
 
@@ -175,8 +175,15 @@ El selector del diseño futuro conserva 18 vistas. Se retiraron las nueve tomas 
 
 ### Sala y comedor con los muebles existentes
 
-Se conservan las paredes y aberturas del modelo anterior. El sofá de 190 × 90 cm y el módulo de 145 × 90 cm forman la L; la mesa de centro mide 73 × 70 cm. La TV permanece sobre el mueble de 173 × 40 × 60 cm, con listones decorativos de madera y luz cálida.
+Se retiran los dos retornos, el dintel y el murete centrales para unir sala y comedor; se conservan la fachada y los accesos existentes a cocina y baño. Antes de una demolición en obra debe verificarse la función estructural de esas divisiones. El sofá de 190 × 90 cm y el módulo de 145 × 90 cm forman la L; la mesa de centro mide 73 × 70 cm. La TV permanece sobre el mueble de 173 × 40 × 60 cm, con listones decorativos de madera y luz cálida.
 
 El comedor de 120 × 70 cm se coloca junto al acceso existente a la cocina. Los dos sillones de 90 × 90 cm forman un rincón de conversación en ese ambiente. Se mantienen el mueble del equipo de 80 × 50 × 120 cm y el de moto de 68 × 33 × 115 cm. El reclinable de 100 × 85 cm pasa al dormitorio para liberar la sala.
 
 El ancho de la TV se estima en 165 cm a partir de los 93 cm de alto y una proporción 16:9; las sillas y alturas no recibidas son orientativas. Los pasos más estrechos modelados rondan 68–73 cm y deben contrastarse con medidas en sitio. Se comprobaron sólidos, medidas, apertura de entrada y colisiones. El estado actual se conserva idéntico y siguen disponibles 18 vistas.
+
+
+### Suite invertida y TV
+
+El clóset de 2,55 × 0,60 m cruza el cuarto delante del borde de las gradas, con frentes corredizos hacia el dormitorio y unos 1,07 m de paso lateral. La cama se gira hacia una TV de referencia de 75 pulgadas en la pared opuesta. El cabecero queda en el tramo ciego; su extremo bajo respeta el vidrio existente. El reclinable se orienta a la TV, y el escritorio en L de 1,90 × 1,50 m se refleja hacia la esquina sureste.
+
+Se comprueban unos 71 cm frente a los tiradores del clóset, 93 cm al pie de la cama, las familias de muebles sin colisiones y una extensión orientativa de 65 cm para el reclinable. Las medidas de la casa, colchón y TV siguen siendo referencias por confirmar. El clóset no sustituye una solución técnica para proteger el hueco de gradas. El estado actual y las 18 vistas se conservan.
