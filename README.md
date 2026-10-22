@@ -4,6 +4,10 @@
 
 Modelo representativo de la vivienda y organizador de remodelación. Las cotas de obra son aproximadas: requiere levantamiento y cálculo profesional antes de ejecutar cambios.
 
+## Minibar junto a las gradas
+
+El rincón posterior se convierte en minibar de madera y negro, conservando la huella de 1,34 × 0,46 m. Mesón a unos 90 cm, botellero inferior para seis botellas, guardado cerrado, bandeja, repisas con botellas, copero y luz cálida. Los libros se retiran de ese mueble. Se conserva el paso al baño y a las gradas; el resto del modelo permanece igual. Medidas de carpintería provisionales.
+
 ## Últimos ajustes de mobiliario
 
 Muebles altos en baño principal (armario con espejo y módulos posteriores), escritorio (L sobre paredes ciegas) y cocina. Ventanal del baño hacia calle ampliado a unos 2,10 × 0,85 m; los dos frontales crecen a 75 cm de altura. Las aperturas son provisionales y sus dinteles y apoyos deben revisarse en sitio.
@@ -19,7 +23,7 @@ Comedor con orientación conservada y desplazado 25 cm a la derecha. Cocción y 
 - Entrada de nogal junto a cocina, con fijo lateral, tirador negro y apertura interior. Acceso anterior cerrado y ventanal de sala de 2,80 × 1,20 m reubicado.
 - Cocina y comedor en el bloque de 6 × 3 m. Mesa existente de 1,20 × 0,70 m girada 90° respecto a la propuesta anterior, con sus cuatro sillas. Se conservan los mesones y las ventanas hacia calle y retorno libre; medianeras ciegas.
 - Sala con sofá de 190 × 90 cm y módulo de 145 × 90 cm en L, dos sillones de 90 × 90 cm y mesa de centro de 73 × 70 cm. Ambos sillones quedan al lado derecho, uno orientado hacia la TV y otro en diagonal de 45°. Se conservan el mueble de TV y el equipo de audio.
-- Mueble de cascos de 68 × 33 × 115 cm junto a entrada y puerta de cocina. El rincón posterior junto a gradas incorpora un mueble bajo, repisas de madera y luz cálida, dejando libre el acceso al baño.
+- Mueble de cascos de 68 × 33 × 115 cm junto a entrada y puerta de cocina. El rincón posterior junto a gradas incorpora el minibar, dejando libre el acceso al baño.
 - Reclinable existente en la esquina de los dos ventanales de arriba; escritorio en L, cama y clóset en L conservados con los ajustes de posición necesarios para la escalera.
 
 ## Escalera cuadrada representativa
