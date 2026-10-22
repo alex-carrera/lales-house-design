@@ -105,9 +105,12 @@ unos 6 × 3 m (18 m² brutos), sin ocupar la calle libre de 3 m. Se retiran su
 baño, los muebles de dormitorio y el Eternit de ese bloque. Una losa plana
 conceptual permite una altura libre aproximada de 2,60 m desde el piso actual.
 
-La cocina ocupa las dos fachadas con ventanas. El lavaplatos y la preparación
-se sitúan bajo los ventanales del frente y de la calle; la cocción con campana
-queda al fondo, sin bloquearlos. Incluye refrigerador, despensa y muebles bajos.
+La cocina conserva el ventanal hacia la calle y abre una ventana de unos
+1,60 × 1,20 m en el retorno opuesto, solo dentro de los 2 m de ampliación.
+Las dos ventanas de la fachada de la foto se retiran: esa pared queda ciega
+por la construcción adosada del tío. El lavaplatos pasa bajo el nuevo retorno,
+la preparación queda hacia la calle y la cocción con campana ocupa la pared
+ciega. Incluye refrigerador, despensa y muebles bajos.
 La lavandería se sitúa en el extremo derecho con lavadora y secadora lado a lado,
 mesón, alacena, lavadero y una separación con puerta corrediza.
 
@@ -116,3 +119,13 @@ Las ventanas y el paso se cortan en la geometría; los marcos quedan dentro
 del límite de propiedad. El plano de maniobra también incluye la ampliación.
 La losa, su apoyo, el desagüe, la impermeabilización y las redes son conceptuales
 y requieren dimensionamiento. El estado actual sigue independiente.
+
+## Construcciones adosadas
+
+Se representa al tío junto al cuarto original, con altura similar a ese bloque,
+y a la tía con dos pisos al otro lado del muro lateral del parqueadero.
+Son volúmenes de contexto: sus huellas y alturas no están medidas.
+La vista «Entorno · Construcciones adosadas» permite revisar su ubicación;
+«Mostrar construcciones adosadas» permite ocultarlas para inspeccionar la casa.
+No se abren ventanas hacia esas medianeras. La lavandería conserva iluminación
+artificial y su extracción hacia un espacio libre queda pendiente de definir.
