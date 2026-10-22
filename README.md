@@ -16,7 +16,7 @@ Dos maceteros de grafito y crema, de unos 38 y 27 cm de alto, incorporan vegetac
 
 ## Reclinable en sala y escritorio adicional arriba
 
-El reclinable existente de 1 × 0,85 m queda inmediatamente debajo del sillón diagonal hacia entrada/cocina, desplazado al centro y orientado hacia la TV. Se conserva el resto de los muebles y un recorrido representativo de 65 cm en sala y acceso a cocina. El paso desde la entrada requiere recoger la hoja de cocina: abierta estrecha esa circulación. El sillón diagonal se corrige hasta tocar el sillón pequeño del ventanal, conservando sus 45° y sin superponer tapizados. El reclinable se representa cerrado y ahora conserva una reserva frontal orientativa de 65 cm, libre de otros muebles; extensión y movimiento reales pendientes de medir.
+El reclinable existente de 1 × 0,85 m queda inmediatamente debajo del sillón diagonal hacia entrada/cocina, ajustado unos centímetros y orientado también a 45° hacia la TV. Se conserva el resto de los muebles y un recorrido representativo de 65 cm en sala y acceso a cocina. El paso desde la entrada requiere recoger la hoja de cocina: abierta estrecha esa circulación. El sillón diagonal se corrige hasta tocar el sillón pequeño del ventanal, conservando sus 45° y sin superponer tapizados. El reclinable se representa cerrado y ahora conserva una reserva frontal orientativa de 65 cm, libre de otros muebles; extensión y movimiento reales pendientes de medir.
 
 En la esquina de los dos ventanales de arriba se añade un escritorio rectangular de exactamente 1,20 × 0,60 m, con su lado largo paralelo a la ventana oeste que da a la calle. Tablero de madera a 75 cm del piso, estructura negra, cajón, monitor y silla. Se conservan el escritorio en L, cama, TV, clóset y ventanas. Se comprobaron cruces, espacio de rodillas y un retiro provisional de silla de 20 cm.
 
@@ -36,7 +36,7 @@ Comedor con orientación conservada y desplazado 25 cm a la derecha. Cocción y 
 - Cocina y comedor en el bloque de 6 × 3 m. Mesa existente de 1,20 × 0,70 m girada 90° respecto a la propuesta anterior, con sus cuatro sillas. Se conservan los mesones y las ventanas hacia calle y retorno libre; medianeras ciegas.
 - Sala con sofá de 190 × 90 cm y módulo de 145 × 90 cm en L, dos sillones de 90 × 90 cm y mesa de centro de 73 × 70 cm. Un sillón pequeño queda junto al ventanal y la L, orientado hacia la TV; el otro conserva su posición diagonal. La L se retrasa hacia el fondo. Se conservan el mueble de TV y el equipo de audio.
 - Mueble de cascos de 68 × 33 × 115 cm junto a entrada y puerta de cocina. El rincón posterior junto a gradas incorpora el minibar, dejando libre el acceso al baño.
-- Reclinable existente abajo, inmediatamente debajo del sillón diagonal hacia entrada/cocina y orientado hacia la TV; escritorio rectangular de 120 × 60 cm en su antigua esquina junto a la ventana de calle de arriba. Escritorio en L, cama y clóset L conservados.
+- Reclinable existente abajo, inmediatamente debajo del sillón diagonal hacia entrada/cocina y orientado a 45° hacia la TV; escritorio rectangular de 120 × 60 cm en su antigua esquina junto a la ventana de calle de arriba. Escritorio en L, cama y clóset L conservados.
 
 ## Escalera de giro redondo representativa
 
