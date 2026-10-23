@@ -1795,8 +1795,8 @@ html&gt;body{padding:0}&lt;/style&gt;
     #exterior-lales-actual .ex-probe { position:absolute; visibility:hidden; pointer-events:none; }
   &lt;/style&gt;
   &lt;div class=&quot;ex-title&quot;&gt;&lt;h3&gt;Casa Lales · Recorrido actual&lt;/h3&gt;&lt;span class=&quot;text-small&quot;&gt;Acabados según fotografías&lt;/span&gt;&lt;/div&gt;
-  &lt;div class=&quot;viz-controls&quot;&gt;
-    &lt;label class=&quot;form-label&quot;&gt;Estancia o vista
+  &lt;div class=&quot;viewer-controls&quot; aria-label=&quot;Controles del recorrido&quot;&gt;
+  &lt;label class=&quot;form-label&quot;&gt;Estancia o vista
       &lt;select class=&quot;form-select&quot; data-view-select aria-label=&quot;Elegir estancia o vista&quot;&gt;
         &lt;option value=&quot;terreno&quot;&gt;Exterior general&lt;/option&gt;
         &lt;option value=&quot;cuarto&quot;&gt;Cuarto blanco&lt;/option&gt;
@@ -1808,10 +1808,38 @@ html&gt;body{padding:0}&lt;/style&gt;
         &lt;option value=&quot;elevada&quot;&gt;Vista elevada&lt;/option&gt;
       &lt;/select&gt;
     &lt;/label&gt;
-    &lt;button type=&quot;button&quot; class=&quot;btn&quot; data-prev&gt;Anterior&lt;/button&gt;
-    &lt;button type=&quot;button&quot; class=&quot;btn&quot; data-next&gt;Siguiente&lt;/button&gt;
-    &lt;label class=&quot;form-label&quot;&gt;Giro &lt;span class=&quot;tabular-nums&quot; data-angle&gt;0°&lt;/span&gt;&lt;input class=&quot;form-range&quot; type=&quot;range&quot; min=&quot;-180&quot; max=&quot;180&quot; step=&quot;1&quot; value=&quot;0&quot; aria-label=&quot;Mirar alrededor, giro de 360 grados&quot;&gt;&lt;/label&gt;
-  &lt;/div&gt;
+  &lt;div class=&quot;view-actions&quot;&gt;&lt;button type=&quot;button&quot; class=&quot;btn&quot; data-prev aria-label=&quot;Vista anterior&quot;&gt;←&lt;/button&gt;&lt;button type=&quot;button&quot; class=&quot;btn&quot; data-next aria-label=&quot;Vista siguiente&quot;&gt;→&lt;/button&gt;&lt;/div&gt;
+  &lt;label class=&quot;form-label angle-control&quot;&gt;Giro &lt;span class=&quot;tabular-nums&quot; data-angle&gt;0°&lt;/span&gt;&lt;input class=&quot;form-range&quot; type=&quot;range&quot; min=&quot;-180&quot; max=&quot;180&quot; step=&quot;1&quot; value=&quot;0&quot; aria-label=&quot;Mirar alrededor, giro de 360 grados&quot;&gt;&lt;/label&gt;
+  &lt;details class=&quot;viewer-options&quot;&gt;&lt;summary&gt;Opciones&lt;/summary&gt;&lt;div class=&quot;options-content&quot;&gt;&lt;label class=&quot;roof-toggle&quot;&gt;&lt;input type=&quot;checkbox&quot; data-show-roofs checked&gt;Mostrar cubiertas&lt;/label&gt;&lt;/div&gt;&lt;/details&gt;
+&lt;/div&gt;
+&lt;style&gt;
+#exterior-lales-actual{color:#2e3033;font-family:-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,sans-serif}
+#exterior-lales-actual .viewer-controls{display:grid;grid-template-columns:minmax(260px,1fr) auto minmax(160px,.5fr) auto;gap:14px;align-items:end;flex:none;padding:12px 14px;background:#f5f4f1;border:1px solid #dedcd6;border-radius:8px;margin-bottom:8px;position:relative;z-index:2}
+#exterior-lales-actual .viewer-controls .form-label{margin:0;min-width:0;font-size:11px;line-height:1.3;color:#626361;display:flex;flex-direction:column;gap:5px}
+#exterior-lales-actual .viewer-controls select{font:inherit;font-size:12px;height:36px;width:100%;border:1px solid #d5d3cd;border-radius:5px;background:white;padding:0 30px 0 10px;color:#292c2e}
+#exterior-lales-actual .viewer-controls .angle-control{display:block}
+#exterior-lales-actual .viewer-controls .angle-control input[type=range]{display:block;height:36px;margin-top:5px}
+#exterior-lales-actual .view-actions{display:flex;gap:5px}
+#exterior-lales-actual .view-actions button{height:36px;width:36px;padding:0;border:1px solid #d5d3cd;border-radius:5px;background:white}
+#exterior-lales-actual .viewer-controls input[type=range]{width:100%;height:24px;accent-color:#78654d;margin:0;padding:0}
+#exterior-lales-actual .viewer-options{position:relative;font-size:12px;align-self:end}
+#exterior-lales-actual .viewer-options summary{cursor:pointer;list-style:none;border:1px solid #d5d3cd;background:white;border-radius:5px;padding:8px 12px;line-height:18px;min-height:36px}
+#exterior-lales-actual .options-content{position:absolute;right:0;top:44px;background:#fff;border:1px solid #dedcd6;box-shadow:0 12px 30px #28231c22;border-radius:8px;width:280px;max-width:calc(100vw - 40px);padding:16px;display:flex;flex-direction:column;gap:12px}
+#exterior-lales-actual .roof-toggle{display:flex;gap:8px;align-items:center;font-size:12px;cursor:pointer;margin:0}
+#exterior-lales-actual .roof-toggle input{width:17px;height:17px;accent-color:#234f42}
+#exterior-lales-actual .ex-footer{padding:8px 2px;font-size:10px;color:#777772}
+#exterior-lales-actual canvas{border-radius:6px;min-height:300px}
+@media(max-width:850px){
+ #exterior-lales-actual .viewer-controls{grid-template-columns:auto minmax(0,1fr) auto;gap:8px;padding:9px}
+ #exterior-lales-actual .viewer-controls&gt;.form-label:first-child{grid-column:1/-1;grid-row:1}
+ #exterior-lales-actual .view-actions{grid-column:1;grid-row:2;gap:3px}
+ #exterior-lales-actual .view-actions button{width:30px}
+ #exterior-lales-actual .viewer-controls .angle-control{grid-column:2;grid-row:2;display:flex;flex-direction:row;align-items:center;gap:8px}
+ #exterior-lales-actual .viewer-controls .angle-control input{margin:0;min-width:0;flex:1}
+ #exterior-lales-actual .viewer-options{grid-column:3;grid-row:2}
+ #exterior-lales-actual .viewer-controls select{font-size:11px}
+}
+&lt;/style&gt;
   &lt;canvas role=&quot;img&quot; aria-label=&quot;Casa, paso adoquinado y terreno lateral de 6 por 11 metros, representado sin lona. Paso nominal de 3 metros y franja de 2 junto a casa; al fondo quedan 2 metros de paso. Incluye cuarto blanco con baño y bajada provisional de 15 cm desde sala, con vistas interiores y sin techo. Sala y comedor con divisiones aproximadas y altura de 2 metros; cuarto de 2,20 metros. Gradas al segundo piso a lo ancho del fondo, con medidas provisionales y sentido de subida corregido de derecha a izquierda. Cocina conectada al comedor y planta alta con llegada de gradas despejada y acceso al balcón/terraza y al baño.&quot;&gt;Exterior aproximado de la casa, cocina, baño y terraza.&lt;/canvas&gt;
   &lt;div class=&quot;ex-footer text-small&quot;&gt;&lt;span data-caption&gt;Divisiones y muebles aproximados&lt;/span&gt;&lt;span data-height&gt;Sala/comedor: 2 m · Cuarto: 2,20 m&lt;/span&gt;&lt;/div&gt;
   &lt;div class=&quot;sr-only&quot; aria-live=&quot;polite&quot; data-status&gt;&lt;/div&gt;
@@ -2085,10 +2113,10 @@ function crearMotorMateriales(gl, triangles, math) {
   (()=&gt;{
     const root=document.getElementById(&#x27;exterior-lales-actual&#x27;),canvas=root.querySelector(&#x27;canvas&#x27;);
     const model=JSON.parse(root.querySelector(&#x27;[data-house]&#x27;).textContent);
-    const slider=root.querySelector(&#x27;input&#x27;),probe=root.querySelector(&#x27;.ex-probe&#x27;),status=root.querySelector(&#x27;[data-status]&#x27;),picker=root.querySelector(&#x27;[data-view-select]&#x27;);
+    const slider=root.querySelector(&#x27;input[type=range]&#x27;),probe=root.querySelector(&#x27;.ex-probe&#x27;),status=root.querySelector(&#x27;[data-status]&#x27;),picker=root.querySelector(&#x27;[data-view-select]&#x27;);
     const views=Array.from(picker.options,o=&gt;o.value);
-    let state={giro:0,vista:&#x27;planta_alta&#x27;,encuadre:5},drag=null;
-    function apply(s){if(!s||s.encuadre!==5)return;if(views.includes(s.vista)){state.vista=s.vista;if(Number.isFinite(s.giro))state.giro=Math.max(-180,Math.min(180,s.giro));}}
+    let state={giro:0,vista:&#x27;planta_alta&#x27;,encuadre:5,cubiertas:true},drag=null;
+    function apply(s){if(typeof s?.cubiertas===&#x27;boolean&#x27;)state.cubiertas=s.cubiertas;if(!s||s.encuadre!==5)return;if(views.includes(s.vista)){state.vista=s.vista;if(Number.isFinite(s.giro))state.giro=Math.max(-180,Math.min(180,s.giro));}}
     function applyHost(s){apply(s?.modelContent?.exteriorActual??s?.exteriorActual);}
     applyHost(window.openai?.widgetState);
     function save(){const p=window.openai?.setWidgetState?.({modelContent:{exteriorActual:{...state,estado:&#x27;Recorrido actual: cocina conectada al comedor, planta alta con llegada despejada y acceso libre a terraza/baño, gradas suben de derecha a izquierda al fondo. Medidas aproximadas.&#x27;}},privateContent:null});p?.catch(()=&gt;{});}
@@ -2124,7 +2152,7 @@ function crearMotorMateriales(gl, triangles, math) {
       }
       const forward=norm(sub(target,camera)),right=norm(cross(forward,[0,0,1])),up=cross(right,forward);
       const project=p=&gt;{const a=sub(p,camera);return [dot(a,right),dot(a,up),dot(a,forward)];};
-      const visible=roomPlan?triangles.filter(t=&gt;!/^Techo|^Cubierta|^Nervio|^CierreTecho|^Cielo|^JuntasCielo|^Luz|^Luminaria/.test(t.name||&#x27;&#x27;)&amp;&amp;(upperPlan||!/^EntrepisoReferencia|^LosaTerraza/.test(t.name||&#x27;&#x27;))&amp;&amp;t.p.every(p=&gt;p[0]&gt;=-3&amp;&amp;p[0]&lt;=4&amp;&amp;p[1]&gt;=(upperPlan?3:0)&amp;&amp;p[1]&lt;=11&amp;&amp;(upperPlan?p[2]&gt;=2.284&amp;&amp;p[2]&lt;4.61:p[2]&lt;2.11||(t.name||&#x27;&#x27;).startsWith(&#x27;GradasActuales&#x27;)))):triangles;
+      const visible=roomPlan?triangles.filter(t=&gt;!/^Techo|^Cubierta|^Nervio|^CierreTecho|^Cielo|^JuntasCielo|^Luz|^Luminaria/.test(t.name||&#x27;&#x27;)&amp;&amp;(upperPlan||!/^EntrepisoReferencia|^LosaTerraza/.test(t.name||&#x27;&#x27;))&amp;&amp;t.p.every(p=&gt;p[0]&gt;=-3&amp;&amp;p[0]&lt;=4&amp;&amp;p[1]&gt;=(upperPlan?3:0)&amp;&amp;p[1]&lt;=11&amp;&amp;(upperPlan?p[2]&gt;=2.284&amp;&amp;p[2]&lt;4.61:p[2]&lt;2.11||(t.name||&#x27;&#x27;).startsWith(&#x27;GradasActuales&#x27;)))):triangles.filter(t=&gt;state.cubiertas||!/^Techo|^Cubierta|^Nervio|^CierreTecho|^Cielo|^JuntasCielo|^Luz|^Luminaria/.test(t.name||&#x27;&#x27;));
       const scene=visible.map(t=&gt;({...t,view:t.p.map(project)}));
       let scale,cx,cy;
       if(inside){const fov=preset.fov_vertical_grados??88;scale=h/(2*Math.tan(fov*Math.PI/360));cx=w/2;cy=h/2;}
@@ -2143,14 +2171,14 @@ function crearMotorMateriales(gl, triangles, math) {
         const near=.08,far=100;positions.push((cx/w*2-1)*p[2]+p[0]*scale/w*2,(1-cy/h*2)*p[2]+p[1]*scale/h*2,(far+near)/(far-near)*p[2]-2*far*near/(far-near),p[2]);colors.push(...rgb);
       }}
       if(gl){
-        motor.render(scene,positions,palette,camera,roomPlan?state.vista:&#x27;completa&#x27;,canvas.width,canvas.height);
+        motor.render(scene,positions,palette,camera,(roomPlan?state.vista:&#x27;completa&#x27;)+(state.cubiertas?&#x27;_cubierto&#x27;:&#x27;_abierto&#x27;),canvas.width,canvas.height);
       }else{
         ctx.setTransform(dpr,0,0,dpr,0,0);ctx.clearRect(0,0,w,h);scene.sort((a,b)=&gt;b.view.reduce((s,p)=&gt;s+p[2],0)-a.view.reduce((s,p)=&gt;s+p[2],0));
         for(const t of scene){if(t.view.some(p=&gt;p[2]&lt;=.08))continue;const rgb=palette[t.mat].map(v=&gt;Math.round(Math.max(0,Math.min(1,v*t.light))*255));ctx.fillStyle=`rgb(${rgb.join(&#x27;,&#x27;)})`;ctx.beginPath();t.view.forEach((p,i)=&gt;ctx[i?&#x27;lineTo&#x27;:&#x27;moveTo&#x27;](cx+p[0]/p[2]*scale,cy-p[1]/p[2]*scale));ctx.closePath();ctx.fill();}
       }
       canvas.dataset.renderer=gl?&#x27;webgl-materiales-sombras&#x27;:&#x27;2d&#x27;;canvas.dataset.triangles=triangles.length;
     }
-    function update(){slider.value=state.giro;picker.value=state.vista;root.querySelector(&#x27;[data-angle]&#x27;).textContent=`${Math.round(state.giro)}°`;const label=picker.selectedOptions[0].textContent;status.textContent=`${label}, giro ${Math.round(state.giro)} grados.`;const captions={cuarto:&#x27;Bajada al cuarto: 15 cm provisionales&#x27;,sala_comedor:&#x27;Gradas al fondo: suben de derecha a izquierda&#x27;,cocina:&#x27;Cocina con acceso al patio y al comedor&#x27;,planta_alta:&#x27;Llegada libre · Acceso al balcón/terraza y al baño&#x27;,planta_baja:&#x27;Distribución actual y gradas al fondo&#x27;,planta_superior:&#x27;Llegada de gradas, espacio abierto, baño y terraza&#x27;};root.querySelector(&#x27;[data-caption]&#x27;).textContent=captions[state.vista]??&#x27;Terreno 6 × 11 m · Paso 3 m + franja 2 m&#x27;;root.querySelector(&#x27;[data-height]&#x27;).textContent=[&#x27;planta_alta&#x27;,&#x27;planta_superior&#x27;].includes(state.vista)?&#x27;Planta alta: 2,30 m · Nivel de piso provisional&#x27;:&#x27;Medidas aproximadas · Sala 2 m · Cuarto 2,20 m&#x27;;draw();}
+    function update(){root.querySelector(&#x27;[data-show-roofs]&#x27;).checked=state.cubiertas;slider.value=state.giro;picker.value=state.vista;root.querySelector(&#x27;[data-angle]&#x27;).textContent=`${Math.round(state.giro)}°`;const label=picker.selectedOptions[0].textContent;status.textContent=`${label}, giro ${Math.round(state.giro)} grados.`;const captions={cuarto:&#x27;Bajada al cuarto: 15 cm provisionales&#x27;,sala_comedor:&#x27;Gradas al fondo: suben de derecha a izquierda&#x27;,cocina:&#x27;Cocina con acceso al patio y al comedor&#x27;,planta_alta:&#x27;Llegada libre · Acceso al balcón/terraza y al baño&#x27;,planta_baja:&#x27;Distribución actual y gradas al fondo&#x27;,planta_superior:&#x27;Llegada de gradas, espacio abierto, baño y terraza&#x27;};root.querySelector(&#x27;[data-caption]&#x27;).textContent=captions[state.vista]??&#x27;Terreno 6 × 11 m · Paso 3 m + franja 2 m&#x27;;root.querySelector(&#x27;[data-height]&#x27;).textContent=[&#x27;planta_alta&#x27;,&#x27;planta_superior&#x27;].includes(state.vista)?&#x27;Planta alta: 2,30 m · Nivel de piso provisional&#x27;:&#x27;Medidas aproximadas · Sala 2 m · Cuarto 2,20 m&#x27;;draw();}
     slider.addEventListener(&#x27;input&#x27;,()=&gt;{state.giro=Number(slider.value);update();});slider.addEventListener(&#x27;change&#x27;,save);
     function selectView(value){state.vista=value;state.giro=0;update();save();}
     picker.addEventListener(&#x27;change&#x27;,()=&gt;selectView(picker.value));
@@ -2162,6 +2190,7 @@ function crearMotorMateriales(gl, triangles, math) {
     new ResizeObserver(draw).observe(canvas);new MutationObserver(draw).observe(document.documentElement,{attributes:true,attributeFilter:[&#x27;class&#x27;,&#x27;style&#x27;,&#x27;data-theme&#x27;]});
     matchMedia(&#x27;(prefers-color-scheme: dark)&#x27;).addEventListener(&#x27;change&#x27;,draw);
     window.addEventListener(&#x27;openai:set_globals&#x27;,e=&gt;{applyHost(e.detail?.globals?.widgetState);update();});
+    root.querySelector(&#x27;[data-show-roofs]&#x27;).addEventListener(&#x27;change&#x27;,e=&gt;{state.cubiertas=e.target.checked;update();save();});
     update();
   })();
   &lt;/script&gt;

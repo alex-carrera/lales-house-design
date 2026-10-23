@@ -123,3 +123,7 @@ Porcelanato beige piedra de gran formato en cocina, comedor, sala, circulación 
 ## Paleta exterior única
 
 Casa, baño del asadero y bodega comparten [Tony Taupe SW 7038](https://www.sherwin-williams.com/sherwinwilliams/SW7038-tony-taupe) (`#b1a290`) en cuerpos, [Restful White SW 7563](https://www.sherwin-williams.com/sherwinwilliams/SW7563-restful-white) (`#eee8d7`) en molduras y [Cloak Gray SW 6278](https://www.sherwin-williams.com/sherwinwilliams/SW6278-cloak-gray) (`#605e63`) en acentos y cubiertas. Se retiran las combinaciones alternativas del visor. Colores digitales oficiales; comprobar muestras físicas con el acabado y la iluminación reales. La geometría exterior y los colores interiores permanecen.
+
+## Controles del estado actual
+
+El estado actual usa el mismo formato compacto del diseño futuro: selector de estancia, flechas de vista anterior y siguiente, giro y menú Opciones. La opción «Mostrar cubiertas» permite abrir la vista exterior sin alterar el modelo. Se conservan las ocho vistas, las cámaras, la geometría y los materiales del estado actual. El diseño futuro permanece idéntico.
