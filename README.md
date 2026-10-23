@@ -62,7 +62,7 @@ El lavabo con armario de espejo se adapta a 70 cm de ancho y se reubica en el tr
 
 ## Patio y exterior
 
-Patio aproximado de 6 × 11 m, con centro y parqueadero abiertos al cielo, cubierta parcial en L sobre servicios y asadero posterior, plaza de SUV y Husqvarna 401 de 2021. El cerramiento deja el paso nominal de 3 m. Las maniobras usan envolventes y radios supuestos: comprobar en sitio.
+Patio aproximado de 6 × 11 m, con centro y parqueadero del auto abiertos al cielo, moto bajo cubierta propia y cubierta parcial en L sobre servicios y asadero posterior, plaza de SUV y Husqvarna 401 de 2021. El cerramiento deja el paso nominal de 3 m. Las maniobras usan envolventes y radios supuestos: comprobar en sitio.
 
 Se conservan las dos paletas exteriores, la opción blanca y la simulación de Eternit pintado. Las paredes interiores permanecen claras; los acentos de madera se limitan a muebles y acabados del boceto. El estado actual no se modifica.
 
@@ -90,4 +90,8 @@ Superficie continua de unos 2,00 × 0,63 m incluyendo el fregadero existente, co
 
 ## Patio jardín y cubierta parcial
 
-La cubierta en L ocupa unos 20,7 m² de planta bruta sobre baño, bodega y asadero; unos 45,3 m² del patio quedan abiertos. Dos jardines en suelo suman 4,08 m² junto al muro izquierdo, con árbol pequeño, plantas bajas y trepadora sobre celosía. El parqueadero de 17,05 m² combina juntas verdes con franjas firmes para las ruedas; esa superficie es pavimento mixto, no jardín completo. Los accesos y la reserva de moto se conservan. Jardines y nuevos postes se comprueban contra 3301 posiciones de la maniobra supuesta. Secciones, voladizos, anclajes, canaletas, drenaje, especies y suelo vegetal por dimensionar y verificar en sitio.
+La cubierta en L ocupa unos 20,7 m² de planta bruta sobre baño, bodega y asadero. La moto añade una cubierta propia de 3,85 m²: 24,55 m² cubiertos en total y unos 41,45 m² del patio abiertos. Dos jardines en suelo suman 4,08 m² junto al muro izquierdo, con árbol pequeño, plantas bajas y trepadora sobre celosía. El parqueadero de 17,05 m² combina juntas verdes con franjas firmes para las ruedas; esa superficie es pavimento mixto, no jardín completo. Los accesos y la reserva de moto se conservan. Jardines y nuevos postes se comprueban contra 3301 posiciones de la maniobra supuesta. Secciones, voladizos, anclajes, canaletas, drenaje, especies y suelo vegetal por dimensionar y verificar en sitio.
+
+## Moto cubierta y servicios hasta el techo
+
+Cubierta propia de 2,75 × 1,40 m sobre la reserva completa de moto de 2,30 × 1,10 m, con postes fuera de la plaza y de los jardines. Se conserva abierto el centro y el parqueadero del auto. Baño y bodega prolongan muros y división interior hasta un cielo raso inclinado bajo la cubierta principal, eliminando la franja abierta superior y la antigua tapa plana. Luminarias elevadas hasta el nuevo cielo raso; puertas, ventanas y equipamiento conservados. Altura libre representativa de unos 3,50–3,58 m; cotas, muros, estructura, anclajes y drenajes por comprobar y dimensionar en sitio.
