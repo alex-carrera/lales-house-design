@@ -93,3 +93,9 @@ Superficie continua de unos 2,00 × 0,63 m incluyendo el fregadero existente, co
 Una sola cubierta continua en L comparte altura y pendiente sobre moto, baño, bodega y asadero. Ocupa unos 27,49 m² de planta bruta, dejando unos 38,51 m² abiertos. La moto gira 90° para quedar longitudinal al muro, con una reserva de 1,10 × 2,30 m. Los dos jardines del patio, su árbol y la celosía se retiran y el piso se restituye con adoquines. El diseño vegetal queda pendiente; se conservan las juntas verdes y las huellas firmes del parqueadero del auto y la jardinera de entrada.
 
 Baño y bodega conservan sus muros y división interior hasta el cielo raso inclinado; puertas, ventanas y equipamiento permanecen. La plaza de moto y los postes se comprueban contra 3301 posiciones de la maniobra supuesta del SUV. Cotas, muros, secciones, voladizos, anclajes, canaletas y drenajes requieren verificación y dimensionamiento en sitio.
+
+## Armario de dormitorio y escritorio ampliado
+
+Se sustituye la consola frente a cama por un armario aproximado de 3,10 m de largo, 61 cm de fondo y 2,18 m de alto, con ropero lateral de frentes correderos, cajones bajo TV y guardado alto. La TV existente de referencia de 55 pulgadas se alinea con el eje de la cama (y=7,13 m); conserva su tamaño. El mueble termina antes de la reserva de llegada de gradas y deja un paso mínimo representativo de unos 70 cm al pie de la cama.
+
+El escritorio rectangular junto al ventanal de calle se prolonga 45 cm hasta el muro frontal, pasando a unos 1,65 × 0,60 m, con apoyo frontal reubicado. Altura de trabajo de 75 cm; ventanas, equipo y silla conservados. El escritorio en L permanece. Medidas, herrajes y anclajes por definir en sitio.
