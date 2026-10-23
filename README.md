@@ -78,8 +78,12 @@ La exportación compacta la iluminación de las mallas con una paleta sin pérdi
 
 ## Baño y bodega de patio
 
-Bloque aproximado de 1,60 × 4,25 m en el lateral izquierdo del fondo: baño de 1,40 × 1,90 m libres, solo inodoro y lavabo, y bodega de 1,40 × 1,95 m con repisas. Dos accesos independientes de 80 cm hacia patio, altura libre de 2,40 m y ventanas altas hacia el patio cubierto. El asadero se traslada y compacta al fondo derecho, con parrilla, cocina de leña y fregadero conservados; penetraciones de cubierta acompañan las chimeneas. Se actualiza la planta y se comprueba el bloque y los componentes del asadero contra la trayectoria muestreada del SUV. Medidas, cimentaciones, redes sanitarias, extracción y separaciones térmicas pendientes de revisar en sitio.
+Bloque aproximado de 1,60 × 4,25 m en el lateral izquierdo del fondo: baño de 1,40 × 1,90 m libres, solo inodoro y lavabo, y bodega de 1,40 × 1,95 m con repisas. Dos accesos independientes de 80 cm hacia patio, altura libre de 2,40 m y ventanas altas hacia el patio cubierto. El asadero se traslada y compacta al fondo derecho, con parrilla y fregadero conservados. La cocina de leña lateral se sustituye por mesón continuo de apoyo y se retira su tubo, cerrando el paso secundario de cubierta. Se actualiza la planta y se comprueba el bloque y los componentes del asadero contra la trayectoria muestreada del SUV. Medidas, cimentaciones, redes sanitarias, extracción y separaciones térmicas pendientes de revisar en sitio.
 
 ## Ventanales de fachada y jardinera
 
 Los dos ventanales hacia el patio se centran en sus paños: el superior entre los extremos de la fachada y el inferior entre el marco de entrada y el extremo del muro. Desplazamiento de 17,5 cm, conservando tamaños y ajustando huecos, marcos y cortinas. Jardinera grafito bajo la ventana inferior, de 2,80 × 0,32 × 0,50 m, separada 8 cm de la fachada y con vegetación baja representativa. Acceso y trayectoria muestreada del SUV comprobados sin cruces. Medidas, dinteles, impermeabilización, drenaje y especies por definir en sitio.
+
+## Mesón de apoyo de parrilla
+
+Superficie continua de unos 2,00 × 0,63 m incluyendo el fregadero existente, con aproximadamente 1,01 m de zona seca a su izquierda para bandejas y utensilios. Conserva la altura anterior de 1,01 m sobre el pavimento, la cubeta, la grifería, la parrilla y su campana. Apoyos de ladrillo y acabado claro del mesón. La cubierta mantiene únicamente el paso de la chimenea principal. Geometría representativa; medidas, acabado y apoyos por comprobar en sitio.

@@ -1,5 +1,5 @@
-import {ProjectStore} from './data.js?v=f5a7a43d0016';
-import {CATEGORIES,AREAS,UNITS,money,cents,expenseData,materialData,totals,filterExpenses,csv,today} from './domain.js?v=f5a7a43d0016';
+import {ProjectStore} from './data.js?v=20e7d75d85b2';
+import {CATEGORIES,AREAS,UNITS,money,cents,expenseData,materialData,totals,filterExpenses,csv,today} from './domain.js?v=20e7d75d85b2';
 const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const store=new ProjectStore();let authResolved=false;let session=null,configured=false,loading=false,loadSerial=0,edit=null,deleting=null,toastTimer,remoteTimer;
@@ -90,7 +90,7 @@ renderAccount();
  const box=(x,y,w,h,fill,extra='')=>`<rect x="${X(x)}" y="${Y(y+h)}" width="${w*44}" height="${h*44}" fill="${fill}" ${extra}/>`;
  map.innerHTML=`<svg viewBox="0 0 620 755" role="img" aria-labelledby="parking-map-title parking-map-desc"><title id="parking-map-title">Planta del patio y maniobra del SUV</title><desc id="parking-map-desc">Baño y bodega en el lateral izquierdo del fondo, asadero reubicado a su derecha, auto delante y moto en el lateral. La calle conserva tres metros de ancho hasta el fondo; el baño social ocupa el bloque de abajo y el baño privado ampliado de arriba mantiene un metro en volado. La cocina ampliada ocupa la franja junto a la casa en los primeros tres metros, sin reducir la calle. El control permite ver el carro durante la entrada.</desc><defs><pattern id="patio-pavers" width="22" height="14" patternUnits="userSpaceOnUse"><rect width="22" height="14" fill="#e6e3d8"/><path d="M0 0H22V14H0Z M11 0V7 M0 7H22" fill="none" stroke="#d3d0c3" stroke-width=".7"/></pattern></defs>
  ${box(-11,0,6,11,'url(#patio-pavers)')}${box(-5,0,3,11,'#efeee7')}${box(-2,3,2,5,'#f8f6ee')}${box(-2,0,2,3,'#c7ccc4')}${box(-2,8,2,3,'#c7ccc4')}${box(-3,8,1,3,'#cbd9d4','fill-opacity=".45" stroke="#527468" stroke-width="1.3" stroke-dasharray="4 4"')}${box(0,0,1.8,11,'#c7ccc4')}
- ${box(-9.04,8.05,3.51,2.8,'#c7b28f','rx="5"')}${box(-8.86,10.22,1.24,.58,'#b2603f')}${box(-7.46,10.24,.58,.55,'#303b39')}${box(-6.75,10.20,1.19,.63,'#e4ded3')}
+ ${box(-9.04,8.05,3.51,2.8,'#c7b28f','rx="5"')}${box(-8.86,10.22,1.24,.58,'#b2603f')}${box(-7.555,10.1982,1.998,.6318,'#e4ded3')}${box(-6.547,10.315,.522,.398,'#7e8d89')}
  ${box(-.40,4.825,.32,2.8,'#527468','rx="3"')}
  ${box(-10.8,6.55,1.6,2.1,'#dce5df','stroke="#63766c" stroke-width="2"')}${box(-10.8,8.65,1.6,2.15,'#d7c8b3','stroke="#827057" stroke-width="2"')}
  <g fill="#34473e" font-family="system-ui,sans-serif" text-anchor="middle"><text x="84" y="190" font-size="12">Baño</text><text x="84" y="206" font-size="10">1,40 × 1,90</text><text x="84" y="94" font-size="12">Bodega</text><text x="84" y="110" font-size="10">1,40 × 1,95</text></g>
