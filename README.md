@@ -131,3 +131,13 @@ El estado actual usa el mismo formato compacto del diseño futuro: selector de e
 ## Pisos y ventana del patio
 
 El asadero y el baño del patio usan el mismo porcelanato beige de gran formato de la referencia interior. La bodega conserva solo el adoquín existente del patio: se retira su capa de loseta. Se amplía la ventana del baño de 60 × 45 cm a unos 75 × 60 cm, con vidrio de privacidad y marcos ajustados al hueco. La ventana alta de bodega permanece. Puertas, muebles, parrilla, mesón, cubierta y casa se conservan. Dimensiones representativas, pendientes de medir en sitio.
+
+## Iluminación interior por ambientes
+
+Se combinan luz general, de trabajo y de apoyo, siguiendo el criterio de [iluminar habitaciones y tareas por separado](https://www.yourhome.gov.au/energy/lighting). La sala conserva siete focos al ras y se mantiene la luz de entrada; TV y minibar tienen apoyo cálido. La cocina incorpora cuatro puntos repartidos y LED bajo altos; el comedor tiene un colgante lineal centrado dentro de la proyección de la mesa, con unos 84 cm sobre el tablero.
+
+El dormitorio incorpora seis focos incluyendo llegada, dos luces de lectura y apoyo cálido de cabecero y TV. Ambos escritorios tienen luz de trabajo: bajo los altos del escritorio L y una lámpara en el del ventanal. Se conserva el guardado iluminado. Los baños combinan luz general, luz frontal del espejo y apoyo cálido, conforme al criterio de [varias fuentes y control de reflejos de ERCO](https://www.erco.com/en/knowledge/fundamentals/the-best-light-for-living-and-working-learning-path-2/bathroom-and-refreshment/). Lavandería y bodega tienen luz de trabajo neutra. Las doce huellas de las gradas incorporan LED inferior, sin ocupar la pisada.
+
+Temperaturas propuestas: 3000 K en estar, comedor y dormitorio; 4000 K en cocina, escritorios, lavandería y servicios; 3500 K en baño principal. Se prevén encendidos separados de general, trabajo y ambiente, regulación en descanso y control de gradas desde ambos niveles. Potencias, flujo, ópticas, protección para zonas húmedas, circuitos y dispositivos se dimensionarán con las medidas y luminarias reales.
+
+En Opciones se añade «Ver iluminación nocturna». Es una visualización orientativa de fuentes locales, sin cálculo fotométrico ni certificación de niveles de lux. Se comprobaron las luminarias contra muebles, ventanas, cielos y peldaños. Distribución, acabados y estado actual se conservan.
