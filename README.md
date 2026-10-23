@@ -50,35 +50,35 @@ Se comprobaron sólidos, cruces de muebles, barrido de entrada, recorrido repres
 
 ## Baño social y lavandería
 
-Lavadora y secadora juntas, sin apilar, en el lateral del baño social aproximado de 2 × 3 m. Mesón y laterales de madera, repisas bajo y sobre la ventana alta, armario superior lateral y guardado bajo y alto al otro lado. El lavabo conserva su posición con mueble de madera y espejo enmarcado. Las tres ventanas altas quedan despejadas; inodoro y acceso conservados. No se añadió ducha.
+Lavadora y secadora juntas, sin apilar, en el lateral del baño social aproximado de 2 × 3 m. Mesón y laterales de madera, repisas bajo y sobre la ventana alta, armario superior lateral y guardado bajo y alto al otro lado. El lavabo conserva su posición con mueble de madera, espejo redondo retroiluminado y grifería negra. Las tres ventanas altas quedan despejadas; inodoro y acceso conservados. No se añadió ducha.
 
 Los equipos del boceto suponen **60 × 66 × 86 cm** cada uno. Se comprobaron cruces con equipos, ventanas y circulaciones, conservando unos 95 cm frente a las máquinas. Altura libre provisional de 2 m; los muebles se adaptan a esa altura. Faltan medidas reales, acometidas y ventilación específica de la secadora.
 
 ## Baño principal
 
-Inspiración cálida de las referencias del propietario: mueble de madera, espejo con iluminación, grifería negra, mampara transparente, cielo con acabado de madera y piso con representación tipo madera. Se mantiene la tina, el inodoro y la ducha independiente. Paredes claras y ventanas conservadas.
+Acabados de la referencia del propietario: revestimiento gris, muebles de madera cálida, espejo redondo retroiluminado, grifería negra y mampara transparente. Cielo blanco y porcelanato beige en el piso. Se mantienen la tina, el inodoro, la ducha independiente, el guardado alto y las ventanas.
 
-El lavabo con armario de espejo se adapta a 70 cm de ancho y se reubica en el tramo interior junto al acceso, para liberar las ventanas frontales. El piso tipo madera es una representación visual; revestimiento apto para zona húmeda, impermeabilización y detalles constructivos por definir.
+El armario de espejo redondo conserva guardado interior y se adapta al tramo junto al acceso, dejando las ventanas despejadas. Revestimientos, impermeabilización y detalles constructivos por definir.
 
 ## Patio y exterior
 
 Patio aproximado de 6 × 11 m, con centro y parqueadero del auto abiertos al cielo, moto longitudinal bajo una cubierta unificada en L con servicios y asadero posterior, plaza de SUV y Husqvarna 401 de 2021. El cerramiento deja el paso nominal de 3 m. Las maniobras usan envolventes y radios supuestos: comprobar en sitio.
 
-Se conservan las dos paletas exteriores, la opción blanca y la simulación de Eternit pintado. Las paredes interiores de sala, entrada, gradas y dormitorio usan la paleta de grises cálidos de referencia; la cocina tiene una paleta propia gris piedra y grafito. Los baños conservan sus acabados. El estado actual no se modifica.
+La casa, el baño del asadero y la bodega comparten una única paleta exterior: Tony Taupe, Restful White y Cloak Gray. Las paredes interiores de sala, entrada, gradas y dormitorio usan los grises cálidos de referencia; la cocina tiene una paleta propia gris piedra y grafito. Los baños usan gris, madera y negro, con piso beige. El estado actual no se modifica.
 
 ## Web y acceso privado
 
-El recorrido público mantiene 18 vistas. Materiales y presupuesto/gastos solo aparecen tras verificar una sesión del propietario autorizado. El acceso usa Supabase con RLS y `lales_is_owner`; tener una sesión de cualquier usuario no basta. Registro de nuevas cuentas deshabilitado. Las claves del cliente son públicas, sin privilegios administrativos.
+El recorrido público tiene 19 vistas, incluida una vista interior del baño del patio. Materiales y presupuesto/gastos solo aparecen tras verificar una sesión del propietario autorizado. El acceso usa Supabase con RLS y `lales_is_owner`; tener una sesión de cualquier usuario no basta. Registro de nuevas cuentas deshabilitado. Las claves del cliente son públicas, sin privilegios administrativos.
 
 No se han contratado servicios de pago. Supabase usa el plan Free, sujeto a sus límites y posibles pausas por inactividad. Los planos privados continúan pendientes; esta actualización no cambia autenticación ni base de datos.
 
 GitHub Pages publica la raíz de `main`. Se necesita WebGL para el visor. La publicación contiene solo HTML, CSS, JavaScript, marca y este README; no incluye fotografías originales, modelos CAD ni estudios locales. `recorrido.html` conserva el estado actual y `propuesta.html` presenta el diseño futuro.
 
-La exportación compacta la iluminación de las mallas con una paleta sin pérdida: conserva todos los valores y reduce el tamaño del visor sin añadir vistas.
+La exportación compacta coordenadas, topología e iluminación sin pérdida de sus valores, para reducir el tamaño del visor.
 
 ## Baño y bodega de patio
 
-Bloque aproximado de 1,60 × 4,25 m en el lateral izquierdo del fondo: baño de 1,40 × 1,90 m libres, solo inodoro y lavabo, y bodega de 1,40 × 1,95 m con repisas. Dos accesos independientes de 80 cm hacia patio, altura libre de 2,40 m y ventanas altas hacia el patio cubierto. El asadero se traslada y compacta al fondo derecho, con parrilla y fregadero conservados. La cocina de leña lateral se sustituye por mesón continuo de apoyo y se retira su tubo, cerrando el paso secundario de cubierta. Se actualiza la planta y se comprueba el bloque y los componentes del asadero contra la trayectoria muestreada del SUV. Medidas, cimentaciones, redes sanitarias, extracción y separaciones térmicas pendientes de revisar en sitio.
+Bloque aproximado de 1,60 × 4,25 m en el lateral izquierdo del fondo: baño de 1,40 × 1,90 m libres, solo inodoro y lavabo, y bodega de 1,40 × 1,95 m con repisas. Dos accesos independientes de 80 cm hacia patio, muros y división hasta el cielo raso inclinado y ventanas altas hacia el patio cubierto. El asadero se traslada y compacta al fondo derecho, con parrilla y fregadero conservados. La cocina de leña lateral se sustituye por mesón continuo de apoyo y se retira su tubo, cerrando el paso secundario de cubierta. Se actualiza la planta y se comprueba el bloque y los componentes del asadero contra la trayectoria muestreada del SUV. Medidas, cimentaciones, redes sanitarias, extracción y separaciones térmicas pendientes de revisar en sitio.
 
 ## Ventanales de fachada y jardinera
 
@@ -102,12 +102,24 @@ El escritorio rectangular junto al ventanal de calle se prolonga 45 cm hasta el 
 
 ## Paleta de paredes interiores
 
-Se toman cuatro aproximaciones digitales de la imagen de referencia: Pearl mouse grey (`#8b7b6e`) como base, Brown grey (`#5a4d45`) en la pared del cabecero, Quartz grey (`#685f5a`) en los paños de TV y Near-neutral dark grey (`#2e2828`) en los fondos del minibar y las gradas. Los cuatro tonos se muestran en Opciones y permanecen fijos al cambiar la paleta exterior.
+Se toman cuatro aproximaciones digitales de la imagen de referencia: Pearl mouse grey (`#8b7b6e`) como base, Brown grey (`#5a4d45`) en la pared del cabecero, Quartz grey (`#685f5a`) en los paños de TV y Near-neutral dark grey (`#2e2828`) en los fondos del minibar y las gradas. Los cuatro tonos se muestran en Opciones y son independientes de la paleta exterior única.
 
-La paleta de paredes se limita a sala, entrada, gradas y dormitorio con sus zonas de escritorios. La cocina tiene una paleta propia; baños y lavandería conservan sus materiales. Distribución, fachada y patio permanecen. Los colores son aproximaciones de pantalla, sin equivalencia comercial garantizada; verificar muestras físicas con la iluminación real.
+La paleta de paredes se limita a sala, entrada, gradas y dormitorio con sus zonas de escritorios. La cocina tiene una paleta propia; baños y lavandería usan la referencia de gris, madera y negro. La distribución permanece. Los colores son aproximaciones de pantalla, sin equivalencia comercial garantizada; verificar muestras físicas con la iluminación real.
 
 ## Cocina gris piedra y grafito
 
 Muebles bajos y columnas en gris piedra mate, altos interiores grafito y fila superior clara hasta el cielo raso. Se modelan frentes lisos, cuatro bancos de tres cajones, puertas bajo las ventanas, perfiles de agarre discretos y tiradores negros largos en la despensa. El conjunto superior llega a la cota +2,445 m del modelo y mantiene el conducto y la campana existentes. Se rematan también las columnas de despensa y refrigerador.
 
-Mesones en piedra clara cálida, salpicadero oscuro en pared ciega y solo en la franja inferior de las dos ventanas, piso claro de formato representativo de 60 cm y pintura cálida clara de cocina. Lavaplatos y grifería se representan en negro mate. Se conserva la iluminación cálida bajo altos y las posiciones de ventanas, lavaplatos, cocción, refrigerador y comedor. No se añaden los hornos de la referencia. Geometría nueva comprobada contra ventanas, equipos, comedor y puerta; sala, planta alta, baños y patio conservados. Medidas de carpintería, herrajes, resistencia térmica del salpicadero, distancias y ventilación según equipo real por confirmar.
+Mesones en piedra clara cálida, salpicadero oscuro en pared ciega y solo en la franja inferior de las dos ventanas, porcelanato beige de formato representativo de 1,20 × 0,60 m y pintura cálida clara de cocina. Lavaplatos y grifería se representan en negro mate. Se conserva la iluminación cálida bajo altos y las posiciones de ventanas, lavaplatos, cocción, refrigerador y comedor. No se añaden los hornos de la referencia. Geometría nueva comprobada contra ventanas, equipos, comedor y puerta; sala, planta alta, baños y patio conservados. Medidas de carpintería, herrajes, resistencia térmica del salpicadero, distancias y ventilación según equipo real por confirmar.
+
+## Baños: gris, madera y espejos redondos
+
+Se revisaron por separado el baño principal, el baño social con lavandería y el baño del patio. Los tres combinan revestimiento gris, superficies blancas, muebles de madera cálida, accesorios negros, espejos redondos y luz cálida. Se conservan sanitarios, ventanas, almacenaje y accesos; la lavandería mantiene los dos equipos sin apilar. El baño del patio conserva únicamente inodoro y lavabo.
+
+## Pisos de referencia
+
+Porcelanato beige piedra de gran formato en cocina, comedor, sala, circulación y baños, con veta sutil y junta fina. El formato de 1,20 × 0,60 m es representativo; el producto y su formato real quedan por elegir. El dormitorio usa piso flotante oscuro tipo roble ahumado, conservando las tablas y el hueco de las gradas. Se verificaron niveles, límites, muebles y pasos existentes.
+
+## Paleta exterior única
+
+Casa, baño del asadero y bodega comparten [Tony Taupe SW 7038](https://www.sherwin-williams.com/sherwinwilliams/SW7038-tony-taupe) (`#b1a290`) en cuerpos, [Restful White SW 7563](https://www.sherwin-williams.com/sherwinwilliams/SW7563-restful-white) (`#eee8d7`) en molduras y [Cloak Gray SW 6278](https://www.sherwin-williams.com/sherwinwilliams/SW6278-cloak-gray) (`#605e63`) en acentos y cubiertas. Se retiran las combinaciones alternativas del visor. Colores digitales oficiales; comprobar muestras físicas con el acabado y la iluminación reales. La geometría exterior y los colores interiores permanecen.
