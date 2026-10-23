@@ -149,3 +149,7 @@ La entrada refuerza los tres focos del remate, añade un aplique al otro lado de
 El patio aprovecha los cuatro puntos de cubierta y suma apliques orientados hacia abajo en el frente, muro lateral y puertas del baño y bodega. Se refuerzan auto, moto y circulación; una barra de trabajo ilumina el mesón del asadero, separada de campana y chimenea. Ambiente cálido de referencia de 3000 K y luz neutra cálida de trabajo. Se proponen encendidos por zonas y sensor de entrada con mando manual. Equipos para intemperie, flujo, ópticas y cableado por dimensionar.
 
 No se añaden postes al recorrido. Se comprobaron nuevas piezas contra el modelo y la trayectoria supuesta del SUV, manteniendo arquitectura, pavimentos, ventanas, muebles e iluminación interior. La opción «Ver iluminación nocturna» permite revisar el exterior; conserva el carácter orientativo de la representación.
+
+## Lateral de baños y paso bajo el volado
+
+Un aplique cálido entre las ventanas bajas y dos plafones compactos bajo la losa iluminan el rincón y su paso lateral. Las vistas de entrada, fachada y exterior general incluyen estas fuentes al activar la iluminación nocturna. Se conservan arquitectura, ventanas, mobiliario y luces anteriores; comprobación de sólidos y maniobra sin cruces nuevos.
