@@ -141,3 +141,11 @@ El dormitorio incorpora seis focos incluyendo llegada, dos luces de lectura y ap
 Temperaturas propuestas: 3000 K en estar, comedor y dormitorio; 4000 K en cocina, escritorios, lavandería y servicios; 3500 K en baño principal. Se prevén encendidos separados de general, trabajo y ambiente, regulación en descanso y control de gradas desde ambos niveles. Potencias, flujo, ópticas, protección para zonas húmedas, circuitos y dispositivos se dimensionarán con las medidas y luminarias reales.
 
 En Opciones se añade «Ver iluminación nocturna». Es una visualización orientativa de fuentes locales, sin cálculo fotométrico ni certificación de niveles de lux. Se comprobaron las luminarias contra muebles, ventanas, cielos y peldaños. Distribución, acabados y estado actual se conservan.
+
+## Entrada y patio iluminados
+
+La entrada refuerza los tres focos del remate, añade un aplique al otro lado de la puerta y dos puntos compactos sobre el ventanal para iluminar la aproximación. Una tira baja en el frente vertical de la grada marca el desnivel sin ocupar la pisada.
+
+El patio aprovecha los cuatro puntos de cubierta y suma apliques orientados hacia abajo en el frente, muro lateral y puertas del baño y bodega. Se refuerzan auto, moto y circulación; una barra de trabajo ilumina el mesón del asadero, separada de campana y chimenea. Ambiente cálido de referencia de 3000 K y luz neutra cálida de trabajo. Se proponen encendidos por zonas y sensor de entrada con mando manual. Equipos para intemperie, flujo, ópticas y cableado por dimensionar.
+
+No se añaden postes al recorrido. Se comprobaron nuevas piezas contra el modelo y la trayectoria supuesta del SUV, manteniendo arquitectura, pavimentos, ventanas, muebles e iluminación interior. La opción «Ver iluminación nocturna» permite revisar el exterior; conserva el carácter orientativo de la representación.
