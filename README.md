@@ -64,7 +64,7 @@ El lavabo con armario de espejo se adapta a 70 cm de ancho y se reubica en el tr
 
 Patio aproximado de 6 × 11 m, con centro y parqueadero del auto abiertos al cielo, moto longitudinal bajo una cubierta unificada en L con servicios y asadero posterior, plaza de SUV y Husqvarna 401 de 2021. El cerramiento deja el paso nominal de 3 m. Las maniobras usan envolventes y radios supuestos: comprobar en sitio.
 
-Se conservan las dos paletas exteriores, la opción blanca y la simulación de Eternit pintado. Las paredes interiores permanecen claras; los acentos de madera se limitan a muebles y acabados del boceto. El estado actual no se modifica.
+Se conservan las dos paletas exteriores, la opción blanca y la simulación de Eternit pintado. Las paredes interiores de sala, entrada, gradas y dormitorio usan la paleta de grises cálidos de referencia; cocina, comedor integrado en cocina y baños conservan sus acabados. El estado actual no se modifica.
 
 ## Web y acceso privado
 
@@ -99,3 +99,9 @@ Baño y bodega conservan sus muros y división interior hasta el cielo raso incl
 Se sustituye la consola frente a cama por un armario aproximado de 3,10 m de largo, 61 cm de fondo y 2,18 m de alto, con ropero lateral de frentes correderos, cajones bajo TV y guardado alto. La TV existente de referencia de 55 pulgadas se alinea con el eje de la cama (y=7,13 m); conserva su tamaño. El mueble termina antes de la reserva de llegada de gradas y deja un paso mínimo representativo de unos 70 cm al pie de la cama.
 
 El escritorio rectangular junto al ventanal de calle se prolonga 45 cm hasta el muro frontal, pasando a unos 1,65 × 0,60 m, con apoyo frontal reubicado. Altura de trabajo de 75 cm; ventanas, equipo y silla conservados. El escritorio en L permanece. Medidas, herrajes y anclajes por definir en sitio.
+
+## Paleta de paredes interiores
+
+Se toman cuatro aproximaciones digitales de la imagen de referencia: Pearl mouse grey (`#8b7b6e`) como base, Brown grey (`#5a4d45`) en la pared del cabecero, Quartz grey (`#685f5a`) en los paños de TV y Near-neutral dark grey (`#2e2828`) en los fondos del minibar y las gradas. Los cuatro tonos se muestran en Opciones y permanecen fijos al cambiar la paleta exterior.
+
+Solo cambian las caras de paredes de sala, entrada, gradas y dormitorio con sus zonas de escritorios. Cocina, comedor integrado en cocina, baños y lavandería quedan pendientes y conservan sus materiales. Pisos, cielos rasos, muebles, distribución, fachada y patio permanecen. Los colores son aproximaciones de pantalla, sin equivalencia comercial garantizada; verificar muestras físicas con la iluminación real.
