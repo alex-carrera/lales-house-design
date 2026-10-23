@@ -127,3 +127,7 @@ Casa, baño del asadero y bodega comparten [Tony Taupe SW 7038](https://www.sher
 ## Controles del estado actual
 
 El estado actual usa el mismo formato compacto del diseño futuro: selector de estancia, flechas de vista anterior y siguiente, giro y menú Opciones. La opción «Mostrar cubiertas» permite abrir la vista exterior sin alterar el modelo. Se conservan las ocho vistas, las cámaras, la geometría y los materiales del estado actual. El diseño futuro permanece idéntico.
+
+## Pisos y ventana del patio
+
+El asadero y el baño del patio usan el mismo porcelanato beige de gran formato de la referencia interior. La bodega conserva solo el adoquín existente del patio: se retira su capa de loseta. Se amplía la ventana del baño de 60 × 45 cm a unos 75 × 60 cm, con vidrio de privacidad y marcos ajustados al hueco. La ventana alta de bodega permanece. Puertas, muebles, parrilla, mesón, cubierta y casa se conservan. Dimensiones representativas, pendientes de medir en sitio.
