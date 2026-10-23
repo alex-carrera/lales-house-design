@@ -62,7 +62,7 @@ El lavabo con armario de espejo se adapta a 70 cm de ancho y se reubica en el tr
 
 ## Patio y exterior
 
-Patio aproximado de 6 × 11 m, adoquines y cubierta completa con asadero posterior, plaza de SUV y Husqvarna 401 de 2021. El cerramiento deja el paso nominal de 3 m. Las maniobras usan envolventes y radios supuestos: comprobar en sitio.
+Patio aproximado de 6 × 11 m, con centro y parqueadero abiertos al cielo, cubierta parcial en L sobre servicios y asadero posterior, plaza de SUV y Husqvarna 401 de 2021. El cerramiento deja el paso nominal de 3 m. Las maniobras usan envolventes y radios supuestos: comprobar en sitio.
 
 Se conservan las dos paletas exteriores, la opción blanca y la simulación de Eternit pintado. Las paredes interiores permanecen claras; los acentos de madera se limitan a muebles y acabados del boceto. El estado actual no se modifica.
 
@@ -87,3 +87,7 @@ Los dos ventanales hacia el patio se centran en sus paños: el superior entre lo
 ## Mesón de apoyo de parrilla
 
 Superficie continua de unos 2,00 × 0,63 m incluyendo el fregadero existente, con aproximadamente 1,01 m de zona seca a su izquierda para bandejas y utensilios. Conserva la altura anterior de 1,01 m sobre el pavimento, la cubeta, la grifería, la parrilla y su campana. Apoyos de ladrillo y acabado claro del mesón. La cubierta mantiene únicamente el paso de la chimenea principal. Geometría representativa; medidas, acabado y apoyos por comprobar en sitio.
+
+## Patio jardín y cubierta parcial
+
+La cubierta en L ocupa unos 20,7 m² de planta bruta sobre baño, bodega y asadero; unos 45,3 m² del patio quedan abiertos. Dos jardines en suelo suman 4,08 m² junto al muro izquierdo, con árbol pequeño, plantas bajas y trepadora sobre celosía. El parqueadero de 17,05 m² combina juntas verdes con franjas firmes para las ruedas; esa superficie es pavimento mixto, no jardín completo. Los accesos y la reserva de moto se conservan. Jardines y nuevos postes se comprueban contra 3301 posiciones de la maniobra supuesta. Secciones, voladizos, anclajes, canaletas, drenaje, especies y suelo vegetal por dimensionar y verificar en sitio.
