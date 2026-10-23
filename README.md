@@ -75,3 +75,7 @@ No se han contratado servicios de pago. Supabase usa el plan Free, sujeto a sus 
 GitHub Pages publica la raíz de `main`. Se necesita WebGL para el visor. La publicación contiene solo HTML, CSS, JavaScript, marca y este README; no incluye fotografías originales, modelos CAD ni estudios locales. `recorrido.html` conserva el estado actual y `propuesta.html` presenta el diseño futuro.
 
 La exportación compacta la iluminación de las mallas con una paleta sin pérdida: conserva todos los valores y reduce el tamaño del visor sin añadir vistas.
+
+## Baño y bodega de patio
+
+Bloque aproximado de 1,60 × 4,25 m en el lateral izquierdo del fondo: baño de 1,40 × 1,90 m libres, solo inodoro y lavabo, y bodega de 1,40 × 1,95 m con repisas. Dos accesos independientes de 80 cm hacia patio, altura libre de 2,40 m y ventanas altas hacia el patio cubierto. El asadero se traslada y compacta al fondo derecho, con parrilla, cocina de leña y fregadero conservados; penetraciones de cubierta acompañan las chimeneas. Se actualiza la planta y se comprueba el bloque y los componentes del asadero contra la trayectoria muestreada del SUV. Medidas, cimentaciones, redes sanitarias, extracción y separaciones térmicas pendientes de revisar en sitio.
