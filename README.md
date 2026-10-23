@@ -64,7 +64,7 @@ El lavabo con armario de espejo se adapta a 70 cm de ancho y se reubica en el tr
 
 Patio aproximado de 6 × 11 m, con centro y parqueadero del auto abiertos al cielo, moto longitudinal bajo una cubierta unificada en L con servicios y asadero posterior, plaza de SUV y Husqvarna 401 de 2021. El cerramiento deja el paso nominal de 3 m. Las maniobras usan envolventes y radios supuestos: comprobar en sitio.
 
-Se conservan las dos paletas exteriores, la opción blanca y la simulación de Eternit pintado. Las paredes interiores de sala, entrada, gradas y dormitorio usan la paleta de grises cálidos de referencia; cocina, comedor integrado en cocina y baños conservan sus acabados. El estado actual no se modifica.
+Se conservan las dos paletas exteriores, la opción blanca y la simulación de Eternit pintado. Las paredes interiores de sala, entrada, gradas y dormitorio usan la paleta de grises cálidos de referencia; la cocina tiene una paleta propia gris piedra y grafito. Los baños conservan sus acabados. El estado actual no se modifica.
 
 ## Web y acceso privado
 
@@ -104,4 +104,10 @@ El escritorio rectangular junto al ventanal de calle se prolonga 45 cm hasta el 
 
 Se toman cuatro aproximaciones digitales de la imagen de referencia: Pearl mouse grey (`#8b7b6e`) como base, Brown grey (`#5a4d45`) en la pared del cabecero, Quartz grey (`#685f5a`) en los paños de TV y Near-neutral dark grey (`#2e2828`) en los fondos del minibar y las gradas. Los cuatro tonos se muestran en Opciones y permanecen fijos al cambiar la paleta exterior.
 
-Solo cambian las caras de paredes de sala, entrada, gradas y dormitorio con sus zonas de escritorios. Cocina, comedor integrado en cocina, baños y lavandería quedan pendientes y conservan sus materiales. Pisos, cielos rasos, muebles, distribución, fachada y patio permanecen. Los colores son aproximaciones de pantalla, sin equivalencia comercial garantizada; verificar muestras físicas con la iluminación real.
+La paleta de paredes se limita a sala, entrada, gradas y dormitorio con sus zonas de escritorios. La cocina tiene una paleta propia; baños y lavandería conservan sus materiales. Distribución, fachada y patio permanecen. Los colores son aproximaciones de pantalla, sin equivalencia comercial garantizada; verificar muestras físicas con la iluminación real.
+
+## Cocina gris piedra y grafito
+
+Muebles bajos y columnas en gris piedra mate, altos interiores grafito y fila superior clara hasta el cielo raso. Se modelan frentes lisos, cuatro bancos de tres cajones, puertas bajo las ventanas, perfiles de agarre discretos y tiradores negros largos en la despensa. El conjunto superior llega a la cota +2,445 m del modelo y mantiene el conducto y la campana existentes. Se rematan también las columnas de despensa y refrigerador.
+
+Mesones en piedra clara cálida, salpicadero oscuro en pared ciega y solo en la franja inferior de las dos ventanas, piso claro de formato representativo de 60 cm y pintura cálida clara de cocina. Lavaplatos y grifería se representan en negro mate. Se conserva la iluminación cálida bajo altos y las posiciones de ventanas, lavaplatos, cocción, refrigerador y comedor. No se añaden los hornos de la referencia. Geometría nueva comprobada contra ventanas, equipos, comedor y puerta; sala, planta alta, baños y patio conservados. Medidas de carpintería, herrajes, resistencia térmica del salpicadero, distancias y ventilación según equipo real por confirmar.
