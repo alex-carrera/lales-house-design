@@ -1,6 +1,6 @@
-import {mountPlans} from './plans.js?v=56f1ea659ad4';
-import {ProjectStore} from './data.js?v=56f1ea659ad4';
-import {CATEGORIES,AREAS,UNITS,money,cents,expenseData,materialData,totals,filterExpenses,csv,today} from './domain.js?v=56f1ea659ad4';
+import {mountPlans} from './plans.js?v=36d1ae1ac1da';
+import {ProjectStore} from './data.js?v=36d1ae1ac1da';
+import {CATEGORIES,AREAS,UNITS,money,cents,expenseData,materialData,totals,filterExpenses,csv,today} from './domain.js?v=36d1ae1ac1da';
 const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const noteHTML=s=>esc(s).replace(/https:\/\/[^\s<]+/g,url=>`<a href="${url}" target="_blank" rel="noopener noreferrer">Ver fuente ↗</a>`);

@@ -156,7 +156,7 @@ Un aplique cálido entre las ventanas bajas y dos plafones compactos bajo la los
 
 ## Planos de obra para los maestros
 
-Se añade la sección pública «Planos de obra»: conjunto, planta baja, planta alta, patio y cubiertas; cotas en metros, cuadro de vanos, zoom, capas de cotas/mobiliario y descarga SVG. El PDF A3 de 17 láminas incorpora cocina/comedor de 6 × 3 m, lavandería dentro del baño social, gradas de giro redondo y cubiertas de Eternit en cocina y baño principal. Se deriva del modelo vigente y distingue medidas nominales, libres y pendientes de replanteo. Imprimir el PDF al 100 % y comprobar la escala gráfica. Estructura e instalaciones pendientes de definición técnica.
+Se añade la sección pública «Planos de obra»: conjunto, planta baja, planta alta, patio y cubiertas; cotas en metros, cuadro de vanos, zoom, capas de cotas/mobiliario y descarga SVG. El PDF A3 de 21 hojas incorpora cocina/comedor de 6 × 3 m, lavandería dentro del baño social, gradas de giro redondo y cubiertas de Eternit en cocina y baño principal. Se deriva del modelo vigente y distingue medidas nominales, libres y pendientes de replanteo. Imprimir el PDF al 100 % y comprobar la escala gráfica. Estructura e instalaciones pendientes de definición técnica.
 
 ## Eternit en cocina y baño principal
 
@@ -166,7 +166,7 @@ Se representa una inclinación del 15 % como estudio volumétrico, condicionada 
 
 ## Electricidad, agua, desagües y lluvias
 
-La sección de planos incorpora filtro por especialidad, cuatro láminas de electricidad, dos de agua fría/caliente, dos de desagües/ventilación, lluvias y dos cuadros de coordinación. El PDF A3 completo tiene 17 láminas. Se representan los puntos de iluminación del modelo y las tomas, mandos, grupos eléctricos y recorridos hidrosanitarios propuestos; se conservan las cubiertas de una caída y sus canaletas vigentes.
+La sección de planos incorpora filtro por especialidad, cuatro láminas de electricidad, dos de agua fría/caliente, dos de desagües/ventilación, lluvias y dos cuadros de coordinación. El PDF A3 completo tiene 21 hojas. Se representan los puntos de iluminación del modelo y las tomas, mandos, grupos eléctricos y recorridos hidrosanitarios propuestos; se conservan las cubiertas de una caída y sus canaletas vigentes.
 
 Tablero, suministro eléctrico, entrada de agua, calentador, alcantarillado y descarga pluvial quedan pendientes de localizar por instrucción del usuario. Calibres, protecciones, diámetros, pendientes, cotas de fondo y montaje requieren levantamiento y cálculo antes de ejecutar. Los esquemas no alteran la geometría ni constituyen ingeniería dimensionada. Se comprobaron integridad de puntos, conectividad gráfica de ramales, PDF y funcionamiento web.
 
@@ -179,3 +179,7 @@ Planos, cuadro de vanos y proyección se sincronizan. La puerta del baño social
 ## Simbología gráfica del plano eléctrico
 
 Cada lámina eléctrica muestra una leyenda con el dibujo y la explicación de sus símbolos: círculo con X para luz general, círculo con raya para apoyo/trabajo, interruptores, tomas, equipos, tablero, trazos de mando y referencias de muros/mobiliario. Se explican los códigos T, S, EQ y C. La página permite plegar la explicación; el PDF y los SVG descargables también la incluyen.
+
+## Impresión de mapas y explicaciones
+
+Al imprimir una lámina desde la página, la primera hoja contiene únicamente el mapa completo y la segunda su explicación y notas. El PDF separa también los cuatro planos eléctricos y sus leyendas, sumando 21 hojas. Los mapas eléctricos de PB, PA y patio se amplían a 1:40 en A3 vertical; el esquema funcional conserva la indicación sin escala.

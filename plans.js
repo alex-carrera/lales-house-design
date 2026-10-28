@@ -37,6 +37,22 @@ export function mountPlans(root){
   svg.querySelectorAll('[data-plan-furniture]').forEach(e=>e.setAttribute('visibility',$('[data-furniture]').checked?'visible':'hidden'));
   $('[data-plan-drawing]').style.width=$('[data-plan-zoom]').value+'%';
   $('[data-plan-zoom-label]').textContent=$('[data-plan-zoom]').value+'%';
+  printPages();
+ }
+ function printPages(){
+  if(!data)return;
+  const page=data.pages.find(p=>p.id===sheet),holder=$('[data-plan-print-pages]');
+  const make=(tag,cls,text)=>{const node=document.createElement(tag);node.className=cls;if(text)node.textContent=text;return node;};
+  const map=make('section','plan-print-map');
+  map.dataset.orientation=page.schematic?'landscape':'portrait';
+  const heading=make('header','plan-print-header');
+  heading.append(make('h1','',page.code+' · '+page.title),make('p','','Casa Lales · Revisión '+data.revision),make('p','',page.schematic?'Esquema sin escala':'Metros · Impresión ajustada a la hoja; leer las cotas.'));
+  const graphic=make('div','plan-print-graphic');graphic.append($('[data-plan-drawing] svg').cloneNode(true));map.append(heading,graphic);
+  const notes=make('section','plan-print-explanation');
+  const intro=make('header','plan-print-header');intro.append(make('h1','','Explicación de '+page.code+' · '+page.title),make('p','','Casa Lales · Revisión '+data.revision));notes.append(intro);
+  if(page.symbols?.length){notes.append(make('h2','','Qué significa cada figura'),$('[data-plan-symbol-items]').cloneNode(true));}
+  const criteria=root.querySelector('.plan-dimensions').cloneNode(true);criteria.querySelector('.plan-print-help')?.remove();notes.append(criteria,make('p','plan-print-caution',$('[data-plan-note]').textContent));
+  holder.replaceChildren(map,notes);
  }
  function draw(){
   const page=data.pages.find(p=>p.id===sheet);
