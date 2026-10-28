@@ -157,3 +157,9 @@ Un aplique cálido entre las ventanas bajas y dos plafones compactos bajo la los
 ## Planos de obra para los maestros
 
 Se añade la sección pública «Planos de obra»: conjunto, planta baja, planta alta, patio y cubiertas; cotas en metros, cuadro de vanos, zoom, capas de cotas/mobiliario y descarga SVG. El PDF A3 de seis láminas incorpora cocina/comedor de 6 × 3 m, lavandería dentro del baño social, gradas de giro redondo y cubiertas de Eternit en cocina y baño principal. Se deriva del modelo vigente y distingue medidas nominales, libres y pendientes de replanteo. Imprimir el PDF al 100 % y comprobar la escala gráfica. Estructura e instalaciones pendientes de definición técnica.
+
+## Eternit en cocina y baño principal
+
+Las dos losas de cubierta se sustituyen por planchas onduladas de fibrocemento sobre estructura ligera representativa, con dos aguas, aislamiento, cámara ventilada, canaletas y bajantes. Los cielos rasos blancos, las luminarias y la losa que sostiene el baño con su volado se conservan. La cocina queda por debajo del antepecho de las ventanas del dormitorio.
+
+Se usa una pendiente de referencia del 27 % de la [ficha Eternit P7 Ecuador](https://eternit.com.ec/wp-content/uploads/2024/04/03_fibrocemento_p7_111_compressed.pdf). No se ha elegido el producto definitivo ni dimensionado estructura, anclajes o drenajes. El encuentro del baño con el alero existente tiene canal y tapajuntas representativos que requieren detalle técnico.
