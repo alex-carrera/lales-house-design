@@ -1055,9 +1055,13 @@ textarea.form-control {
   line-height: 18px;
 }
 
-.form-select option {
+.form-select :is(option, optgroup) {
   color: var(--popover-foreground);
   background-color: var(--popover);
+}
+
+.form-select :is(option, optgroup):disabled {
+  color: var(--muted-foreground);
 }
 
 .form-select:not(:disabled):hover {
@@ -2509,7 +2513,7 @@ function crearMotorMateriales(gl, triangles, math) {
   };
 
   // Events between children of one shadow root never reach the document.
-  listen(document);
+  listen(document.documentElement);
   window.addEventListener(&quot;pagehide&quot;, destroy, { once: true });
 })();
 &lt;/script&gt;

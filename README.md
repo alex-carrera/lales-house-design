@@ -156,10 +156,22 @@ Un aplique cálido entre las ventanas bajas y dos plafones compactos bajo la los
 
 ## Planos de obra para los maestros
 
-Se añade la sección pública «Planos de obra»: conjunto, planta baja, planta alta, patio y cubiertas; cotas en metros, cuadro de vanos, zoom, capas de cotas/mobiliario y descarga SVG. El PDF A3 de seis láminas incorpora cocina/comedor de 6 × 3 m, lavandería dentro del baño social, gradas de giro redondo y cubiertas de Eternit en cocina y baño principal. Se deriva del modelo vigente y distingue medidas nominales, libres y pendientes de replanteo. Imprimir el PDF al 100 % y comprobar la escala gráfica. Estructura e instalaciones pendientes de definición técnica.
+Se añade la sección pública «Planos de obra»: conjunto, planta baja, planta alta, patio y cubiertas; cotas en metros, cuadro de vanos, zoom, capas de cotas/mobiliario y descarga SVG. El PDF A3 de 17 láminas incorpora cocina/comedor de 6 × 3 m, lavandería dentro del baño social, gradas de giro redondo y cubiertas de Eternit en cocina y baño principal. Se deriva del modelo vigente y distingue medidas nominales, libres y pendientes de replanteo. Imprimir el PDF al 100 % y comprobar la escala gráfica. Estructura e instalaciones pendientes de definición técnica.
 
 ## Eternit en cocina y baño principal
 
 Las dos losas de cubierta se sustituyen por planchas onduladas de fibrocemento sobre estructura ligera representativa, con una sola caída, aislamiento y cámara ventilada. El baño descarga hacia CanalCeleste y la bajante existentes de la casa; la cocina incorpora un único canal hacia patio y una bajante en paño ciego. Los cielos rasos blancos, las luminarias y la losa que sostiene el baño con su volado se conservan. La cocina queda por debajo del antepecho de las ventanas del dormitorio.
 
 Se representa una inclinación del 15 % como estudio volumétrico, condicionada a confirmar un sistema de baja pendiente con Eternit Ecuador. La [ficha P7 Ecuador](https://eternit.com.ec/wp-content/uploads/2024/04/03_fibrocemento_p7_111_compressed.pdf) remite al manual para pendientes inferiores al montaje de referencia del 27 %. No se ha elegido producto ni dimensionado estructura, anclajes o drenajes. Se debe comprobar capacidad de canaleta y bajante existentes antes de sumar el agua del baño; se verificó que las piezas nuevas dejan libre su envolvente en el modelo.
+
+## Electricidad, agua, desagües y lluvias
+
+La sección de planos incorpora filtro por especialidad, cuatro láminas de electricidad, dos de agua fría/caliente, dos de desagües/ventilación, lluvias y dos cuadros de coordinación. El PDF A3 completo tiene 17 láminas. Se representan los puntos de iluminación del modelo y las tomas, mandos, grupos eléctricos y recorridos hidrosanitarios propuestos; se conservan las cubiertas de una caída y sus canaletas vigentes.
+
+Tablero, suministro eléctrico, entrada de agua, calentador, alcantarillado y descarga pluvial quedan pendientes de localizar por instrucción del usuario. Calibres, protecciones, diámetros, pendientes, cotas de fondo y montaje requieren levantamiento y cálculo antes de ejecutar. Los esquemas no alteran la geometría ni constituyen ingeniería dimensionada. Se comprobaron integridad de puntos, conectividad gráfica de ramales, PDF y funcionamiento web.
+
+## Entrada doble y planificación de costes
+
+La entrada incorpora dos hojas nominales de 70 × 195 cm en hueco de 150 × 200 cm, sin fijo lateral. Las ventanas conservan medidas y posiciones; dintel, paso útil y machones requieren comprobación y refuerzo definido antes de abrir el hueco. La puerta del baño social lleva una hoja de 80 × 195 cm por su altura interior. Planos, cuadro de vanos y proyección se sincronizan con esta revisión.
+
+El organizador privado muestra notas con cálculos y enlaces de referencia, además de comparar la lista pendiente de compra, con una reserva del 15 %, contra el presupuesto disponible. Las estimaciones siguen separadas de los pagos. Los datos financieros se consultan autenticados y no se incluyen en archivos públicos.
