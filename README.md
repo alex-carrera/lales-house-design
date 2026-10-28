@@ -170,8 +170,8 @@ La sección de planos incorpora filtro por especialidad, cuatro láminas de elec
 
 Tablero, suministro eléctrico, entrada de agua, calentador, alcantarillado y descarga pluvial quedan pendientes de localizar por instrucción del usuario. Calibres, protecciones, diámetros, pendientes, cotas de fondo y montaje requieren levantamiento y cálculo antes de ejecutar. Los esquemas no alteran la geometría ni constituyen ingeniería dimensionada. Se comprobaron integridad de puntos, conectividad gráfica de ramales, PDF y funcionamiento web.
 
-## Entrada doble y planificación de costes
+## Entrada de una hoja y planificación de costes
 
-La entrada incorpora dos hojas nominales de 70 × 195 cm en hueco de 150 × 200 cm, sin fijo lateral. Las ventanas conservan medidas y posiciones; dintel, paso útil y machones requieren comprobación y refuerzo definido antes de abrir el hueco. La puerta del baño social lleva una hoja de 80 × 195 cm por su altura interior. Planos, cuadro de vanos y proyección se sincronizan con esta revisión.
+La entrada recupera el estilo anterior de nogal y paneles horizontales, con una hoja objetivo de 1,20 × 2,10 m, apertura exterior y sin fijo lateral. El hueco se representa a 1,29 × 2,15 m. Ventanas, muebles y entrepiso se conservan. El cielo interior está modelado a 2 m: altura real, dintel, paso útil, peso, herrajes y descanso exterior deben resolverse antes de fabricar. El giro hacia dentro de la hoja de 1,20 m cruza el mueble junto a la entrada; por eso se propone hacia fuera. La alternativa de dos hojas queda descartada.
 
-El organizador privado muestra notas con cálculos y enlaces de referencia, además de comparar la lista pendiente de compra, con una reserva del 15 %, contra el presupuesto disponible. Las estimaciones siguen separadas de los pagos. Los datos financieros se consultan autenticados y no se incluyen en archivos públicos.
+Planos, cuadro de vanos y proyección se sincronizan. La puerta del baño social conserva su hoja de 80 × 195 cm. El organizador privado permite leer cálculos y fuentes y compara las estimaciones, con una reserva del 15 %, contra el presupuesto disponible. Las estimaciones se mantienen separadas de los pagos y no se publican como archivos financieros estáticos.
