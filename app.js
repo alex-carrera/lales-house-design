@@ -1,13 +1,15 @@
-import {ProjectStore} from './data.js?v=9e32efd2ea57';
-import {CATEGORIES,AREAS,UNITS,money,cents,expenseData,materialData,totals,filterExpenses,csv,today} from './domain.js?v=9e32efd2ea57';
+import {mountPlans} from './plans.js?v=d5be22790323';
+import {ProjectStore} from './data.js?v=d5be22790323';
+import {CATEGORIES,AREAS,UNITS,money,cents,expenseData,materialData,totals,filterExpenses,csv,today} from './domain.js?v=d5be22790323';
 const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const store=new ProjectStore();let authResolved=false;let session=null,configured=false,loading=false,loadSerial=0,edit=null,deleting=null,toastTimer,remoteTimer;
 let records={expenses:[],materials:[],settings:null};
-const names={actual:'Estado actual',propuesta:'Diseño futuro',materiales:'Materiales',gastos:'Presupuesto y gastos'};
+const plans=mountPlans(document.querySelector('#plans-panel'));
+const names={planos:'Planos de obra',actual:'Estado actual',propuesta:'Diseño futuro',materiales:'Materiales',gastos:'Presupuesto y gastos'};
 const route=()=>Object.hasOwn(names,location.hash.slice(1))?location.hash.slice(1):'actual';
 function toast(message){$('#toast').textContent=message;$('#toast').hidden=false;clearTimeout(toastTimer);toastTimer=setTimeout(()=>$('#toast').hidden=true,4500);}
-function showRoute(focus=false){let r=route();if(!session&&['materiales','gastos'].includes(r)){if(authResolved)history.replaceState(null,'','#propuesta');r='propuesta';}if(r==='propuesta'){const viewer=$('#proposal-viewer');if(!viewer.getAttribute('src'))viewer.src=viewer.dataset.src;}$$('.page').forEach(p=>p.hidden=p.id!=='view-'+r);$$('[data-nav]').forEach(a=>{if(a.dataset.nav===r)a.setAttribute('aria-current','page');else a.removeAttribute('aria-current');});$('#breadcrumb').textContent=names[r];document.title=`${names[r]} · Casa Lales`;if(focus)$('#main').focus({preventScroll:true});}
+function showRoute(focus=false){let r=route();if(r==='planos')plans.load();if(!session&&['materiales','gastos'].includes(r)){if(authResolved)history.replaceState(null,'','#propuesta');r='propuesta';}if(r==='propuesta'){const viewer=$('#proposal-viewer');if(!viewer.getAttribute('src'))viewer.src=viewer.dataset.src;}$$('.page').forEach(p=>p.hidden=p.id!=='view-'+r);$$('[data-nav]').forEach(a=>{if(a.dataset.nav===r)a.setAttribute('aria-current','page');else a.removeAttribute('aria-current');});$('#breadcrumb').textContent=names[r];document.title=`${names[r]} · Casa Lales`;if(focus)$('#main').focus({preventScroll:true});}
 window.addEventListener('hashchange',()=>showRoute(true));showRoute();
 function options(list,value=''){return list.map(v=>`<option value="${esc(v)}"${value===v?' selected':''}>${esc(v)}</option>`).join('');}
 $('#material-area').insertAdjacentHTML('beforeend',options(AREAS));$('#expense-category-filter').insertAdjacentHTML('beforeend',options(CATEGORIES));

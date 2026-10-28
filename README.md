@@ -153,3 +153,7 @@ No se añaden postes al recorrido. Se comprobaron nuevas piezas contra el modelo
 ## Lateral de baños y paso bajo el volado
 
 Un aplique cálido entre las ventanas bajas y dos plafones compactos bajo la losa iluminan el rincón y su paso lateral. Las vistas de entrada, fachada y exterior general incluyen estas fuentes al activar la iluminación nocturna. Se conservan arquitectura, ventanas, mobiliario y luces anteriores; comprobación de sólidos y maniobra sin cruces nuevos.
+
+## Planos de obra para los maestros
+
+Se añade la sección pública «Planos de obra»: conjunto, planta baja, planta alta, patio y cubiertas; cotas en metros, cuadro de vanos, zoom, capas de cotas/mobiliario y descarga SVG. El PDF A3 de seis láminas incorpora cocina/comedor de 6 × 3 m, lavandería dentro del baño social, gradas de giro redondo y cubiertas de Eternit en cocina y baño principal. Se deriva del modelo vigente y distingue medidas nominales, libres y pendientes de replanteo. Imprimir el PDF al 100 % y comprobar la escala gráfica. Estructura e instalaciones pendientes de definición técnica.
