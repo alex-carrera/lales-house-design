@@ -183,3 +183,9 @@ Cada lámina eléctrica muestra una leyenda con el dibujo y la explicación de s
 ## Impresión de mapas y explicaciones
 
 Al imprimir una lámina desde la página, la primera hoja contiene únicamente el mapa completo y la segunda su explicación y notas. El PDF separa también los cuatro planos eléctricos y sus leyendas, sumando 21 hojas. Los mapas eléctricos de PB, PA y patio se amplían a 1:40 en A3 vertical; el esquema funcional conserva la indicación sin escala.
+
+## Descargar previsualizaciones en PDF
+
+En Estado actual y Diseño futuro, «Descargar vista PDF» guarda la imagen del ambiente seleccionado con su giro, la visibilidad de cubiertas y, en la propuesta, el modo diurno o nocturno. El archivo incluye el nombre de la vista y fecha, en una hoja A4 horizontal o vertical según el encuadre. Se genera en el dispositivo, sin subir imágenes ni datos a servicios externos.
+
+Los recorridos conservan sus sandboxes: la captura se solicita mediante mensajes con origen, ventana y solicitud verificados. Se probaron ambas descargas reales y se revisaron sus imágenes y textos; la geometría y la iluminación del modelo permanecen idénticas.

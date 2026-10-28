@@ -1,3 +1,4 @@
+import {mountTourPDF} from './tour-pdf.js?v=d7942f1155e5';
 import {mountPlans} from './plans.js?v=e7cb7aac600f';
 import {ProjectStore} from './data.js?v=e7cb7aac600f';
 import {CATEGORIES,AREAS,UNITS,money,cents,expenseData,materialData,totals,filterExpenses,csv,today} from './domain.js?v=e7cb7aac600f';
@@ -86,6 +87,7 @@ function download(name,content,type){const a=document.createElement('a'),url=URL
 $('#export-expenses').addEventListener('click',()=>{if(!session)return;const rows=filterExpenses(records.expenses,filterState());download('casa-lales-gastos-'+today()+'.csv',csv([['Fecha','Concepto','Categoría','Ambiente','Estado','Importe USD','Proveedor','Notas'],...rows.map(x=>[x.spent_on,x.concept,x.category,x.area,x.status,(x.amount_cents/100).toFixed(2),x.supplier,x.notes])]),'text/csv;charset=utf-8');});
 $('#export-backup').addEventListener('click',()=>{if(!session)return;download('casa-lales-respaldo-'+today()+'.json',JSON.stringify({format:'casa-lales-v1',exported_at:new Date().toISOString(),...records},null,2),'application/json');});
 $('#logout').addEventListener('click',async()=>{try{await store.signOut();$('#account-dialog').close();toast('Sesión cerrada.');}catch(e){message($('#account-dialog'),friendly(e));}});
+mountTourPDF({notify:toast});
 $$('#fullscreen,[data-fullscreen]').forEach(button=>button.addEventListener('click',async()=>{try{if(document.fullscreenElement)await document.exitFullscreen();else await $('#'+(button.dataset.fullscreen||'tour-stage')).requestFullscreen();}catch{toast('Tu navegador no permite ampliar esta vista.');}}));
 window.addEventListener('focus',()=>{if(session&&!loading)load();});document.addEventListener('visibilitychange',()=>{if(document.visibilityState==='visible'&&session&&!loading)load();});
 // Reconcile deletions and interrupted realtime connections without storing records locally.

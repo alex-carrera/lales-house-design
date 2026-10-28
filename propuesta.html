@@ -2287,6 +2287,34 @@ function iniciarAcabados(root, redraw){
     root.querySelector(&#x27;[data-show-neighbors]&#x27;).addEventListener(&#x27;change&#x27;,update);
     root.querySelector(&#x27;[data-entry-open]&#x27;).addEventListener(&#x27;change&#x27;,update);
     iniciarAcabados(root,update);
+
+    // Solo el contenedor inmediato puede solicitar una captura de esta vista pública.
+    let previewPDFLast=null;
+    window.addEventListener(&#x27;message&#x27;,event=&gt;{
+      const request=event.data;
+      if(event.source!==window.parent||request?.type!==&#x27;casa-lales:preview-capture&#x27;||request.kind!==&quot;propuesta&quot;||!/^[-a-z0-9]{16,80}$/.test(request.id??&#x27;&#x27;))return;
+      if(previewPDFLast===request.id)return;previewPDFLast=request.id;
+      try{
+        if(canvas.clientWidth&lt;1||canvas.clientHeight&lt;1)throw Error(&#x27;La vista todavía no está visible.&#x27;);
+        draw();if(gl)gl.finish();
+        const image=document.createElement(&#x27;canvas&#x27;),scale=Math.min(1,2560/Math.max(canvas.width,canvas.height));
+        image.width=Math.max(1,Math.round(canvas.width*scale));image.height=Math.max(1,Math.round(canvas.height*scale));
+        const context=image.getContext(&#x27;2d&#x27;,{alpha:false});if(!context)throw Error(&#x27;No se pudo preparar la imagen.&#x27;);
+        const night=Boolean(root.querySelector(&#x27;[data-light-night]&#x27;)?.checked);
+        const colors=getComputedStyle(canvas).backgroundImage.match(/rgba?\([^)]*\)|#[a-f0-9]{3,8}\b/gi)??[];
+        const gradient=context.createLinearGradient(0,0,0,image.height);
+        gradient.addColorStop(0,colors[0]??(night?&#x27;#273340&#x27;:&#x27;#d5dfe0&#x27;));
+        gradient.addColorStop(1,colors.at(-1)??(night?&#x27;#151c23&#x27;:&#x27;#edf0e7&#x27;));
+        context.fillStyle=gradient;context.fillRect(0,0,image.width,image.height);context.drawImage(canvas,0,0,image.width,image.height);
+        const flags=[];
+        if(root.querySelector(&#x27;[data-light-night]&#x27;))flags.push(night?&#x27;Iluminación nocturna&#x27;:&#x27;Vista diurna&#x27;);
+        const roofs=root.querySelector(&#x27;[data-show-roofs],[data-show-patio-roof]&#x27;);
+        if(roofs)flags.push(roofs.checked?&#x27;Cubiertas visibles&#x27;:&#x27;Cubiertas ocultas&#x27;);
+        window.parent.postMessage({type:&#x27;casa-lales:preview-result&#x27;,id:request.id,kind:&quot;propuesta&quot;,
+          image:image.toDataURL(&#x27;image/jpeg&#x27;,.94),width:image.width,height:image.height,
+          view:picker.selectedOptions[0].textContent.trim(),angle:state.giro,mode:flags.join(&#x27; · &#x27;)},&#x27;*&#x27;);
+      }catch(error){window.parent.postMessage({type:&#x27;casa-lales:preview-result&#x27;,id:request.id,kind:&quot;propuesta&quot;,error:&#x27;No se pudo capturar la vista. Espera a que termine de cargar e inténtalo otra vez.&#x27;},&#x27;*&#x27;);}
+    });
     update();
   })();
   &lt;/script&gt;
@@ -3244,6 +3272,22 @@ function iniciarAcabados(root, redraw){
   }
   frame.srcdoc = frameHtml;
   delete frame.dataset.srcdoc;
+})();
+</script>
+<script id="casa-lales-preview-pdf-relay">
+(()=>{
+ const frame=document.getElementById('codex-visualization'),kind="propuesta";
+ let pending=null;
+ const forward=()=>{if(pending)frame.contentWindow?.postMessage(pending,'*');};
+ frame.addEventListener('load',forward);
+ window.addEventListener('message',event=>{
+  const data=event.data;
+  if(event.source===window.parent&&event.origin===location.origin&&data?.type==='casa-lales:preview-capture'&&data.kind===kind&&/^[-a-z0-9]{16,80}$/.test(data.id??'')){
+   pending={type:data.type,id:data.id,kind};forward();
+  }else if(event.source===frame.contentWindow&&data?.type==='casa-lales:preview-result'&&data.id===pending?.id&&data.kind===kind){
+   pending=null;window.parent.postMessage(data,location.origin);
+  }
+ });
 })();
 </script>
 </body>

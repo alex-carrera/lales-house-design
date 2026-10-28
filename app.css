@@ -84,3 +84,7 @@
 }
 
 .material-coverage{margin-top:8px;padding:8px 10px;background:#f1f4ee;border-left:2px solid #75896f;min-width:190px;font-size:12px;line-height:1.6;white-space:normal}.material-coverage span{display:block}.material-coverage strong{font-weight:600}.material-coverage small{margin:3px 0 0}
+
+/* Descarga de vistas 3D en PDF. */
+.tour-view-actions{display:flex;align-items:center;justify-content:flex-end;gap:20px;flex-wrap:wrap}.tour-view-actions .text-button{white-space:nowrap}.tour-pdf-status{font-size:11px;color:var(--muted);padding:9px 17px;margin:0;border-top:1px solid var(--line)}
+@media(max-width:600px){.tour-card .panel-heading{align-items:flex-start;flex-wrap:wrap;gap:6px}.tour-view-actions{width:100%;justify-content:space-between;gap:12px}.tour-view-actions .text-button{min-height:38px}}
