@@ -175,3 +175,7 @@ Tablero, suministro eléctrico, entrada de agua, calentador, alcantarillado y de
 La entrada recupera el estilo anterior de nogal y paneles horizontales, con una hoja objetivo de 1,20 × 2,10 m, apertura exterior y sin fijo lateral. El hueco se representa a 1,29 × 2,15 m. Ventanas, muebles y entrepiso se conservan. El cielo interior está modelado a 2 m: altura real, dintel, paso útil, peso, herrajes y descanso exterior deben resolverse antes de fabricar. El giro hacia dentro de la hoja de 1,20 m cruza el mueble junto a la entrada; por eso se propone hacia fuera. La alternativa de dos hojas queda descartada.
 
 Planos, cuadro de vanos y proyección se sincronizan. La puerta del baño social conserva su hoja de 80 × 195 cm. El organizador privado permite leer cálculos y fuentes y compara las estimaciones, con una reserva del 15 %, contra el presupuesto disponible. Las estimaciones se mantienen separadas de los pagos y no se publican como archivos financieros estáticos.
+
+## Simbología gráfica del plano eléctrico
+
+Cada lámina eléctrica muestra una leyenda con el dibujo y la explicación de sus símbolos: círculo con X para luz general, círculo con raya para apoyo/trabajo, interruptores, tomas, equipos, tablero, trazos de mando y referencias de muros/mobiliario. Se explican los códigos T, S, EQ y C. La página permite plegar la explicación; el PDF y los SVG descargables también la incluyen.

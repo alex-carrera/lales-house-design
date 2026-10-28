@@ -32,7 +32,7 @@ export function mountPlans(root){
   $('[data-sheet]').value=sheet;
  }
  function toggle(){
-  const svg=$('svg');if(!svg)return;
+  const svg=$('[data-plan-drawing] svg');if(!svg)return;
   svg.querySelectorAll('[data-plan-dimensions]').forEach(e=>e.setAttribute('visibility',$('[data-dimensions]').checked?'visible':'hidden'));
   svg.querySelectorAll('[data-plan-furniture]').forEach(e=>e.setAttribute('visibility',$('[data-furniture]').checked?'visible':'hidden'));
   $('[data-plan-drawing]').style.width=$('[data-plan-zoom]').value+'%';
@@ -46,9 +46,14 @@ export function mountPlans(root){
   $('[data-plan-unit-note]').textContent=page.schematic?'Esquema sin escala':'Metros · Frente abajo';
   $('[data-plan-floor-title]').textContent=page.code+' · '+page.title;
   $('[data-plan-drawing]').replaceChildren(safeSvg(page.svg));
+  const symbols=page.symbols||[];
+  $('[data-plan-symbols]').hidden=!symbols.length;
+  $('[data-plan-symbol-items]').innerHTML=symbols.map(s=>`<div class="plan-symbol-item" role="listitem"><div class="plan-symbol-icon" data-symbol-glyph></div><div><strong>${esc(s.title)}</strong><p>${esc(s.description)}</p></div></div>`).join('');
+  root.querySelectorAll('[data-symbol-glyph]').forEach((node,i)=>node.replaceChildren(safeSvg(symbols[i].iconSvg)));
   $('[data-plan-rows]').innerHTML=page.rows.map(r=>`<div><dt>${esc(r.title)}</dt><dd><strong>${esc(r.dimensions)}</strong><small>${esc(r.note)}</small></dd></div>`).join('');
   $('[data-plan-notes]').innerHTML=page.notes.map(n=>`<li>${esc(n)}</li>`).join('');
   $('[data-plan-legend]').innerHTML=(page.legend||defaultLegend).map(l=>`<span data-tone="${esc(l.tone)}">━ ${esc(l.label)}</span>`).join('');
+  $('[data-plan-legend]').hidden=!!symbols.length;
   $('[data-plan-note]').textContent=page.discipline==='arquitectura'?data.measurementNote:'Instalaciones: propuesta de puntos y recorridos para coordinación. Acometidas y conexiones pendientes de medir. Calibres, protecciones, diámetros, pendientes y cotas de fondo requieren cálculo y verificación antes de ejecutar.';
   toggle();
  }
@@ -80,7 +85,10 @@ export function mountPlans(root){
   if(e.target.closest('[data-plan-retry]'))load();
   if(e.target.closest('[data-plan-print]'))window.print();
   if(e.target.closest('[data-plan-download]')&&data){
-   const svg=$('svg').cloneNode(true),url=URL.createObjectURL(new Blob([new XMLSerializer().serializeToString(svg)],{type:'image/svg+xml'}));
+   const page=data.pages.find(p=>p.id===sheet),svg=page.downloadSvg?safeSvg(page.downloadSvg):$('[data-plan-drawing] svg').cloneNode(true);
+   if(!$('[data-dimensions]').checked)svg.querySelectorAll('[data-plan-dimensions]').forEach(e=>e.setAttribute('visibility','hidden'));
+   if(!$('[data-furniture]').checked)svg.querySelectorAll('[data-plan-furniture]').forEach(e=>e.setAttribute('visibility','hidden'));
+   const url=URL.createObjectURL(new Blob([new XMLSerializer().serializeToString(svg)],{type:'image/svg+xml'}));
    const link=document.createElement('a');link.href=url;link.download=`casa-lales-${sheet}-${data.sourceSha256.slice(0,8)}.svg`;link.click();setTimeout(()=>URL.revokeObjectURL(url),1500);
   }
  });
