@@ -2220,7 +2220,7 @@ function crearMotorMateriales(gl, triangles, math) {
         if(roofs)flags.push(roofs.checked?&#x27;Cubiertas visibles&#x27;:&#x27;Cubiertas ocultas&#x27;);
         window.parent.postMessage({type:&#x27;casa-lales:preview-result&#x27;,id:request.id,kind:&quot;actual&quot;,
           image:image.toDataURL(&#x27;image/jpeg&#x27;,.94),width:image.width,height:image.height,
-          view:picker.selectedOptions[0].textContent.trim(),angle:state.giro,mode:flags.join(&#x27; · &#x27;)},&#x27;*&#x27;);
+          view:picker.selectedOptions[0].textContent.trim(),angle:state.giro,mode:flags.join(&#x27; · &#x27;),palettes:root.dataset.paletteSummary??&#x27;&#x27;},&#x27;*&#x27;);
       }catch(error){window.parent.postMessage({type:&#x27;casa-lales:preview-result&#x27;,id:request.id,kind:&quot;actual&quot;,error:&#x27;No se pudo capturar la vista. Espera a que termine de cargar e inténtalo otra vez.&#x27;},&#x27;*&#x27;);}
     });
     update();

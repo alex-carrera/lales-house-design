@@ -189,3 +189,7 @@ Al imprimir una lámina desde la página, la primera hoja contiene únicamente e
 En Estado actual y Diseño futuro, «Descargar vista PDF» guarda la imagen del ambiente seleccionado con su giro, la visibilidad de cubiertas y, en la propuesta, el modo diurno o nocturno. El archivo incluye el nombre de la vista y fecha, en una hoja A4 horizontal o vertical según el encuadre. Se genera en el dispositivo, sin subir imágenes ni datos a servicios externos.
 
 Los recorridos conservan sus sandboxes: la captura se solicita mediante mensajes con origen, ventana y solicitud verificados. Se probaron ambas descargas reales y se revisaron sus imágenes y textos; la geometría y la iluminación del modelo permanecen idénticas.
+
+
+### Comparador de colores
+En Diseño futuro, el botón Colores ofrece 20 propuestas: seis exteriores, seis para sala y dormitorio, cuatro de cocina y cuatro de baños. Cada ámbito se combina por separado; tocar una muestra permite personalizar su color. Guardar favorita conserva una combinación en ese navegador y Original recupera los acabados de referencia. La selección actual también se recuerda al volver a abrir la página. Los pisos, muebles existentes, equipos y geometría se conservan. Los colores son aproximaciones digitales para comparar; deben confirmarse con muestras físicas. Las vistas PDF conservan los colores elegidos e indican las paletas.

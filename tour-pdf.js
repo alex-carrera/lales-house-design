@@ -4,16 +4,20 @@ const latin=value=>Uint8Array.from(String(value),c=>c.charCodeAt(0)&255);
 const clean=value=>String(value??'').replace(/[\r\n\t]/g,' ').replace(/[–—−]/g,'-').replace(/[“”]/g,'"').replace(/[’‘]/g,"'").replace(/[^\x20-\xFF]/g,'').trim();
 const literal=value=>`(${clean(value).replace(/[\\()]/g,'\\$&')})`;
 const num=value=>Number(value.toFixed(2));
-export function previewPDF({jpeg,width,height,kind,view,angle=0,mode='',date=''}){
+export function previewPDF({jpeg,width,height,kind,view,angle=0,mode='',date='',palettes=''}){
  if(!(jpeg instanceof Uint8Array)||jpeg.length<4||jpeg.length>15_000_000||jpeg[0]!==255||jpeg[1]!==216||jpeg.at(-2)!==255||jpeg.at(-1)!==217)throw Error('La imagen de la vista no es válida.');
  if(!['actual','propuesta'].includes(kind)||![width,height].every(n=>Number.isInteger(n)&&n>0&&n<=8192)||!Number.isFinite(angle))throw Error('No se pudo preparar esta vista.');
  const landscape=width>=height,W=landscape?841.89:595.28,H=landscape?595.28:841.89;
- const pageTitle=kind==='actual'?'Estado actual':'Diseño futuro',scale=Math.min((W-48)/width,(H-148)/height),iw=num(width*scale),ih=num(height*scale);
- const x=num((W-iw)/2),y=num(54+(H-148-ih)/2),safeView=clean(view).slice(0,112);
+ const paletteLines=[];let paletteRest=clean(palettes).slice(0,320),limit=Math.floor((W-48)/5);
+ while(paletteRest&&paletteLines.length<2){let end=paletteRest.length<=limit?paletteRest.length:paletteRest.lastIndexOf(' ',limit);if(end<1)end=limit;paletteLines.push(paletteRest.slice(0,end));paletteRest=paletteRest.slice(end).trim();}
+ const reserved=paletteLines.length?174:148;
+ const pageTitle=kind==='actual'?'Estado actual':'Diseño futuro',scale=Math.min((W-48)/width,(H-reserved)/height),iw=num(width*scale),ih=num(height*scale);
+ const x=num((W-iw)/2),y=num(54+(H-reserved-ih)/2),safeView=clean(view).slice(0,112);
  const line=(text,size,xx,yy,color='0.15 0.2 0.18')=>`${color} rg BT /F1 ${size} Tf ${xx} ${yy} Td ${literal(text)} Tj ET\n`;
  const content=latin('1 1 1 rg 0 0 '+W+' '+H+' re f\n'+
   line('CASA LALES',18,24,H-35)+line(pageTitle+' - '+safeView,12,24,H-57)+
   line(`Giro ${Math.round(angle)}°${mode?' | '+clean(mode):''}${date?' | '+clean(date):''}`,9,24,H-75,'0.4 0.44 0.42')+
+  paletteLines.map((text,i)=>line(text,8,24,H-89-i*10,'0.4 0.44 0.42')).join('')+
   `q ${iw} 0 0 ${ih} ${x} ${y} cm /Im1 Do Q\n`+
   line('Previsualización del modelo. Medidas aproximadas; no es un plano de ejecución.',9,24,28,'0.4 0.44 0.42'));
  const chunks=[],offsets=[0];let length=0;
@@ -35,7 +39,7 @@ export function previewPDF({jpeg,width,height,kind,view,angle=0,mode='',date=''}
  const result=new Uint8Array(length);let pos=0;for(const bytes of chunks){result.set(bytes,pos);pos+=bytes.length;}return result;
 }
 export function capturePayload(data,kind){
- if(data?.kind!==kind||typeof data.view!=='string'||data.view.length>300||!Number.isFinite(data.angle)||typeof data.mode!=='string'||data.mode.length>150||typeof data.image!=='string'||data.image.length>20_000_000||!/^data:image\/jpeg;base64,[a-z0-9+/=]+$/i.test(data.image))throw Error('No se recibió una imagen válida del recorrido.');
+ if(data?.kind!==kind||typeof data.view!=='string'||data.view.length>300||!Number.isFinite(data.angle)||typeof data.mode!=='string'||data.mode.length>150||(data.palettes!==undefined&&(typeof data.palettes!=='string'||data.palettes.length>400))||typeof data.image!=='string'||data.image.length>20_000_000||!/^data:image\/jpeg;base64,[a-z0-9+/=]+$/i.test(data.image))throw Error('No se recibió una imagen válida del recorrido.');
  const binary=atob(data.image.slice(data.image.indexOf(',')+1));
  return {...data,jpeg:Uint8Array.from(binary,c=>c.charCodeAt(0))};
 }
