@@ -1,5 +1,5 @@
 import {mountTourPDF} from './tour-pdf.js?v=e301b8f5be44';
-import {mountPlans} from './plans.js?v=b8468cb4c977';
+import {mountPlans} from './plans.js?v=9472c2325eb7';
 import {ProjectStore} from './data.js?v=e7cb7aac600f';
 import {CATEGORIES,AREAS,UNITS,money,cents,expenseData,materialData,totals,filterExpenses,csv,today} from './domain.js?v=e7cb7aac600f';
 const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];

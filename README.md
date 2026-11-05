@@ -118,7 +118,7 @@ Se revisaron por separado el baño principal, el baño social con lavandería y 
 
 ## Pisos de referencia
 
-Porcelanato beige piedra de gran formato en cocina, comedor, sala, circulación y baños, con veta sutil y junta fina. El formato de 1,20 × 0,60 m es representativo; el producto y su formato real quedan por elegir. El dormitorio usa piso flotante oscuro tipo roble ahumado, conservando las tablas y el hueco de las gradas. Se verificaron niveles, límites, muebles y pasos existentes.
+Porcelanato beige piedra de gran formato en cocina/comedor y baños, con veta sutil y junta fina. El formato de 1,20 × 0,60 m es representativo; el producto y su formato real quedan por elegir. Sala, estudio y dormitorio usan piso flotante oscuro tipo roble ahumado, conservando niveles, alfombras, muebles y el hueco de las gradas. Se verificaron niveles, límites, muebles y pasos existentes.
 
 ## Paleta exterior única
 
@@ -208,3 +208,8 @@ El baño principal superior se reduce a 2,80 × 3,00 m: su losa y pared sobresal
 Pared original de adobe de 45 cm conservada: cara hacia cocina en y=2,88 m, espesor hacia la sala hasta y=3,33 m. El vano existente de 85 × 200 cm permanece sin ensanchar; se retira su hoja y se reviste en madera (luz representativa de 82,6 × 198,5 cm). Retorno de la extensión en bloque de 15 cm. La entrada principal se desplaza 18 cm hacia el ventanal con autorización del usuario; el mueble de cascos avanza 20 cm para quedar delante del adobe. Se conserva el desnivel de cocina. Replantear jambas y dinteles en sitio; el revestimiento no es un refuerzo.
 
 Se elimina la ventana este del estudio por adosamiento a la construcción vecina: muro y acabado continuos. Luz natural desde la corredera del balcón. Planos y PDF actualizados, con la selección vigente de 11 mapas y 15 páginas.
+
+
+## Flotante en los tres espacios secos
+
+La sala adopta el mismo flotante oscuro del estudio y dormitorio. El porcelanato continúa en cocina, baños y asadero. Metraje representativo de flotante: 70,388 m² netos (sala 28,425; estudio 16,589; dormitorio 25,375), descontando la pared de adobe de la sala y conservando el vacío de gradas. Referencia aproximada de material indicada por el propietario: $15/m²; formato de caja, accesorios e instalación por confirmar. Planos de acabados actualizados.
