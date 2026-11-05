@@ -16,7 +16,7 @@ Dos maceteros de grafito y crema, de unos 38 y 27 cm de alto, incorporan vegetac
 
 ## Reclinable en sala y escritorio adicional arriba
 
-El reclinable existente de 1 × 0,85 m se adelanta 40 cm sobre su diagonal hacia la TV, conservando los 45°. Se conserva el resto de los muebles y un recorrido representativo de 65 cm en sala y acceso a cocina. El paso desde la entrada requiere recoger la hoja de cocina: abierta estrecha esa circulación. El sillón pequeño diagonal retrocede otros 5 cm siguiendo su propio eje (45 cm acumulados, 31,82 cm en cada dirección de planta), conservando sus 45° hacia TV y sin superponer tapizados. El reclinable se representa cerrado y ahora conserva una reserva frontal orientativa de 65 cm, libre de otros muebles; extensión y movimiento reales pendientes de medir.
+El reclinable existente de 1 × 0,85 m se adelanta 40 cm sobre su diagonal hacia la TV, conservando los 45°. Se conserva el resto de los muebles y un recorrido representativo de 65 cm en sala y acceso a cocina. El paso de cocina conserva su vano existente y queda abierto, sin hoja. El sillón pequeño diagonal retrocede otros 5 cm siguiendo su propio eje (45 cm acumulados, 31,82 cm en cada dirección de planta), conservando sus 45° hacia TV y sin superponer tapizados. El reclinable se representa cerrado y ahora conserva una reserva frontal orientativa de 65 cm, libre de otros muebles; extensión y movimiento reales pendientes de medir.
 
 En la esquina de los dos ventanales de arriba se añade un escritorio rectangular de exactamente 1,20 × 0,60 m, con su lado largo paralelo a la ventana oeste que da a la calle. Tablero de madera a 75 cm del piso, estructura negra, cajón, monitor y silla. Se conservan el escritorio en L, cama, TV, clóset y ventanas. Se comprobaron cruces, espacio de rodillas y un retiro provisional de silla de 20 cm.
 
@@ -26,7 +26,7 @@ Muebles altos en baño principal (armario con espejo y módulos posteriores), es
 
 TV del dormitorio de referencia de 55 pulgadas, 16:9 (aprox. 1,218 × 0,685 m), colgada en pared. Consola baja alargada a 2 m. Se conserva la TV existente de planta baja.
 
-Alfombra de sala de 3,25 × 3,25 m. Las dos piezas de la L se desplazan juntas otros 30 cm hacia la derecha de la imagen de referencia, es decir, hacia el fondo/gradas (90 cm acumulados respecto a la posición anterior a las gradas redondas). La mesa de centro conserva su posición reciente. El sillón pequeño del ventanal se acerca 50 cm y se alinea 3 cm con el sofá largo de la L, cerrando la separación entre ambos sin superponerlos, orientado hacia la TV; el sillón diagonal retrocede 45 cm acumulados sobre su eje y el reclinable se adelanta 40 cm, ambos a 45° hacia la TV. Con la hoja de cocina recogida, se comprueba un recorrido representativo de 65 cm por la sala hacia el arranque libre de 1 m; no es certificación de accesibilidad.
+Alfombra de sala de 3,25 × 3,25 m. Las dos piezas de la L se desplazan juntas otros 30 cm hacia la derecha de la imagen de referencia, es decir, hacia el fondo/gradas (90 cm acumulados respecto a la posición anterior a las gradas redondas). La mesa de centro conserva su posición reciente. El sillón pequeño del ventanal se acerca 50 cm y se alinea 3 cm con el sofá largo de la L, cerrando la separación entre ambos sin superponerlos, orientado hacia la TV; el sillón diagonal retrocede 45 cm acumulados sobre su eje y el reclinable se adelanta 40 cm, ambos a 45° hacia la TV. Con el paso de cocina abierto, se comprueba un recorrido representativo de 65 cm por la sala hacia el arranque libre de 1 m; no es certificación de accesibilidad.
 
 Lavaplatos de cocina desplazado otros 20 cm a la derecha (45 cm acumulados), bajo el ventanal del retorno. Grifo y aro trasladados con la cubeta; hueco anterior cerrado y nuevo alojamiento ajustado en mesón y ambos módulos inferiores, ya que ahora cruza su unión. Instalaciones definitivas por resolver en sitio.
 
@@ -201,3 +201,10 @@ La propuesta incorpora un estudio de 6 × 3 m sobre la cocina y un balcón later
 Las cotas, espesores, perfiles y baranda son representativos; no constituyen cálculo de losas, volado, apoyos ni cimentación. El CAD se conserva como Base_Estudio_Balcon_80cm.FCStd en la fuente del proyecto. Las vistas nuevas son Estudio y balcón y Balcón de 80 cm; la planta alta incluye ambos espacios. Los planos de coordinación reflejan la ampliación conservando las once láminas seleccionadas y el PDF de quince hojas.
 
 El baño principal superior se reduce a 2,80 × 3,00 m: su losa y pared sobresalen solo 80 cm desde la pared de PB. Tina e inodoro se desplazan20 cm hacia dentro manteniendo su tamaño; ventana lateral, primer ventanal frontal, cielo y piso se ajustan al nuevo borde. La losa superior también termina en ese límite hacia la calle.
+
+
+## Adobe, paso abierto y lateral del estudio
+
+Pared original de adobe de 45 cm conservada: cara hacia cocina en y=2,88 m, espesor hacia la sala hasta y=3,33 m. El vano existente de 85 × 200 cm permanece sin ensanchar; se retira su hoja y se reviste en madera (luz representativa de 82,6 × 198,5 cm). Retorno de la extensión en bloque de 15 cm. La entrada principal se desplaza 18 cm hacia el ventanal con autorización del usuario; el mueble de cascos avanza 20 cm para quedar delante del adobe. Se conserva el desnivel de cocina. Replantear jambas y dinteles en sitio; el revestimiento no es un refuerzo.
+
+Se elimina la ventana este del estudio por adosamiento a la construcción vecina: muro y acabado continuos. Luz natural desde la corredera del balcón. Planos y PDF actualizados, con la selección vigente de 11 mapas y 15 páginas.
