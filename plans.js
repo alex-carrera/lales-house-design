@@ -1,5 +1,4 @@
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-const number=n=>new Intl.NumberFormat('es-EC',{maximumFractionDigits:2,minimumFractionDigits:2}).format(n);
 export function planDocument(value){
  if(value?.version!==3||!Array.isArray(value.pages)||!value.pages.length||!Array.isArray(value.openings)||!value.installations||!Number.isInteger(value.pdfPages))throw Error('El documento de planos no tiene un formato válido.');
  if(!['fixtures','circuits','outlets'].every(k=>Array.isArray(value.installations[k])))throw Error('Faltan los cuadros de instalaciones.');
@@ -51,23 +50,24 @@ export function mountPlans(root){
   const notes=make('section','plan-print-explanation');
   const intro=make('header','plan-print-header');intro.append(make('h1','','Explicación de '+page.code+' · '+page.title),make('p','','Casa Lales · Revisión '+data.revision));notes.append(intro);
   if(page.symbols?.length){notes.append(make('h2','','Qué significa cada figura'),$('[data-plan-symbol-items]').cloneNode(true));}
-  const criteria=root.querySelector('.plan-dimensions').cloneNode(true);criteria.querySelector('.plan-print-help')?.remove();notes.append(criteria,make('p','plan-print-caution',$('[data-plan-note]').textContent));
+  const criteria=make('section','plan-dimensions');
+  criteria.append(make('h2','',page.discipline==='arquitectura'?'Medidas de referencia':'Puntos y criterios'),make('p','',page.discipline==='arquitectura'?'Dimensiones exteriores, salvo donde se indique «libre».':'Puntos y recorridos propuestos. Acometidas y dimensionamiento pendientes.'));
+  const rows=make('dl','');rows.innerHTML=page.rows.map(r=>`<div><dt>${esc(r.title)}</dt><dd><strong>${esc(r.dimensions)}</strong><small>${esc(r.note)}</small></dd></div>`).join('');
+  const list=make('ul','');list.innerHTML=page.notes.map(n=>`<li>${esc(n)}</li>`).join('');
+  criteria.append(rows,make('h3','','Notas para el maestro'),list);
+  notes.append(criteria,make('p','plan-print-caution',$('[data-plan-note]').textContent));
   holder.replaceChildren(map,notes);
  }
  function draw(){
   const page=data.pages.find(p=>p.id===sheet);
   $('[data-plan-status]').textContent=page.status||'Propuesta · Medidas por verificar';
-  $('[data-plan-sidebar-title]').textContent=page.discipline==='arquitectura'?'Medidas de referencia':'Puntos y criterios';
-  $('[data-plan-measurement-help]').textContent=page.discipline==='arquitectura'?'Dimensiones exteriores, salvo donde se indique «libre».':'Puntos y recorridos propuestos. Acometidas y dimensionamiento pendientes.';
   $('[data-plan-unit-note]').textContent=page.schematic?'Esquema sin escala':'Metros · Frente abajo';
   $('[data-plan-floor-title]').textContent=page.code+' · '+page.title;
   $('[data-plan-drawing]').replaceChildren(safeSvg(page.svg));
   const symbols=page.symbols||[];
   $('[data-plan-symbols]').hidden=!symbols.length;
   $('[data-plan-symbol-items]').innerHTML=symbols.map(s=>`<div class="plan-symbol-item" role="listitem"><div class="plan-symbol-icon" data-symbol-glyph></div><div><strong>${esc(s.title)}</strong><p>${esc(s.description)}</p></div></div>`).join('');
-  root.querySelectorAll('[data-symbol-glyph]').forEach((node,i)=>node.replaceChildren(safeSvg(symbols[i].iconSvg)));
-  $('[data-plan-rows]').innerHTML=page.rows.map(r=>`<div><dt>${esc(r.title)}</dt><dd><strong>${esc(r.dimensions)}</strong><small>${esc(r.note)}</small></dd></div>`).join('');
-  $('[data-plan-notes]').innerHTML=page.notes.map(n=>`<li>${esc(n)}</li>`).join('');
+  $('[data-plan-symbol-items]').querySelectorAll('[data-symbol-glyph]').forEach((node,i)=>node.replaceChildren(safeSvg(symbols[i].iconSvg)));
   $('[data-plan-legend]').innerHTML=(page.legend||defaultLegend).map(l=>`<span data-tone="${esc(l.tone)}">━ ${esc(l.label)}</span>`).join('');
   $('[data-plan-legend]').hidden=!!symbols.length;
   $('[data-plan-note]').textContent=page.discipline==='arquitectura'?data.measurementNote:'Instalaciones: propuesta de puntos y recorridos para coordinación. Acometidas y conexiones pendientes de medir. Calibres, protecciones, diámetros, pendientes y cotas de fondo requieren cálculo y verificación antes de ejecutar.';
@@ -84,13 +84,6 @@ export function mountPlans(root){
    sheetOptions();
    $('[data-plan-revision]').textContent='Revisión '+data.revision;
    document.querySelector('[data-plan-pdf-label]').textContent=`Descargar PDF · ${data.pdfPages} láminas ↓`;
-   $('[data-plan-changes]').innerHTML=data.changes.map(n=>`<li>${esc(n)}</li>`).join('');
-   $('[data-plan-openings]').innerHTML=data.openings.map(o=>`<tr><td>${esc(o.id)}</td><td>${esc(o.floor)}</td><td>${number(o.width)} × ${number(o.height)}</td><td>${o.sill===null?'Por medir':number(o.sill)}</td></tr>`).join('');
-   const installations=data.installations;
-   $('[data-plan-fixtures]').innerHTML=installations.fixtures.map(f=>`<tr><td>${esc(f.code)}</td><td>${esc(f.title)}</td><td>${esc(f.level)}</td><td>Sí</td><td>${f.hot?'Propuesta':'—'}</td><td>Sí</td></tr>`).join('');
-   $('[data-plan-circuits]').innerHTML=installations.circuits.map(c=>`<tr><td>${esc(c.code)}</td><td>${esc(c.title)}</td><td>${esc(c.scope)}</td><td>Por calcular</td></tr>`).join('');
-   $('[data-plan-outlets]').innerHTML=installations.outlets.map(o=>`<tr><td>${esc(o.code)}</td><td>${esc(o.description)}</td><td>${esc(o.circuit)}</td><td>Por medir</td></tr>`).join('');
-   $('[data-plan-sources]').innerHTML=(data.references||[]).map(r=>`<li><a href="${esc(r.url)}" target="_blank" rel="noopener">${esc(r.title)} ↗</a><p>${esc(r.scope)}</p></li>`).join('');
    draw();$('[data-plan-state]').textContent='';$('[data-plan-content]').hidden=false;
   }catch(error){data=null;$('[data-plan-state]').textContent=error?.message||'No se pudieron cargar los planos.';$('[data-plan-retry]').hidden=false;}
   finally{pending=false;}
