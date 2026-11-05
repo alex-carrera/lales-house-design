@@ -55,7 +55,7 @@ export function mountPlans(root){
   const rows=make('dl','');rows.innerHTML=page.rows.map(r=>`<div><dt>${esc(r.title)}</dt><dd><strong>${esc(r.dimensions)}</strong><small>${esc(r.note)}</small></dd></div>`).join('');
   const list=make('ul','');list.innerHTML=page.notes.map(n=>`<li>${esc(n)}</li>`).join('');
   criteria.append(rows,make('h3','','Notas para el maestro'),list);
-  notes.append(criteria,make('p','plan-print-caution',$('[data-plan-note]').textContent));
+  notes.append(criteria);
   holder.replaceChildren(map,notes);
  }
  function draw(){
@@ -70,7 +70,6 @@ export function mountPlans(root){
   $('[data-plan-symbol-items]').querySelectorAll('[data-symbol-glyph]').forEach((node,i)=>node.replaceChildren(safeSvg(symbols[i].iconSvg)));
   $('[data-plan-legend]').innerHTML=(page.legend||defaultLegend).map(l=>`<span data-tone="${esc(l.tone)}">━ ${esc(l.label)}</span>`).join('');
   $('[data-plan-legend]').hidden=!!symbols.length;
-  $('[data-plan-note]').textContent=page.discipline==='arquitectura'?data.measurementNote:'Instalaciones: propuesta de puntos y recorridos para coordinación. Acometidas y conexiones pendientes de medir. Calibres, protecciones, diámetros, pendientes y cotas de fondo requieren cálculo y verificación antes de ejecutar.';
   toggle();
  }
  async function load(){
