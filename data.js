@@ -1,4 +1,4 @@
-import {config} from './config.js?v=032f599fd03b';
+import {config} from './config.js?v=0f21debbe9c5';
 export class ProjectStore{
  client=null;session=null;channel=null;authSerial=0;
  async initialize(onSession,onRemote,onDenied=()=>{}){
