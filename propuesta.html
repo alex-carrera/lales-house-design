@@ -1677,11 +1677,42 @@ html&gt;body{padding:0}&lt;/style&gt;
       postToHost(&quot;widget-state-write&quot;, { id, state: serializedState });
     });
   };
+  const mockElement = document.getElementById(&quot;codex-connector-mocks&quot;);
+  const connectorGlobals = {};
+  if (mockElement != null) {
+    const values = new Map(Object.entries(parse(mockElement.textContent)));
+    mockElement.remove();
+    connectorGlobals.visualizationData = {
+      updates: Array.from(values, ([name, value]) =&gt; ({
+        name,
+        revision: 1,
+        state: &quot;ready&quot;,
+        value: { type: &quot;json&quot;, value },
+      })),
+    };
+    connectorGlobals.visualization = {
+      /** @param {string} name @param {(value: unknown) =&gt; void} callback */
+      onData(name, callback) {
+        if (typeof callback !== &quot;function&quot;) {
+          throw new TypeError(&quot;onData requires a callback&quot;);
+        }
+        try {
+          callback(values.get(name));
+        } catch (error) {
+          // oxlint-disable-next-line no-console -- Keep authored callback failures local.
+          console.error(&quot;Live visualization data callback failed&quot;, error);
+        }
+        // A static preview delivers the current fixture once per subscription.
+        return () =&gt; {};
+      },
+    };
+  }
   const syncTheme = () =&gt; {
     const theme = mediaQuery.matches ? &quot;dark&quot; : &quot;light&quot;;
     root.dataset.theme = theme;
     globalThis.openai = {
       ...globalThis.openai,
+      ...connectorGlobals,
       openExternal,
       sendFollowUpMessage,
       setWidgetState,
@@ -1891,385 +1922,386 @@ html&gt;body{padding:0}&lt;/style&gt;
 &lt;/details&gt;
 &lt;details class=&quot;viewer-options&quot;&gt;&lt;summary&gt;Opciones&lt;/summary&gt;&lt;div class=&quot;options-content&quot;&gt;&lt;label class=&quot;roof-toggle&quot;&gt;&lt;input type=&quot;checkbox&quot; data-show-electric checked&gt;Mostrar tomas e interruptores&lt;/label&gt;&lt;label class=&quot;roof-toggle&quot;&gt;&lt;input type=&quot;checkbox&quot; data-light-night&gt;Ver iluminación nocturna&lt;/label&gt;&lt;label class=&quot;roof-toggle&quot;&gt;&lt;input type=&quot;checkbox&quot; data-show-patio-roof checked&gt;Mostrar cubierta del patio&lt;/label&gt;&lt;label class=&quot;roof-toggle&quot;&gt;&lt;input type=&quot;checkbox&quot; data-show-neighbors checked&gt;Mostrar construcciones adosadas&lt;/label&gt;&lt;label class=&quot;roof-toggle&quot; data-aseo-control hidden&gt;&lt;input type=&quot;checkbox&quot; data-aseo-open&gt;Abrir guardado de aseo&lt;/label&gt;&lt;label class=&quot;roof-toggle&quot; data-social-door-control hidden&gt;&lt;input type=&quot;checkbox&quot; data-social-door-open checked&gt;Abrir puerta del baño hacia dentro&lt;/label&gt;&lt;label class=&quot;roof-toggle&quot; data-entry-control&gt;&lt;input type=&quot;checkbox&quot; data-entry-open&gt;Abrir puerta principal&lt;/label&gt;&lt;/div&gt;&lt;/details&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;script type=&quot;application/json&quot; data-paletas&gt;{
- &quot;version&quot;: 1,
- &quot;exterior&quot;: {
-  &quot;label&quot;: &quot;Exterior&quot;,
-  &quot;description&quot;: &quot;Fachadas de la casa, baño del patio y bodega. La puerta conserva su madera.&quot;,
-  &quot;roles&quot;: [
-   {
-    &quot;key&quot;: &quot;base&quot;,
-    &quot;label&quot;: &quot;Paredes principales&quot;,
-    &quot;vars&quot;: [
-     &quot;paintbase&quot;
+  &quot;version&quot;: 1,
+  &quot;exterior&quot;: {
+    &quot;label&quot;: &quot;Exterior&quot;,
+    &quot;description&quot;: &quot;Fachadas de la casa, baño del patio y bodega. La puerta conserva su madera.&quot;,
+    &quot;roles&quot;: [
+      {
+        &quot;key&quot;: &quot;base&quot;,
+        &quot;label&quot;: &quot;Paredes principales&quot;,
+        &quot;vars&quot;: [
+          &quot;paintbase&quot;
+        ]
+      },
+      {
+        &quot;key&quot;: &quot;trim&quot;,
+        &quot;label&quot;: &quot;Bordes y molduras&quot;,
+        &quot;vars&quot;: [
+          &quot;painttrim&quot;
+        ]
+      },
+      {
+        &quot;key&quot;: &quot;accent&quot;,
+        &quot;label&quot;: &quot;Acentos&quot;,
+        &quot;vars&quot;: [
+          &quot;paintaccent&quot;
+        ]
+      },
+      {
+        &quot;key&quot;: &quot;roof&quot;,
+        &quot;label&quot;: &quot;Cubiertas&quot;,
+        &quot;vars&quot;: [
+          &quot;roof&quot;,
+          &quot;patioroof&quot;
+        ]
+      }
+    ],
+    &quot;palettes&quot;: [
+      {
+        &quot;id&quot;: &quot;actual&quot;,
+        &quot;name&quot;: &quot;Referencia actual&quot;,
+        &quot;note&quot;: &quot;Tony Taupe, Restful White y Cloak Gray de la combinación anterior.&quot;,
+        &quot;colors&quot;: {
+          &quot;base&quot;: &quot;#b1a290&quot;,
+          &quot;trim&quot;: &quot;#eee8d7&quot;,
+          &quot;accent&quot;: &quot;#605e63&quot;,
+          &quot;roof&quot;: &quot;#605e63&quot;
+        }
+      },
+      {
+        &quot;id&quot;: &quot;arena&quot;,
+        &quot;name&quot;: &quot;Arena y carbón&quot;,
+        &quot;note&quot;: &quot;Fachada clara y cálida con detalles oscuros que acompañan la madera.&quot;,
+        &quot;colors&quot;: {
+          &quot;base&quot;: &quot;#d4c7b4&quot;,
+          &quot;trim&quot;: &quot;#f1ebe0&quot;,
+          &quot;accent&quot;: &quot;#514d48&quot;,
+          &quot;roof&quot;: &quot;#494c4b&quot;
+        }
+      },
+      {
+        &quot;id&quot;: &quot;piedra&quot;,
+        &quot;name&quot;: &quot;Piedra y blanco&quot;,
+        &quot;note&quot;: &quot;Gris claro equilibrado con blanco suave y grafito.&quot;,
+        &quot;colors&quot;: {
+          &quot;base&quot;: &quot;#b9bcb9&quot;,
+          &quot;trim&quot;: &quot;#f0efea&quot;,
+          &quot;accent&quot;: &quot;#555d60&quot;,
+          &quot;roof&quot;: &quot;#474e52&quot;
+        }
+      },
+      {
+        &quot;id&quot;: &quot;salvia&quot;,
+        &quot;name&quot;: &quot;Salvia natural&quot;,
+        &quot;note&quot;: &quot;Verde grisáceo discreto, crema y acentos verde profundo.&quot;,
+        &quot;colors&quot;: {
+          &quot;base&quot;: &quot;#aeb8a6&quot;,
+          &quot;trim&quot;: &quot;#eee9dc&quot;,
+          &quot;accent&quot;: &quot;#4b5b50&quot;,
+          &quot;roof&quot;: &quot;#474d49&quot;
+        }
+      },
+      {
+        &quot;id&quot;: &quot;terracota&quot;,
+        &quot;name&quot;: &quot;Arcilla suave&quot;,
+        &quot;note&quot;: &quot;Tierra rosada desaturada con crema y café oscuro.&quot;,
+        &quot;colors&quot;: {
+          &quot;base&quot;: &quot;#bd9b88&quot;,
+          &quot;trim&quot;: &quot;#efe4d5&quot;,
+          &quot;accent&quot;: &quot;#66534a&quot;,
+          &quot;roof&quot;: &quot;#4f4b48&quot;
+        }
+      },
+      {
+        &quot;id&quot;: &quot;azul&quot;,
+        &quot;name&quot;: &quot;Azul niebla&quot;,
+        &quot;note&quot;: &quot;Azul grisáceo con bordes claros y pizarra.&quot;,
+        &quot;colors&quot;: {
+          &quot;base&quot;: &quot;#9eafb8&quot;,
+          &quot;trim&quot;: &quot;#edece5&quot;,
+          &quot;accent&quot;: &quot;#485963&quot;,
+          &quot;roof&quot;: &quot;#414b53&quot;
+        }
+      }
     ]
-   },
-   {
-    &quot;key&quot;: &quot;trim&quot;,
-    &quot;label&quot;: &quot;Bordes y molduras&quot;,
-    &quot;vars&quot;: [
-     &quot;painttrim&quot;
+  },
+  &quot;interior&quot;: {
+    &quot;label&quot;: &quot;Interiores&quot;,
+    &quot;description&quot;: &quot;Paredes pintadas de sala, entrada, gradas, dormitorio y estudio. Los muebles mantienen su acabado.&quot;,
+    &quot;roles&quot;: [
+      {
+        &quot;key&quot;: &quot;base&quot;,
+        &quot;label&quot;: &quot;Paredes base&quot;,
+        &quot;vars&quot;: [
+          &quot;interiorpearl&quot;
+        ]
+      },
+      {
+        &quot;key&quot;: &quot;headboard&quot;,
+        &quot;label&quot;: &quot;Pared junto a la cama&quot;,
+        &quot;vars&quot;: [
+          &quot;interiorbrown&quot;
+        ]
+      },
+      {
+        &quot;key&quot;: &quot;tv&quot;,
+        &quot;label&quot;: &quot;Paredes de TV&quot;,
+        &quot;vars&quot;: [
+          &quot;interiorquartz&quot;
+        ]
+      },
+      {
+        &quot;key&quot;: &quot;bar&quot;,
+        &quot;label&quot;: &quot;Paredes de minibar y gradas&quot;,
+        &quot;vars&quot;: [
+          &quot;interiordark&quot;
+        ]
+      }
+    ],
+    &quot;palettes&quot;: [
+      {
+        &quot;id&quot;: &quot;actual&quot;,
+        &quot;name&quot;: &quot;Blanco roto · techo más claro&quot;,
+        &quot;note&quot;: &quot;Paredes en blanco roto suave, ligeramente más oscuro que el techo blanco luminoso.&quot;,
+        &quot;colors&quot;: {
+          &quot;base&quot;: &quot;#e8e7e3&quot;,
+          &quot;headboard&quot;: &quot;#e8e7e3&quot;,
+          &quot;tv&quot;: &quot;#e8e7e3&quot;,
+          &quot;bar&quot;: &quot;#e8e7e3&quot;
+        }
+      },
+      {
+        &quot;id&quot;: &quot;grises&quot;,
+        &quot;name&quot;: &quot;Grises cálidos anteriores&quot;,
+        &quot;note&quot;: &quot;La referencia original de cuatro grises cálidos y acentos oscuros.&quot;,
+        &quot;colors&quot;: {
+          &quot;base&quot;: &quot;#8b7b6e&quot;,
+          &quot;headboard&quot;: &quot;#5a4d45&quot;,
+          &quot;tv&quot;: &quot;#685f5a&quot;,
+          &quot;bar&quot;: &quot;#2e2828&quot;
+        }
+      },
+      {
+        &quot;id&quot;: &quot;greige&quot;,
+        &quot;name&quot;: &quot;Greige luminoso&quot;,
+        &quot;note&quot;: &quot;Bases claras para ganar luminosidad, con acentos taupe y oliva grisáceo.&quot;,
+        &quot;colors&quot;: {
+          &quot;base&quot;: &quot;#e6ded2&quot;,
+          &quot;headboard&quot;: &quot;#b8a896&quot;,
+          &quot;tv&quot;: &quot;#c8c3bb&quot;,
+          &quot;bar&quot;: &quot;#55564f&quot;
+        }
+      },
+      {
+        &quot;id&quot;: &quot;arena&quot;,
+        &quot;name&quot;: &quot;Lino y arena&quot;,
+        &quot;note&quot;: &quot;Blancos cálidos, tonos lino y café que acompañan el piso y el sofá.&quot;,
+        &quot;colors&quot;: {
+          &quot;base&quot;: &quot;#eee4d6&quot;,
+          &quot;headboard&quot;: &quot;#c4ab8a&quot;,
+          &quot;tv&quot;: &quot;#b69b80&quot;,
+          &quot;bar&quot;: &quot;#625443&quot;
+        }
+      },
+      {
+        &quot;id&quot;: &quot;salvia&quot;,
+        &quot;name&quot;: &quot;Salvia serena&quot;,
+        &quot;note&quot;: &quot;Paredes claras con verdes suaves y un acento profundo.&quot;,
+        &quot;colors&quot;: {
+          &quot;base&quot;: &quot;#e2e5d9&quot;,
+          &quot;headboard&quot;: &quot;#aeb9a3&quot;,
+          &quot;tv&quot;: &quot;#97a38f&quot;,
+          &quot;bar&quot;: &quot;#40534a&quot;
+        }
+      },
+      {
+        &quot;id&quot;: &quot;azul&quot;,
+        &quot;name&quot;: &quot;Piedra y azul humo&quot;,
+        &quot;note&quot;: &quot;Grises claros y azul apagado para contrastar con la madera cálida.&quot;,
+        &quot;colors&quot;: {
+          &quot;base&quot;: &quot;#e4e6e8&quot;,
+          &quot;headboard&quot;: &quot;#aebbc6&quot;,
+          &quot;tv&quot;: &quot;#889aa7&quot;,
+          &quot;bar&quot;: &quot;#3c4e5b&quot;
+        }
+      },
+      {
+        &quot;id&quot;: &quot;terracota&quot;,
+        &quot;name&quot;: &quot;Arena y terracota&quot;,
+        &quot;note&quot;: &quot;Crema con acentos de arcilla suave en cabecero y minibar.&quot;,
+        &quot;colors&quot;: {
+          &quot;base&quot;: &quot;#efe2d5&quot;,
+          &quot;headboard&quot;: &quot;#c9967e&quot;,
+          &quot;tv&quot;: &quot;#c9b2a0&quot;,
+          &quot;bar&quot;: &quot;#784f40&quot;
+        }
+      }
+    ],
+    &quot;painting_revision&quot;: &quot;offwhite-2026-11-08&quot;
+  },
+  &quot;cocina&quot;: {
+    &quot;label&quot;: &quot;Cocina&quot;,
+    &quot;description&quot;: &quot;Frentes, mesón, salpicadero y paredes de la cocina; porcelanato y equipos conservan sus acabados.&quot;,
+    &quot;roles&quot;: [
+      {
+        &quot;key&quot;: &quot;lower&quot;,
+        &quot;label&quot;: &quot;Bajos y columnas&quot;,
+        &quot;vars&quot;: [
+          &quot;kitchengrey&quot;
+        ]
+      },
+      {
+        &quot;key&quot;: &quot;upper&quot;,
+        &quot;label&quot;: &quot;Muebles altos&quot;,
+        &quot;vars&quot;: [
+          &quot;kitchengraphite&quot;
+        ]
+      },
+      {
+        &quot;key&quot;: &quot;stone&quot;,
+        &quot;label&quot;: &quot;Mesón&quot;,
+        &quot;vars&quot;: [
+          &quot;kitchenstone&quot;
+        ]
+      },
+      {
+        &quot;key&quot;: &quot;splash&quot;,
+        &quot;label&quot;: &quot;Salpicadero&quot;,
+        &quot;vars&quot;: [
+          &quot;kitchensplash&quot;
+        ]
+      },
+      {
+        &quot;key&quot;: &quot;wall&quot;,
+        &quot;label&quot;: &quot;Paredes&quot;,
+        &quot;vars&quot;: [
+          &quot;kitchenwall&quot;
+        ]
+      }
+    ],
+    &quot;palettes&quot;: [
+      {
+        &quot;id&quot;: &quot;actual&quot;,
+        &quot;name&quot;: &quot;Gris y grafito actuales&quot;,
+        &quot;note&quot;: &quot;La combinación de la referencia de cocina que elegiste.&quot;,
+        &quot;colors&quot;: {
+          &quot;lower&quot;: &quot;#89867f&quot;,
+          &quot;upper&quot;: &quot;#343431&quot;,
+          &quot;stone&quot;: &quot;#c6bca9&quot;,
+          &quot;splash&quot;: &quot;#302f2b&quot;,
+          &quot;wall&quot;: &quot;#e8e7e3&quot;
+        }
+      },
+      {
+        &quot;id&quot;: &quot;marfil&quot;,
+        &quot;name&quot;: &quot;Marfil y arena&quot;,
+        &quot;note&quot;: &quot;Frentes suaves, mesón claro y salpicadero arena.&quot;,
+        &quot;colors&quot;: {
+          &quot;lower&quot;: &quot;#d7d0c3&quot;,
+          &quot;upper&quot;: &quot;#eee8dc&quot;,
+          &quot;stone&quot;: &quot;#e7dfd0&quot;,
+          &quot;splash&quot;: &quot;#a89e8d&quot;,
+          &quot;wall&quot;: &quot;#f1ede5&quot;
+        }
+      },
+      {
+        &quot;id&quot;: &quot;salvia&quot;,
+        &quot;name&quot;: &quot;Salvia y crema&quot;,
+        &quot;note&quot;: &quot;Bajos verdes con altos claros y piedra cálida.&quot;,
+        &quot;colors&quot;: {
+          &quot;lower&quot;: &quot;#93a18e&quot;,
+          &quot;upper&quot;: &quot;#dfe4d8&quot;,
+          &quot;stone&quot;: &quot;#e5dfd1&quot;,
+          &quot;splash&quot;: &quot;#66766a&quot;,
+          &quot;wall&quot;: &quot;#e8ebe0&quot;
+        }
+      },
+      {
+        &quot;id&quot;: &quot;azul&quot;,
+        &quot;name&quot;: &quot;Azul humo y piedra&quot;,
+        &quot;note&quot;: &quot;Azul profundo desaturado y altos gris claro.&quot;,
+        &quot;colors&quot;: {
+          &quot;lower&quot;: &quot;#647b89&quot;,
+          &quot;upper&quot;: &quot;#bbc5c8&quot;,
+          &quot;stone&quot;: &quot;#e0d8c9&quot;,
+          &quot;splash&quot;: &quot;#4c606b&quot;,
+          &quot;wall&quot;: &quot;#e2e6e7&quot;
+        }
+      }
     ]
-   },
-   {
-    &quot;key&quot;: &quot;accent&quot;,
-    &quot;label&quot;: &quot;Acentos&quot;,
-    &quot;vars&quot;: [
-     &quot;paintaccent&quot;
+  },
+  &quot;banos&quot;: {
+    &quot;label&quot;: &quot;Baños&quot;,
+    &quot;description&quot;: &quot;Revestimientos y mueble de madera en los baños; sanitarios, grifería y porcelanato conservan sus acabados.&quot;,
+    &quot;roles&quot;: [
+      {
+        &quot;key&quot;: &quot;tile&quot;,
+        &quot;label&quot;: &quot;Revestimiento principal&quot;,
+        &quot;vars&quot;: [
+          &quot;bathwalltile&quot;
+        ]
+      },
+      {
+        &quot;key&quot;: &quot;light&quot;,
+        &quot;label&quot;: &quot;Paredes claras&quot;,
+        &quot;vars&quot;: [
+          &quot;bathlightwall&quot;
+        ]
+      },
+      {
+        &quot;key&quot;: &quot;wood&quot;,
+        &quot;label&quot;: &quot;Tono del mueble&quot;,
+        &quot;vars&quot;: [
+          &quot;bathoaktimber&quot;
+        ]
+      }
+    ],
+    &quot;palettes&quot;: [
+      {
+        &quot;id&quot;: &quot;actual&quot;,
+        &quot;name&quot;: &quot;Gris y roble actuales&quot;,
+        &quot;note&quot;: &quot;Gris medio, blanco cálido y madera de la referencia original.&quot;,
+        &quot;colors&quot;: {
+          &quot;tile&quot;: &quot;#656663&quot;,
+          &quot;light&quot;: &quot;#e8e7e3&quot;,
+          &quot;wood&quot;: &quot;#b18a60&quot;
+        }
+      },
+      {
+        &quot;id&quot;: &quot;arena&quot;,
+        &quot;name&quot;: &quot;Piedra arena&quot;,
+        &quot;note&quot;: &quot;Piedra cálida clara y madera natural para una lectura más luminosa.&quot;,
+        &quot;colors&quot;: {
+          &quot;tile&quot;: &quot;#b8aa95&quot;,
+          &quot;light&quot;: &quot;#eee6d9&quot;,
+          &quot;wood&quot;: &quot;#ae865f&quot;
+        }
+      },
+      {
+        &quot;id&quot;: &quot;salvia&quot;,
+        &quot;name&quot;: &quot;Salvia y roble&quot;,
+        &quot;note&quot;: &quot;Revestimiento verde grisáceo con pared marfil y madera.&quot;,
+        &quot;colors&quot;: {
+          &quot;tile&quot;: &quot;#8d9c8a&quot;,
+          &quot;light&quot;: &quot;#e5e8de&quot;,
+          &quot;wood&quot;: &quot;#ad895f&quot;
+        }
+      },
+      {
+        &quot;id&quot;: &quot;humo&quot;,
+        &quot;name&quot;: &quot;Humo y nogal&quot;,
+        &quot;note&quot;: &quot;Gris azulado y mueble de madera más oscuro.&quot;,
+        &quot;colors&quot;: {
+          &quot;tile&quot;: &quot;#74848c&quot;,
+          &quot;light&quot;: &quot;#e2e6e6&quot;,
+          &quot;wood&quot;: &quot;#795d46&quot;
+        }
+      }
     ]
-   },
-   {
-    &quot;key&quot;: &quot;roof&quot;,
-    &quot;label&quot;: &quot;Cubiertas&quot;,
-    &quot;vars&quot;: [
-     &quot;roof&quot;,
-     &quot;patioroof&quot;
-    ]
-   }
-  ],
-  &quot;palettes&quot;: [
-   {
-    &quot;id&quot;: &quot;actual&quot;,
-    &quot;name&quot;: &quot;Referencia actual&quot;,
-    &quot;note&quot;: &quot;Tony Taupe, Restful White y Cloak Gray de la combinación anterior.&quot;,
-    &quot;colors&quot;: {
-     &quot;base&quot;: &quot;#b1a290&quot;,
-     &quot;trim&quot;: &quot;#eee8d7&quot;,
-     &quot;accent&quot;: &quot;#605e63&quot;,
-     &quot;roof&quot;: &quot;#605e63&quot;
-    }
-   },
-   {
-    &quot;id&quot;: &quot;arena&quot;,
-    &quot;name&quot;: &quot;Arena y carbón&quot;,
-    &quot;note&quot;: &quot;Fachada clara y cálida con detalles oscuros que acompañan la madera.&quot;,
-    &quot;colors&quot;: {
-     &quot;base&quot;: &quot;#d4c7b4&quot;,
-     &quot;trim&quot;: &quot;#f1ebe0&quot;,
-     &quot;accent&quot;: &quot;#514d48&quot;,
-     &quot;roof&quot;: &quot;#494c4b&quot;
-    }
-   },
-   {
-    &quot;id&quot;: &quot;piedra&quot;,
-    &quot;name&quot;: &quot;Piedra y blanco&quot;,
-    &quot;note&quot;: &quot;Gris claro equilibrado con blanco suave y grafito.&quot;,
-    &quot;colors&quot;: {
-     &quot;base&quot;: &quot;#b9bcb9&quot;,
-     &quot;trim&quot;: &quot;#f0efea&quot;,
-     &quot;accent&quot;: &quot;#555d60&quot;,
-     &quot;roof&quot;: &quot;#474e52&quot;
-    }
-   },
-   {
-    &quot;id&quot;: &quot;salvia&quot;,
-    &quot;name&quot;: &quot;Salvia natural&quot;,
-    &quot;note&quot;: &quot;Verde grisáceo discreto, crema y acentos verde profundo.&quot;,
-    &quot;colors&quot;: {
-     &quot;base&quot;: &quot;#aeb8a6&quot;,
-     &quot;trim&quot;: &quot;#eee9dc&quot;,
-     &quot;accent&quot;: &quot;#4b5b50&quot;,
-     &quot;roof&quot;: &quot;#474d49&quot;
-    }
-   },
-   {
-    &quot;id&quot;: &quot;terracota&quot;,
-    &quot;name&quot;: &quot;Arcilla suave&quot;,
-    &quot;note&quot;: &quot;Tierra rosada desaturada con crema y café oscuro.&quot;,
-    &quot;colors&quot;: {
-     &quot;base&quot;: &quot;#bd9b88&quot;,
-     &quot;trim&quot;: &quot;#efe4d5&quot;,
-     &quot;accent&quot;: &quot;#66534a&quot;,
-     &quot;roof&quot;: &quot;#4f4b48&quot;
-    }
-   },
-   {
-    &quot;id&quot;: &quot;azul&quot;,
-    &quot;name&quot;: &quot;Azul niebla&quot;,
-    &quot;note&quot;: &quot;Azul grisáceo con bordes claros y pizarra.&quot;,
-    &quot;colors&quot;: {
-     &quot;base&quot;: &quot;#9eafb8&quot;,
-     &quot;trim&quot;: &quot;#edece5&quot;,
-     &quot;accent&quot;: &quot;#485963&quot;,
-     &quot;roof&quot;: &quot;#414b53&quot;
-    }
-   }
-  ]
- },
- &quot;interior&quot;: {
-  &quot;label&quot;: &quot;Interiores&quot;,
-  &quot;description&quot;: &quot;Paredes pintadas de sala, entrada, gradas, dormitorio y estudio. Los muebles mantienen su acabado.&quot;,
-  &quot;roles&quot;: [
-   {
-    &quot;key&quot;: &quot;base&quot;,
-    &quot;label&quot;: &quot;Paredes base&quot;,
-    &quot;vars&quot;: [
-     &quot;interiorpearl&quot;
-    ]
-   },
-   {
-    &quot;key&quot;: &quot;headboard&quot;,
-    &quot;label&quot;: &quot;Pared junto a la cama&quot;,
-    &quot;vars&quot;: [
-     &quot;interiorbrown&quot;
-    ]
-   },
-   {
-    &quot;key&quot;: &quot;tv&quot;,
-    &quot;label&quot;: &quot;Paredes de TV&quot;,
-    &quot;vars&quot;: [
-     &quot;interiorquartz&quot;
-    ]
-   },
-   {
-    &quot;key&quot;: &quot;bar&quot;,
-    &quot;label&quot;: &quot;Paredes de minibar y gradas&quot;,
-    &quot;vars&quot;: [
-     &quot;interiordark&quot;
-    ]
-   }
-  ],
-  &quot;palettes&quot;: [
-   {
-    &quot;id&quot;: &quot;actual&quot;,
-    &quot;name&quot;: &quot;Blanco mate luminoso&quot;,
-    &quot;note&quot;: &quot;Todas las paredes interiores pintadas en blanco; muebles y revestimientos conservan sus acabados.&quot;,
-    &quot;colors&quot;: {
-     &quot;base&quot;: &quot;#f7f7f4&quot;,
-     &quot;headboard&quot;: &quot;#f7f7f4&quot;,
-     &quot;tv&quot;: &quot;#f7f7f4&quot;,
-     &quot;bar&quot;: &quot;#f7f7f4&quot;
-    }
-   },
-   {
-    &quot;id&quot;: &quot;grises&quot;,
-    &quot;name&quot;: &quot;Grises cálidos anteriores&quot;,
-    &quot;note&quot;: &quot;La referencia original de cuatro grises cálidos y acentos oscuros.&quot;,
-    &quot;colors&quot;: {
-     &quot;base&quot;: &quot;#8b7b6e&quot;,
-     &quot;headboard&quot;: &quot;#5a4d45&quot;,
-     &quot;tv&quot;: &quot;#685f5a&quot;,
-     &quot;bar&quot;: &quot;#2e2828&quot;
-    }
-   },
-   {
-    &quot;id&quot;: &quot;greige&quot;,
-    &quot;name&quot;: &quot;Greige luminoso&quot;,
-    &quot;note&quot;: &quot;Bases claras para ganar luminosidad, con acentos taupe y oliva grisáceo.&quot;,
-    &quot;colors&quot;: {
-     &quot;base&quot;: &quot;#e6ded2&quot;,
-     &quot;headboard&quot;: &quot;#b8a896&quot;,
-     &quot;tv&quot;: &quot;#c8c3bb&quot;,
-     &quot;bar&quot;: &quot;#55564f&quot;
-    }
-   },
-   {
-    &quot;id&quot;: &quot;arena&quot;,
-    &quot;name&quot;: &quot;Lino y arena&quot;,
-    &quot;note&quot;: &quot;Blancos cálidos, tonos lino y café que acompañan el piso y el sofá.&quot;,
-    &quot;colors&quot;: {
-     &quot;base&quot;: &quot;#eee4d6&quot;,
-     &quot;headboard&quot;: &quot;#c4ab8a&quot;,
-     &quot;tv&quot;: &quot;#b69b80&quot;,
-     &quot;bar&quot;: &quot;#625443&quot;
-    }
-   },
-   {
-    &quot;id&quot;: &quot;salvia&quot;,
-    &quot;name&quot;: &quot;Salvia serena&quot;,
-    &quot;note&quot;: &quot;Paredes claras con verdes suaves y un acento profundo.&quot;,
-    &quot;colors&quot;: {
-     &quot;base&quot;: &quot;#e2e5d9&quot;,
-     &quot;headboard&quot;: &quot;#aeb9a3&quot;,
-     &quot;tv&quot;: &quot;#97a38f&quot;,
-     &quot;bar&quot;: &quot;#40534a&quot;
-    }
-   },
-   {
-    &quot;id&quot;: &quot;azul&quot;,
-    &quot;name&quot;: &quot;Piedra y azul humo&quot;,
-    &quot;note&quot;: &quot;Grises claros y azul apagado para contrastar con la madera cálida.&quot;,
-    &quot;colors&quot;: {
-     &quot;base&quot;: &quot;#e4e6e8&quot;,
-     &quot;headboard&quot;: &quot;#aebbc6&quot;,
-     &quot;tv&quot;: &quot;#889aa7&quot;,
-     &quot;bar&quot;: &quot;#3c4e5b&quot;
-    }
-   },
-   {
-    &quot;id&quot;: &quot;terracota&quot;,
-    &quot;name&quot;: &quot;Arena y terracota&quot;,
-    &quot;note&quot;: &quot;Crema con acentos de arcilla suave en cabecero y minibar.&quot;,
-    &quot;colors&quot;: {
-     &quot;base&quot;: &quot;#efe2d5&quot;,
-     &quot;headboard&quot;: &quot;#c9967e&quot;,
-     &quot;tv&quot;: &quot;#c9b2a0&quot;,
-     &quot;bar&quot;: &quot;#784f40&quot;
-    }
-   }
-  ],
-  &quot;painting_revision&quot;: &quot;white-2026-11-06&quot;
- },
- &quot;cocina&quot;: {
-  &quot;label&quot;: &quot;Cocina&quot;,
-  &quot;description&quot;: &quot;Frentes, mesón, salpicadero y paredes de la cocina; porcelanato y equipos conservan sus acabados.&quot;,
-  &quot;roles&quot;: [
-   {
-    &quot;key&quot;: &quot;lower&quot;,
-    &quot;label&quot;: &quot;Bajos y columnas&quot;,
-    &quot;vars&quot;: [
-     &quot;kitchengrey&quot;
-    ]
-   },
-   {
-    &quot;key&quot;: &quot;upper&quot;,
-    &quot;label&quot;: &quot;Muebles altos&quot;,
-    &quot;vars&quot;: [
-     &quot;kitchengraphite&quot;
-    ]
-   },
-   {
-    &quot;key&quot;: &quot;stone&quot;,
-    &quot;label&quot;: &quot;Mesón&quot;,
-    &quot;vars&quot;: [
-     &quot;kitchenstone&quot;
-    ]
-   },
-   {
-    &quot;key&quot;: &quot;splash&quot;,
-    &quot;label&quot;: &quot;Salpicadero&quot;,
-    &quot;vars&quot;: [
-     &quot;kitchensplash&quot;
-    ]
-   },
-   {
-    &quot;key&quot;: &quot;wall&quot;,
-    &quot;label&quot;: &quot;Paredes&quot;,
-    &quot;vars&quot;: [
-     &quot;kitchenwall&quot;
-    ]
-   }
-  ],
-  &quot;palettes&quot;: [
-   {
-    &quot;id&quot;: &quot;actual&quot;,
-    &quot;name&quot;: &quot;Gris y grafito actuales&quot;,
-    &quot;note&quot;: &quot;La combinación de la referencia de cocina que elegiste.&quot;,
-    &quot;colors&quot;: {
-     &quot;lower&quot;: &quot;#89867f&quot;,
-     &quot;upper&quot;: &quot;#343431&quot;,
-     &quot;stone&quot;: &quot;#c6bca9&quot;,
-     &quot;splash&quot;: &quot;#302f2b&quot;,
-     &quot;wall&quot;: &quot;#f7f7f4&quot;
-    }
-   },
-   {
-    &quot;id&quot;: &quot;marfil&quot;,
-    &quot;name&quot;: &quot;Marfil y arena&quot;,
-    &quot;note&quot;: &quot;Frentes suaves, mesón claro y salpicadero arena.&quot;,
-    &quot;colors&quot;: {
-     &quot;lower&quot;: &quot;#d7d0c3&quot;,
-     &quot;upper&quot;: &quot;#eee8dc&quot;,
-     &quot;stone&quot;: &quot;#e7dfd0&quot;,
-     &quot;splash&quot;: &quot;#a89e8d&quot;,
-     &quot;wall&quot;: &quot;#f1ede5&quot;
-    }
-   },
-   {
-    &quot;id&quot;: &quot;salvia&quot;,
-    &quot;name&quot;: &quot;Salvia y crema&quot;,
-    &quot;note&quot;: &quot;Bajos verdes con altos claros y piedra cálida.&quot;,
-    &quot;colors&quot;: {
-     &quot;lower&quot;: &quot;#93a18e&quot;,
-     &quot;upper&quot;: &quot;#dfe4d8&quot;,
-     &quot;stone&quot;: &quot;#e5dfd1&quot;,
-     &quot;splash&quot;: &quot;#66766a&quot;,
-     &quot;wall&quot;: &quot;#e8ebe0&quot;
-    }
-   },
-   {
-    &quot;id&quot;: &quot;azul&quot;,
-    &quot;name&quot;: &quot;Azul humo y piedra&quot;,
-    &quot;note&quot;: &quot;Azul profundo desaturado y altos gris claro.&quot;,
-    &quot;colors&quot;: {
-     &quot;lower&quot;: &quot;#647b89&quot;,
-     &quot;upper&quot;: &quot;#bbc5c8&quot;,
-     &quot;stone&quot;: &quot;#e0d8c9&quot;,
-     &quot;splash&quot;: &quot;#4c606b&quot;,
-     &quot;wall&quot;: &quot;#e2e6e7&quot;
-    }
-   }
-  ]
- },
- &quot;banos&quot;: {
-  &quot;label&quot;: &quot;Baños&quot;,
-  &quot;description&quot;: &quot;Revestimientos y mueble de madera en los baños; sanitarios, grifería y porcelanato conservan sus acabados.&quot;,
-  &quot;roles&quot;: [
-   {
-    &quot;key&quot;: &quot;tile&quot;,
-    &quot;label&quot;: &quot;Revestimiento principal&quot;,
-    &quot;vars&quot;: [
-     &quot;bathwalltile&quot;
-    ]
-   },
-   {
-    &quot;key&quot;: &quot;light&quot;,
-    &quot;label&quot;: &quot;Paredes claras&quot;,
-    &quot;vars&quot;: [
-     &quot;bathlightwall&quot;
-    ]
-   },
-   {
-    &quot;key&quot;: &quot;wood&quot;,
-    &quot;label&quot;: &quot;Tono del mueble&quot;,
-    &quot;vars&quot;: [
-     &quot;bathoaktimber&quot;
-    ]
-   }
-  ],
-  &quot;palettes&quot;: [
-   {
-    &quot;id&quot;: &quot;actual&quot;,
-    &quot;name&quot;: &quot;Gris y roble actuales&quot;,
-    &quot;note&quot;: &quot;Gris medio, blanco cálido y madera de la referencia original.&quot;,
-    &quot;colors&quot;: {
-     &quot;tile&quot;: &quot;#656663&quot;,
-     &quot;light&quot;: &quot;#f7f7f4&quot;,
-     &quot;wood&quot;: &quot;#b18a60&quot;
-    }
-   },
-   {
-    &quot;id&quot;: &quot;arena&quot;,
-    &quot;name&quot;: &quot;Piedra arena&quot;,
-    &quot;note&quot;: &quot;Piedra cálida clara y madera natural para una lectura más luminosa.&quot;,
-    &quot;colors&quot;: {
-     &quot;tile&quot;: &quot;#b8aa95&quot;,
-     &quot;light&quot;: &quot;#eee6d9&quot;,
-     &quot;wood&quot;: &quot;#ae865f&quot;
-    }
-   },
-   {
-    &quot;id&quot;: &quot;salvia&quot;,
-    &quot;name&quot;: &quot;Salvia y roble&quot;,
-    &quot;note&quot;: &quot;Revestimiento verde grisáceo con pared marfil y madera.&quot;,
-    &quot;colors&quot;: {
-     &quot;tile&quot;: &quot;#8d9c8a&quot;,
-     &quot;light&quot;: &quot;#e5e8de&quot;,
-     &quot;wood&quot;: &quot;#ad895f&quot;
-    }
-   },
-   {
-    &quot;id&quot;: &quot;humo&quot;,
-    &quot;name&quot;: &quot;Humo y nogal&quot;,
-    &quot;note&quot;: &quot;Gris azulado y mueble de madera más oscuro.&quot;,
-    &quot;colors&quot;: {
-     &quot;tile&quot;: &quot;#74848c&quot;,
-     &quot;light&quot;: &quot;#e2e6e6&quot;,
-     &quot;wood&quot;: &quot;#795d46&quot;
-    }
-   }
-  ]
- }
-}&lt;/script&gt;
+  }
+}
+&lt;/script&gt;
   &lt;canvas role=&quot;img&quot; aria-label=&quot;Diseño futuro de Casa Lales con estudio sobre cocina, balcón lateral en volado de 80 centímetros, con antepecho revocado, losas de cocina y baño principal y cubierta ligera sobre el estudio. Dos subidas desde el dormitorio y paso inferior sin pilares representados. Medidas y estructura provisionales.&quot;&gt;Exterior aproximado de la casa, cocina, baño y terraza.&lt;/canvas&gt;
   &lt;div class=&quot;ex-footer text-small&quot;&gt;&lt;span data-caption&gt;Divisiones y muebles aproximados&lt;/span&gt;&lt;span data-height&gt;Sala/comedor: 2 m · Cuarto: 2,20 m&lt;/span&gt;&lt;/div&gt;
   &lt;div class=&quot;sr-only&quot; aria-live=&quot;polite&quot; data-status&gt;&lt;/div&gt;
@@ -2672,10 +2704,10 @@ function normalizarPaletas(catalog,raw){
  if(raw?.version===1&amp;&amp;raw.favorite&amp;&amp;typeof raw.favorite===&#x27;object&#x27;&amp;&amp;!Array.isArray(raw.favorite))result.favorite=normalizar(raw.favorite);
  if(revision&amp;&amp;raw?.version===1&amp;&amp;raw.paintRevision!==revision){
   result.current.interior={id:&#x27;actual&#x27;,custom:{}};
-  result.current.cocina.custom.wall=&#x27;#f7f7f4&#x27;;result.current.banos.custom.light=&#x27;#f7f7f4&#x27;;
-  // Preservar el aspecto de la favorita guardada antes del nuevo blanco.
+  result.current.cocina.custom.wall=catalog.cocina.palettes[0].colors.wall;result.current.banos.custom.light=catalog.banos.palettes[0].colors.light;
+  // Preservar el aspecto de la favorita guardada antes de actualizar el blanco de paredes.
   if(result.favorite){
-   if(result.favorite.interior.id===&#x27;actual&#x27;)result.favorite.interior.id=&#x27;grises&#x27;;
+   if(result.favorite.interior.id===&#x27;actual&#x27;){const prior=raw.paintRevision===&#x27;white-2026-11-06&#x27;?&#x27;#f7f7f4&#x27;:null;if(prior)result.favorite.interior.custom={base:prior,headboard:prior,tv:prior,bar:prior,...result.favorite.interior.custom};else result.favorite.interior.id=&#x27;grises&#x27;;}
    if(result.favorite.cocina.id===&#x27;actual&#x27;&amp;&amp;!result.favorite.cocina.custom.wall)result.favorite.cocina.custom.wall=&#x27;#d7d4cd&#x27;;
    if(result.favorite.banos.id===&#x27;actual&#x27;&amp;&amp;!result.favorite.banos.custom.light)result.favorite.banos.custom.light=&#x27;#e3dfd7&#x27;;
   }
@@ -3036,7 +3068,7 @@ function iniciarAcabados(root,redraw){
 
 &lt;/style&gt;
 
-&lt;style&gt;#exterior-lales-futuro{--studyquartz:#685f5a;--interiorpearl:#f7f7f4;--interiorbrown:#f7f7f4;--interiorquartz:#f7f7f4;--interiordark:#f7f7f4;--kitchenwall:#f7f7f4;--bathlightwall:#f7f7f4}&lt;/style&gt;
+&lt;style&gt;#exterior-lales-futuro{--studyquartz:#685f5a;--interiorpearl:#e8e7e3;--interiorbrown:#e8e7e3;--interiorquartz:#e8e7e3;--interiordark:#e8e7e3;--kitchenwall:#e8e7e3;--bathlightwall:#e8e7e3}&lt;/style&gt;
 
 &lt;script&gt;
 (() =&gt; {
