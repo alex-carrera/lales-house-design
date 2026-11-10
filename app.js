@@ -1,7 +1,7 @@
-import {mountTourPDF} from './tour-pdf.js?v=96c4d7fbf7cb';
-import {mountPlans} from './plans.js?v=96c4d7fbf7cb';
-import {ProjectStore} from './data.js?v=96c4d7fbf7cb';
-import {CATEGORIES,AREAS,UNITS,money,cents,expenseData,materialData,totals,filterExpenses,csv,today} from './domain.js?v=96c4d7fbf7cb';
+import {mountTourPDF} from './tour-pdf.js?v=e45b94d30fc5';
+import {mountPlans} from './plans.js?v=e45b94d30fc5';
+import {ProjectStore} from './data.js?v=e45b94d30fc5';
+import {CATEGORIES,AREAS,UNITS,money,cents,expenseData,materialData,totals,filterExpenses,csv,today} from './domain.js?v=e45b94d30fc5';
 const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const noteHTML=s=>esc(s.replace(/\[METRAJE[^\]]*\]\s*/g,'').replace(/\[CL-P01:[^\]]*\]\s*/g,'')).replace(/https:\/\/[^\s<]+/g,url=>`<a href="${url}" target="_blank" rel="noopener noreferrer">Ver fuente ↗</a>`);
