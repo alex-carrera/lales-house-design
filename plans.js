@@ -43,7 +43,7 @@ export function mountPlans(root){
   const page=data.pages.find(p=>p.id===sheet),holder=$('[data-plan-print-pages]');
   const make=(tag,cls,text)=>{const node=document.createElement(tag);node.className=cls;if(text)node.textContent=text;return node;};
   const map=make('section','plan-print-map');
-  map.dataset.orientation=page.schematic?'landscape':'portrait';
+  map.dataset.orientation=page.pdfOrientation||(page.schematic?'landscape':'portrait');
   const heading=make('header','plan-print-header');
   heading.append(make('h1','',page.code+' · '+page.title),make('p','','Casa Lales · Revisión '+data.revision),make('p','',page.schematic?'Esquema sin escala':'Metros · Impresión ajustada a la hoja; leer las cotas.'));
   const graphic=make('div','plan-print-graphic');graphic.append($('[data-plan-drawing] svg').cloneNode(true));map.append(heading,graphic);
@@ -56,7 +56,7 @@ export function mountPlans(root){
   const list=make('ul','');list.innerHTML=page.notes.map(n=>`<li>${esc(n)}</li>`).join('');
   criteria.append(rows,make('h3','','Notas para el maestro'),list);
   notes.append(criteria);
-  holder.replaceChildren(map,notes);
+  holder.replaceChildren(...(page.symbols?.length?[map,notes]:[map]));
  }
  function draw(){
   const page=data.pages.find(p=>p.id===sheet);
