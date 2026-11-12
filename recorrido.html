@@ -1677,20 +1677,41 @@ html&gt;body{padding:0}&lt;/style&gt;
       postToHost(&quot;widget-state-write&quot;, { id, state: serializedState });
     });
   };
+  const bindingElement = document.getElementById(&quot;codex-visualization-bindings&quot;);
   const mockElement = document.getElementById(&quot;codex-connector-mocks&quot;);
   const connectorGlobals = {};
-  if (mockElement != null) {
-    const values = new Map(Object.entries(parse(mockElement.textContent)));
-    mockElement.remove();
-    connectorGlobals.visualizationData = {
-      updates: Array.from(values, ([name, value]) =&gt; ({
-        name,
-        revision: 1,
-        state: &quot;ready&quot;,
-        value: { type: &quot;json&quot;, value },
-      })),
-    };
+  if (bindingElement != null || mockElement != null) {
+    const bindings = parse(bindingElement?.textContent ?? &quot;{}&quot;);
+    bindingElement?.remove();
+    const values = new Map();
+    for (const [name, binding] of Object.entries(bindings)) {
+      if (binding.type === &quot;json&quot;) values.set(name, structuredClone(binding.value));
+    }
+    const pending = [bindings];
+    while (pending.length) {
+      const object = pending.pop();
+      Object.freeze(object);
+      for (const child of Object.values(object)) {
+        if (child !== null &amp;&amp; typeof child === &quot;object&quot;) pending.push(child);
+      }
+    }
+    if (mockElement != null) {
+      const mocks = Object.entries(parse(mockElement.textContent));
+      mockElement.remove();
+      connectorGlobals.visualizationData = {
+        updates: mocks.map(([name, value]) =&gt; ({
+          name,
+          revision: 1,
+          state: &quot;ready&quot;,
+          value: { type: &quot;json&quot;, value },
+        })),
+      };
+      for (const [name, value] of mocks) values.set(name, value);
+    }
     connectorGlobals.visualization = {
+      get bindings() {
+        return bindings;
+      },
       /** @param {string} name @param {(value: unknown) =&gt; void} callback */
       onData(name, callback) {
         if (typeof callback !== &quot;function&quot;) {
@@ -1702,7 +1723,7 @@ html&gt;body{padding:0}&lt;/style&gt;
           // oxlint-disable-next-line no-console -- Keep authored callback failures local.
           console.error(&quot;Live visualization data callback failed&quot;, error);
         }
-        // A static preview delivers the current fixture once per subscription.
+        // A static preview delivers the current value once per subscription.
         return () =&gt; {};
       },
     };
