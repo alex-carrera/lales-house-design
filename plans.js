@@ -22,7 +22,8 @@ export function safeSvg(source){
 export function mountPlans(root){
  let data=null,sheet='',pending=false;
  const $=s=>root.querySelector(s);
- const groupNames={arquitectura:'Arquitectura',electricidad:'Electricidad',agua:'Agua fría y caliente',desagues:'Desagües y ventilación',lluvias:'Aguas lluvias',coordinacion:'Montantes y cuadros'};
+ const scopes={cocina_estudio:{path:'./planos/etapa-cocina-estudio/planos-obra.json',label:'Cocina y estudio'},general:{path:'./planos/planos-obra.json',label:'Casa completa'}};
+ const groupNames={arquitectura:'Arquitectura',electricidad:'Electricidad',agua:'Agua fría y caliente',desagues:'Desagües y ventilación',lluvias:'Aguas lluvias',coordinacion:'Cuadros de puntos'};
  const defaultLegend=[{label:'Muros',tone:'muted'},{label:'Ventanas',tone:'cold'},{label:'Mobiliario',tone:'muted'},{label:'Cotas del modelo',tone:'dimension'}];
  function sheetOptions(){
   const group=$('[data-plan-group]').value,pages=data.pages.filter(p=>!group||p.discipline===group);
@@ -73,21 +74,24 @@ export function mountPlans(root){
   toggle();
  }
  async function load(){
-  if(pending||data)return;pending=true;$('[data-plan-state]').textContent='Cargando planos…';$('[data-plan-retry]').hidden=true;
+  if(pending||data)return;pending=true;$('[data-plan-scope]').disabled=true;$('[data-plan-state]').textContent='Cargando planos…';$('[data-plan-retry]').hidden=true;
   try{
-   const url=new URL('./planos/planos-obra.json',import.meta.url);url.search=new URL(import.meta.url).search;
+   const scope=scopes[$('[data-plan-scope]').value]||scopes.cocina_estudio;
+   const url=new URL(scope.path,import.meta.url);url.search=new URL(import.meta.url).search;
    const response=await fetch(url);
    if(!response.ok)throw Error('No se pudieron cargar los planos. Revisa tu conexión y vuelve a intentar.');
    data=planDocument(await response.json());sheet=data.pages[0].id;
    $('[data-plan-group]').innerHTML='<option value="">Todas las especialidades</option>'+Object.entries(groupNames).filter(([key])=>data.pages.some(p=>p.discipline===key)).map(([key,title])=>`<option value="${key}">${esc(title)}</option>`).join('');
    sheetOptions();
    $('[data-plan-revision]').textContent='Revisión '+data.revision;
-   document.querySelector('[data-plan-pdf-label]').textContent=`Descargar PDF · ${data.pdfPages} láminas ↓`;
+   const pdf=document.querySelector('[data-plan-pdf-label]'),pdfUrl=new URL(data.pdf,url);pdfUrl.search=url.search;
+   pdf.href=pdfUrl.href;pdf.textContent=`Descargar PDF · ${scope.label} · ${data.pdfPages} láminas ↓`;
+   const intro=document.querySelector('[data-plan-intro]');if(intro)intro.textContent=data.scope==='cocina_estudio'?'Primera etapa: cocina y estudio. Distribución, encuentros e instalaciones para revisar con el maestro.':'Mapas generales de la casa para revisar, imprimir y entregar a los maestros.';
    draw();$('[data-plan-state]').textContent='';$('[data-plan-content]').hidden=false;
   }catch(error){data=null;$('[data-plan-state]').textContent=error?.message||'No se pudieron cargar los planos.';$('[data-plan-retry]').hidden=false;}
-  finally{pending=false;}
+  finally{pending=false;$('[data-plan-scope]').disabled=false;}
  }
- root.addEventListener('change',e=>{if(e.target.matches('[data-plan-group]')){sheetOptions();draw();}else if(e.target.matches('[data-sheet]')){sheet=e.target.value;draw();}else toggle();});
+ root.addEventListener('change',e=>{if(e.target.matches('[data-plan-scope]')){data=null;$('[data-plan-content]').hidden=true;load();}else if(e.target.matches('[data-plan-group]')){sheetOptions();draw();}else if(e.target.matches('[data-sheet]')){sheet=e.target.value;draw();}else toggle();});
  root.addEventListener('input',e=>{if(e.target.matches('[data-plan-zoom]'))toggle();});
  root.addEventListener('click',e=>{
   if(e.target.closest('[data-plan-retry]'))load();
