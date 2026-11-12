@@ -23,7 +23,7 @@ export function mountPlans(root){
  let data=null,sheet='',pending=false;
  const $=s=>root.querySelector(s);
  const scopes={cocina_estudio:{path:'./planos/etapa-cocina-estudio/planos-obra.json',label:'Cocina y estudio'},general:{path:'./planos/planos-obra.json',label:'Casa completa'}};
- const groupNames={arquitectura:'Arquitectura',electricidad:'Electricidad',agua:'Agua fría y caliente',desagues:'Desagües y ventilación',lluvias:'Aguas lluvias',coordinacion:'Cuadros de puntos'};
+ const groupNames={arquitectura:'Arquitectura',electricidad:'Electricidad',agua:'Agua fría y caliente',desagues:'Desagües y ventilación',lluvias:'Aguas lluvias',coordinacion:'Cuadros de puntos',estructura:'Estructura · Esquema para revisión'};
  const defaultLegend=[{label:'Muros',tone:'muted'},{label:'Ventanas',tone:'cold'},{label:'Mobiliario',tone:'muted'},{label:'Cotas del modelo',tone:'dimension'}];
  function sheetOptions(){
   const group=$('[data-plan-group]').value,pages=data.pages.filter(p=>!group||p.discipline===group);
