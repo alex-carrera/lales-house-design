@@ -1,7 +1,7 @@
-import {mountTourPDF} from './tour-pdf.js?v=758ee5861b8b';
-import {mountPlans} from './plans.js?v=758ee5861b8b';
-import {ProjectStore} from './data.js?v=758ee5861b8b';
-import {CATEGORIES,AREAS,UNITS,money,cents,expenseData,materialData,totals,filterExpenses,csv,today} from './domain.js?v=758ee5861b8b';
+import {mountTourPDF} from './tour-pdf.js?v=2cb0eb7acdab';
+import {mountPlans} from './plans.js?v=2cb0eb7acdab';
+import {ProjectStore} from './data.js?v=2cb0eb7acdab';
+import {CATEGORIES,AREAS,UNITS,money,cents,expenseData,materialData,totals,filterExpenses,csv,today} from './domain.js?v=2cb0eb7acdab';
 const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const noteHTML=s=>esc(s.replace(/\[METRAJE[^\]]*\]\s*/g,'').replace(/\[CL-P01:[^\]]*\]\s*/g,'')).replace(/https:\/\/[^\s<]+/g,url=>`<a href="${url}" target="_blank" rel="noopener noreferrer">Ver fuente ↗</a>`);
@@ -103,8 +103,8 @@ renderAccount();
  map.innerHTML=`<svg viewBox="0 0 620 755" role="img" aria-labelledby="parking-map-title parking-map-desc"><title id="parking-map-title">Planta del patio y maniobra del SUV</title><desc id="parking-map-desc">Auto y moto conservan cubierta. El antiguo bloque del baño y bodega se reorganiza como asadero abierto y bodega cerrada, sin baño exterior. Jardín de césped descubierto con camino de1,20m y caja CR2 accesible.</desc><defs><pattern id="patio-pavers" width="26.4" height="26.4" patternUnits="userSpaceOnUse"><rect width="26.4" height="26.4" fill="#d2bea2"/><path d="M0 0H26.4V26.4H0Z" fill="none" stroke="#b5a58e" stroke-width=".7"/></pattern></defs>
  ${box(-11,0,6,11,'#91ab70')}${box(-11,0,6,6.55,'url(#patio-pavers)')}${box(-11,6.55,2,4.45,'url(#patio-pavers)')}${box(-9.2,6.55,1.2,4.25,'#eee4d2')}${box(-5,0,3,11,'#efeee7')}${box(-2,3,2,5,'#f8f6ee')}${box(-2,0,2,3,'#c7ccc4')}${box(-2,8,2,3,'#c7ccc4')}${box(-3,8,1,3,'#cbd9d4','fill-opacity=".45" stroke="#527468" stroke-width="1.3" stroke-dasharray="4 4"')}${box(0,0,1.8,11,'#c7ccc4')}
  ${box(-.40,4.825,.32,2.8,'#527468','rx="3"')}
- ${box(-10.8,6.55,1.6,2.15,'#ddc3a2','stroke="#63766c" stroke-width="2"')}${box(-10.8,8.7,1.6,2.1,'#d7c8b3','stroke="#827057" stroke-width="2"')}
- <g fill="#34473e" font-family="system-ui,sans-serif" text-anchor="middle"><text x="84" y="190" font-size="12">Asadero</text><text x="84" y="206" font-size="10">Abierto</text><text x="84" y="94" font-size="12">Bodega</text><text x="84" y="110" font-size="10">1,30 × 1,88</text></g>
+ ${box(-10.8,6.55,1.6,2.15,'#ddc3a2')}<path d="M${X(-10.8)} ${Y(6.55)}V${Y(8.7)}H${X(-9.2)}" fill="none" stroke="#63766c" stroke-width="2"/>${box(-10.8,8.7,1.6,2.1,'#d7c8b3','stroke="#827057" stroke-width="2"')}
+ <g fill="#34473e" font-family="system-ui,sans-serif" text-anchor="middle"><text x="84" y="190" font-size="12">Asadero</text><text x="84" y="206" font-size="10">Lateral abierto</text><text x="84" y="94" font-size="12">Bodega</text><text x="84" y="110" font-size="10">1,30 × 1,88</text></g>
  ${box(-10.85,3.35,5.5,3.1,'#d2bea2','fill-opacity=".15" stroke="#968265" stroke-width="1.3" stroke-dasharray="5 4" rx="5"')}${box(-10.85,.25,5.5,3.1,'#d2bea2','fill-opacity=".15" stroke="#968265" stroke-width="1.3" stroke-dasharray="5 4" rx="5"')}
  ${[[-10.98,.18,.13,3.10],[-10.97,3.65,.28,2.60],[-10.62,.03,5.10,.24]].map(r=>box(...r,'#6c8a4c','stroke="#303b39" stroke-width="1.5"')).join('')}
  ${box(-8.4,6.4,.8,.8,'#d2bea2','stroke="#303b39" stroke-width="1.5"')}
