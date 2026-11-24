@@ -1,7 +1,7 @@
-import {mountTourPDF} from './tour-pdf.js?v=62285615079c';
-import {mountPlans} from './plans.js?v=62285615079c';
-import {ProjectStore} from './data.js?v=62285615079c';
-import {CATEGORIES,AREAS,UNITS,money,cents,expenseData,materialData,totals,filterExpenses,csv,today} from './domain.js?v=62285615079c';
+import {mountTourPDF} from './tour-pdf.js?v=958987c6ac4a';
+import {mountPlans} from './plans.js?v=958987c6ac4a';
+import {ProjectStore} from './data.js?v=958987c6ac4a';
+import {CATEGORIES,AREAS,UNITS,money,cents,expenseData,materialData,totals,filterExpenses,csv,today} from './domain.js?v=958987c6ac4a';
 const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const noteHTML=s=>esc(s.replace(/\[METRAJE[^\]]*\]\s*/g,'').replace(/\[CL-P01:[^\]]*\]\s*/g,'')).replace(/https:\/\/[^\s<]+/g,url=>`<a href="${url}" target="_blank" rel="noopener noreferrer">Ver fuente ↗</a>`);
@@ -111,7 +111,7 @@ renderAccount();
  ${box(-8.4,6.4,.8,.8,'#d2bea2','stroke="#303b39" stroke-width="1.5"')}
  <path d="${[[-11,0],[-5.05,0],[-5.05,6.55],[-8.7,6.55],[-8.7,8.1],[-5.25,8.1],[-5.25,11],[-11,11]].map(([x,y],i)=>`${i?"L":"M"}${X(x)},${Y(y)}`).join(" ")}Z" fill="#bea77f" fill-opacity=".12" stroke="#8f714d" stroke-width="2" stroke-dasharray="7 4"/>
  ${box(-8.50,8.05,2.3,1.1,'#d7c7ac','stroke="#a1845a" stroke-dasharray="4 3" rx="4"')}
- <path d="${samples.map((p,i)=>`${i?'L':'M'}${X(p[0]).toFixed(2)},${Y(p[1]).toFixed(2)}`).join(' ')}" fill="none" stroke="#447e6d" stroke-width="2" stroke-dasharray="5 5" opacity=".65"/>
+ <path d="${samples.map((p,i)=>`${i&&p[3]===samples[i-1][3]?'L':'M'}${X(p[0]).toFixed(2)},${Y(p[1]).toFixed(2)}`).join(' ')}" fill="none" stroke="#447e6d" stroke-width="2" stroke-dasharray="5 5" opacity=".65"/>
  <g fill="none" stroke="#676d61" stroke-width="7" stroke-linecap="square"><path d="M40 524V40H524 M40 524H304 M436 524H524"/></g>
  <g font-family="system-ui,sans-serif" fill="#31483d"><text x="234" y="96" text-anchor="middle" font-size="13" font-weight="600">Asadero</text><text x="234" y="109" text-anchor="middle" font-size="10">Cubierto</text><text x="200" y="187" text-anchor="middle" font-size="12">Moto al fondo</text><text x="200" y="254" text-anchor="middle" font-size="12">Auto 2</text><text x="200" y="391" text-anchor="middle" font-size="12">Auto 1</text><text x="480" y="108" text-anchor="middle" font-size="12">Baño social</text><text x="480" y="129" text-anchor="middle" font-size="11">2 × 3 m aprox.</text><text x="414" y="109" text-anchor="middle" font-size="11" transform="rotate(-90 414 109)">Volado ≈1 m</text><text x="366" y="155" text-anchor="middle" font-size="11" transform="rotate(-90 366 155)">Calle de 3 m</text><text x="566" y="286" text-anchor="middle" font-size="14" transform="rotate(90 566 286)">CASA · FACHADA</text><text x="480" y="448" text-anchor="middle" font-size="11">Cocina +</text><text x="480" y="464" text-anchor="middle" font-size="11">comedor</text><text x="460" y="345" font-size="11" transform="rotate(-90 460 345)">Paso hacia la casa</text><text x="372" y="550" text-anchor="middle" font-size="15" font-weight="600">Entrada · 3 m</text><text x="372" y="725" text-anchor="middle" font-size="12">Llegada desde la calle</text><text x="172" y="20" text-anchor="middle" font-size="12">PATIO · DOS AUTOS CUBIERTOS</text></g>
  <g transform="translate(${X(-7.35)},${Y(8.60)})"><rect x="-37" y="-5" width="18" height="10" rx="4" fill="#303a38"/><rect x="18" y="-5" width="18" height="10" rx="4" fill="#303a38"/><path d="M-28 0H28" stroke="#253f35" stroke-width="8"/><ellipse rx="11" ry="7" fill="#9baaa0"/><path d="M22 -16V16" stroke="#303a38" stroke-width="3"/></g>
