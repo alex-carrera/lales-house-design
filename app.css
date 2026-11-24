@@ -88,3 +88,8 @@
 /* Descarga de vistas 3D en PDF. */
 .tour-view-actions{display:flex;align-items:center;justify-content:flex-end;gap:20px;flex-wrap:wrap}.tour-view-actions .text-button{white-space:nowrap}.tour-pdf-status{font-size:11px;color:var(--muted);padding:9px 17px;margin:0;border-top:1px solid var(--line)}
 @media(max-width:600px){.tour-card .panel-heading{align-items:flex-start;flex-wrap:wrap;gap:6px}.tour-view-actions{width:100%;justify-content:space-between;gap:12px}.tour-view-actions .text-button{min-height:38px}}
+
+/* Alzados de ventanas y cómputo de bloques en el mismo visor de planos. */
+.plan-heading-actions{display:flex;flex-wrap:wrap;align-items:center;gap:10px}.plans-heading .text-button{display:inline-block;margin-top:7px;color:var(--green)}.plan-drawing img{display:block;width:100%;height:auto;max-height:none}.plan-note[data-plan-summary]{margin:0 0 16px}.plan-print-graphic img{display:block;width:100%;height:auto}
+@media(max-width:760px){.plan-heading-actions{width:100%}.plan-sheet-heading{flex-wrap:wrap}.plan-sheet-heading h2{overflow-wrap:anywhere}.plan-sheet-heading span{white-space:normal}}
+@media print{.plan-print-graphic img{height:220mm;object-fit:contain}}
