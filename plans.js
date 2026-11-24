@@ -30,8 +30,9 @@ export function mountPlans(root){
  const groupNames={arquitectura:'Arquitectura',electricidad:'Electricidad',agua:'Agua fría y caliente',desagues:'Desagües y ventilación',lluvias:'Aguas lluvias',coordinacion:'Cuadros de puntos',estructura:'Estructura · Esquema para revisión',dormitorio:'Paredes del dormitorio',estudio:'Paredes del estudio',bano:'Ventanas del baño',bloques:'Cantidad de bloques'};
  const assetUrl=path=>{const url=new URL(path,dataUrl);url.search=dataUrl.search;return url.href;};
  const defaultLegend=[{label:'Muros',tone:'muted'},{label:'Ventanas',tone:'cold'},{label:'Mobiliario',tone:'muted'},{label:'Cotas del modelo',tone:'dimension'}];
+ const visiblePages=()=>data.pages.filter(p=>!$('[data-plan-group]').value||p.discipline===$('[data-plan-group]').value);
  function sheetOptions(){
-  const group=$('[data-plan-group]').value,pages=data.pages.filter(p=>!group||p.discipline===group);
+  const pages=visiblePages();
   $('[data-sheet]').innerHTML=pages.map(p=>`<option value="${esc(p.id)}">${esc(p.code+' · '+p.title)}</option>`).join('');
   if(!pages.some(p=>p.id===sheet))sheet=pages[0].id;
   $('[data-sheet]').value=sheet;
@@ -66,6 +67,10 @@ export function mountPlans(root){
  }
  function draw(){
   const page=data.pages.find(p=>p.id===sheet);
+  const pages=visiblePages(),index=pages.findIndex(p=>p.id===sheet);
+  $('[data-sheet-step="-1"]').disabled=index<=0;
+  $('[data-sheet-step="1"]').disabled=index<0||index===pages.length-1;
+  $('[data-sheet-count]').textContent=`${index+1} de ${pages.length}`;
   $('[data-plan-state]').textContent='';
   $('[data-plan-status]').textContent=page.status||'Propuesta · Medidas por verificar';
   $('[data-plan-unit-note]').textContent=page.unitNote||(page.schematic?'Esquema sin escala':'Metros · Frente abajo');
@@ -85,6 +90,7 @@ export function mountPlans(root){
   $('[data-plan-symbol-items]').querySelectorAll('[data-symbol-glyph]').forEach((node,i)=>node.replaceChildren(safeSvg(symbols[i].iconSvg)));
   $('[data-plan-legend]').innerHTML=(page.legend||defaultLegend).map(l=>`<span data-tone="${esc(l.tone)}">━ ${esc(l.label)}</span>`).join('');
   $('[data-plan-legend]').hidden=!!symbols.length||!!page.image;
+  const scroll=$('.plan-scroll');scroll.scrollTop=0;scroll.scrollLeft=0;
   toggle();
  }
  async function load(){
@@ -110,6 +116,11 @@ export function mountPlans(root){
  root.addEventListener('change',e=>{if(e.target.matches('[data-plan-scope]')){data=null;$('[data-plan-content]').hidden=true;load();}else if(e.target.matches('[data-plan-group]')){sheetOptions();draw();}else if(e.target.matches('[data-sheet]')){sheet=e.target.value;draw();}else toggle();});
  root.addEventListener('input',e=>{if(e.target.matches('[data-plan-zoom]'))toggle();});
  root.addEventListener('click',e=>{
+  const step=e.target.closest('[data-sheet-step]');
+  if(step&&data&&!step.disabled){
+   const pages=visiblePages(),index=pages.findIndex(p=>p.id===sheet),next=index+Number(step.dataset.sheetStep);
+   if(next>=0&&next<pages.length){sheet=pages[next].id;$('[data-sheet]').value=sheet;draw();}
+  }
   if(e.target.closest('[data-plan-retry]'))load();
   if(e.target.closest('[data-plan-print]'))window.print();
   if(e.target.closest('[data-plan-download]')&&data){
