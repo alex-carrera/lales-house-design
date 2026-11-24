@@ -1,7 +1,7 @@
-import {mountTourPDF} from './tour-pdf.js?v=8dfa0dcbddf4';
-import {mountPlans} from './plans.js?v=8dfa0dcbddf4';
-import {ProjectStore} from './data.js?v=8dfa0dcbddf4';
-import {CATEGORIES,AREAS,UNITS,money,cents,expenseData,materialData,totals,filterExpenses,csv,today} from './domain.js?v=8dfa0dcbddf4';
+import {mountTourPDF} from './tour-pdf.js?v=91f8c1017b46';
+import {mountPlans} from './plans.js?v=91f8c1017b46';
+import {ProjectStore} from './data.js?v=91f8c1017b46';
+import {CATEGORIES,AREAS,UNITS,money,cents,expenseData,materialData,totals,filterExpenses,csv,today} from './domain.js?v=91f8c1017b46';
 const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const noteHTML=s=>esc(s.replace(/\[METRAJE[^\]]*\]\s*/g,'').replace(/\[CL-P01:[^\]]*\]\s*/g,'')).replace(/https:\/\/[^\s<]+/g,url=>`<a href="${url}" target="_blank" rel="noopener noreferrer">Ver fuente ↗</a>`);
@@ -105,6 +105,7 @@ renderAccount();
  ${box(-.40,4.825,.32,2.8,'#527468','rx="3"')}
  ${box(-10.8,6.55,1.6,2.07,'#ddc3a2')}<path d="M${X(-10.8)} ${Y(6.55)}V${Y(8.62)}H${X(-9.2)}" fill="none" stroke="#63766c" stroke-width="2"/>${box(-10.8,8.62,2.775,2.882,'#d7c8b3','stroke="#827057" stroke-width="2"')}
  ${box(-9.185,8.62,.87,.15,'#eee4d2')}<path d="M${X(-8.3325)} ${Y(8.705)}V${Y(9.5)}" stroke="#303b39" stroke-width="2"/>
+ ${box(-10.64,7.85,.64,.77,'#ddd3bd','stroke="#8b8273" stroke-width="1"')}${box(-10,8.02,.70,.60,'#ddd3bd','stroke="#8b8273" stroke-width="1"')}${box(-9.89,8.12,.45,.40,'#b8cccc','stroke="#637c7a" stroke-width="1"')}
  <g fill="#34473e" font-family="system-ui,sans-serif" text-anchor="middle"><text x="84" y="190" font-size="12">Asadero</text><text x="84" y="206" font-size="10">Lateral abierto</text><text x="110" y="75" font-size="12">Bodega</text><text x="110" y="91" font-size="10">6,39 m² libres</text></g>
  ${box(-10.85,3.35,2.8,3.1,'#d2bea2','fill-opacity=".15" stroke="#968265" stroke-width="1.3" stroke-dasharray="5 4" rx="5"')}${box(-10.85,.25,5.5,3.1,'#d2bea2','fill-opacity=".15" stroke="#968265" stroke-width="1.3" stroke-dasharray="5 4" rx="5"')}
  ${[[-10.98,.18,.13,3.10],[-10.97,3.65,.28,2.60],[-10.62,.03,5.10,.24]].map(r=>box(...r,'#6c8a4c','stroke="#303b39" stroke-width="1.5"')).join('')}
