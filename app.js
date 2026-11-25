@@ -1,7 +1,7 @@
-import {mountTourPDF} from './tour-pdf.js?v=2998a7c65024';
-import {mountPlans} from './plans.js?v=2998a7c65024';
-import {ProjectStore} from './data.js?v=2998a7c65024';
-import {CATEGORIES,AREAS,UNITS,money,cents,expenseData,materialData,totals,filterExpenses,csv,today} from './domain.js?v=2998a7c65024';
+import {mountTourPDF} from './tour-pdf.js?v=295c94467485';
+import {mountPlans} from './plans.js?v=295c94467485';
+import {ProjectStore} from './data.js?v=295c94467485';
+import {CATEGORIES,AREAS,UNITS,money,cents,expenseData,materialData,totals,filterExpenses,csv,today} from './domain.js?v=295c94467485';
 const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const noteHTML=s=>esc(s.replace(/\[METRAJE[^\]]*\]\s*/g,'').replace(/\[CL-P01:[^\]]*\]\s*/g,'')).replace(/https:\/\/[^\s<]+/g,url=>`<a href="${url}" target="_blank" rel="noopener noreferrer">Ver fuente ↗</a>`);
