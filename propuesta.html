@@ -2548,7 +2548,21 @@ function crearMotorMateriales(gl, triangles, math) {
     uniform float nightMode;
     uniform vec4 interiorLightPos[32],interiorLightColor[32];
     uniform vec4 nearBox[16], farBox[16];
+
+    bool interiorSurface184(){
+      vec3 face=normalize(N);
+      if(dot(face,eye-P)&lt;0.)face=-face;
+      vec3 probe=P+face*.025;
+      if(all(greaterThanEqual(probe,vec3(0.12000,3.55200,-0.00600)))&amp;&amp;all(lessThanEqual(probe,vec3(4.64400,11.38200,2.30600))))return true;
+      if(all(greaterThanEqual(probe,vec3(-1.69800,0.10800,-0.00600)))&amp;&amp;all(lessThanEqual(probe,vec3(4.32600,3.43200,2.30600))))return true;
+      if(all(greaterThanEqual(probe,vec3(0.12000,3.64800,2.42100)))&amp;&amp;all(lessThanEqual(probe,vec3(4.64400,11.38200,4.73300))))return true;
+      if(all(greaterThanEqual(probe,vec3(-1.69800,0.10800,2.42100)))&amp;&amp;all(lessThanEqual(probe,vec3(4.62600,3.43200,4.73300))))return true;
+      if(all(greaterThanEqual(probe,vec3(-2.89200,8.61000,-0.00600)))&amp;&amp;all(lessThanEqual(probe,vec3(-0.10800,11.39400,2.30600))))return true;
+      if(all(greaterThanEqual(probe,vec3(-2.89200,8.61000,2.42100)))&amp;&amp;all(lessThanEqual(probe,vec3(-0.10800,11.39400,4.73300))))return true;
+      return false;
+    }
 float interiorZone(float zone){
+if((abs(zone-1.)&lt;.1||abs(zone-2.)&lt;.1||abs(zone-3.)&lt;.1||abs(zone-4.)&lt;.1||abs(zone-5.)&lt;.1||abs(zone-6.)&lt;.1||abs(zone-13.)&lt;.1||abs(zone-15.)&lt;.1)&amp;&amp;!interiorSurface184())return 0.;
 if(abs(zone-1.)&lt;.1)return all(greaterThanEqual(P,vec3(0.1000,3.5300,-0.0300)))&amp;&amp;all(lessThanEqual(P,vec3(4.6640,11.4020,2.3100)))?1.:0.;
 if(abs(zone-2.)&lt;.1)return all(greaterThanEqual(P,vec3(-1.7060,0.1000,-0.0200)))&amp;&amp;all(lessThanEqual(P,vec3(4.6640,3.4400,2.3100)))?1.:0.;
 if(abs(zone-3.)&lt;.1)return all(greaterThanEqual(P,vec3(0.1000,3.5700,2.4070)))&amp;&amp;all(lessThanEqual(P,vec3(4.6500,11.4000,4.7570)))?1.:0.;
@@ -2760,7 +2774,7 @@ return min(glow,1.35);}
       if(P.y&lt;3.05&amp;&amp;P.x&gt;=-2.05&amp;&amp;P.x&lt;=4.05&amp;&amp;P.z&lt;2.6)windows+=exp(-length(P-vec3(-1.90,1.5,1.6))*.9)+exp(-length(P-vec3(-1.,2.90,1.6))*.9);
       if(P.y&gt;8.1&amp;&amp;P.y&lt;10.85&amp;&amp;P.x&gt; -3.01&amp;&amp;P.x&lt;0.)windows+=exp(-length(P-vec3(-1.9,9.15,1.55))*1.1)+exp(-length(P-vec3(-2.9,9.15,3.85))*1.1);
       float light=ambient+.30*diffuse*visibility+min(.20,windows*.14);
-      vec3 warm=vec3(1.035,1.01,.96);
+      vec3 warm=interiorSurface184()?vec3(1.035,1.01,.96):vec3(1.);
       float spec=pow(max(0.,dot(n,normalize(sun+v))),mix(95.,8.,rough))*(1.-rough)*.25*visibility;
       vec3 result=albedo*light*ao*warm+vec3(spec);
       // Mild tone curve preserves texture contrast in pale walls and cloth.
@@ -2770,16 +2784,16 @@ return min(glow,1.35);}
         glow+=.07*exp(-pow((P.y-3.125)*8.,2.))*(exp(-abs(P.z-1.05)*4.)+exp(-abs(P.z-1.68)*4.));
         result+=vec3(1.,.61,.25)*glow;
       }
-      if(P.z&gt;2.3&amp;&amp;P.z&lt;4.6&amp;&amp;P.x&gt;0.12&amp;&amp;P.x&lt;3.88&amp;&amp;P.y&gt;3.12&amp;&amp;P.y&lt;10.){
+      if(interiorSurface184()&amp;&amp;P.z&gt;2.3&amp;&amp;P.z&lt;4.6&amp;&amp;P.x&gt;0.12&amp;&amp;P.x&lt;3.88&amp;&amp;P.y&gt;3.12&amp;&amp;P.y&lt;10.){
         float warm=.095*exp(-abs(P.x-.22)*2.5)*exp(-abs(P.y-7.8)*.75);
         warm+=.06*exp(-length(P-vec3(3.2,5.8,3.4))*2.);
         result+=vec3(1.,.63,.29)*warm;
       }
-      if(P.z&lt;2.05&amp;&amp;P.x&gt;.12&amp;&amp;P.x&lt;3.88&amp;&amp;P.y&gt;3.05&amp;&amp;P.y&lt;10.9){
+      if(interiorSurface184()&amp;&amp;P.z&lt;2.05&amp;&amp;P.x&gt;.12&amp;&amp;P.x&lt;3.88&amp;&amp;P.y&gt;3.05&amp;&amp;P.y&lt;10.9){
         float warmth=.07*exp(-abs(P.x-3.82)*2.)*exp(-abs(P.y-8.)*.9);
         result+=vec3(1.,.60,.25)*warmth;
       }
-      if(P.x&gt;.10&amp;&amp;P.x&lt;1.6&amp;&amp;P.y&gt;10.1&amp;&amp;P.z&lt;2.0)result+=vec3(1.,.64,.30)*.065*exp(-abs(P.y-10.60)*3.0);
+      if(interiorSurface184()&amp;&amp;P.x&gt;.10&amp;&amp;P.x&lt;1.6&amp;&amp;P.y&gt;10.1&amp;&amp;P.z&lt;2.0)result+=vec3(1.,.64,.30)*.065*exp(-abs(P.y-10.60)*3.0);
 
       vec3 electricLight=vec3(0.);
       for(int i=0;i&lt;32;i++){
@@ -2792,13 +2806,13 @@ return min(glow,1.35);}
         }
       }
       result=mix(result+electricLight*.12,albedo*(warmPB154()?vec3(.080,.067,.046):vec3(.065,.074,.092))+electricLight,nightMode);
-      result+=albedo*vec3(1.,.73,.43)*(warmPB154()?warmCovePB154(n)*mix(.24,1.15,nightMode):perimeterWash(n)*mix(.11,1.15,nightMode));
+      result+=albedo*vec3(1.,.73,.43)*(warmPB154()?(warmCovePB154(n)*(interiorSurface184()?1.:0.))*mix(.24,1.15,nightMode):(perimeterWash(n)*(interiorSurface184()?1.:0.))*mix(.11,1.15,nightMode));
       result*=1.-moldingContactShade(n);
       if(P.z&gt;2.417&amp;&amp;P.z&lt;4.757&amp;&amp;P.x&gt;-1.69&amp;&amp;P.x&lt;4.65&amp;&amp;P.y&gt;.12&amp;&amp;P.y&lt;11.38){
-        result=mix(result,result*vec3(1.055,1.,.87)+electricLight*.28,.80);
-        result+=albedo*vec3(1.,.61,.23)*warmCove146(n)*mix(.24,.75,nightMode);
+
+        result+=albedo*vec3(1.,.61,.23)*(warmCove146(n)*(interiorSurface184()?1.:0.))*mix(.24,.75,nightMode);
       }
-      if(warmPB154())result=mix(result,result*vec3(1.04,1.,.90)+electricLight*.22,.65);
+
       result=clamp(result,0.,1.);
       float alpha=transparentGlass?(S.y&gt;2.5?.65:.18+.55*pow(1.-max(0.,dot(n,v)),3.)):1.;
       gl_FragColor=vec4(result,alpha);
