@@ -1,7 +1,7 @@
-import {mountTourPDF} from './tour-pdf.js?v=a943ed6ee81b';
-import {mountPlans} from './plans.js?v=a943ed6ee81b';
-import {ProjectStore} from './data.js?v=a943ed6ee81b';
-import {CATEGORIES,AREAS,UNITS,money,cents,expenseData,materialData,totals,filterExpenses,csv,today} from './domain.js?v=a943ed6ee81b';
+import {mountTourPDF} from './tour-pdf.js?v=5ff1cb4f77ec';
+import {mountPlans} from './plans.js?v=5ff1cb4f77ec';
+import {ProjectStore} from './data.js?v=5ff1cb4f77ec';
+import {CATEGORIES,AREAS,UNITS,money,cents,expenseData,materialData,totals,filterExpenses,csv,today} from './domain.js?v=5ff1cb4f77ec';
 const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const noteHTML=s=>esc(s.replace(/\[METRAJE[^\]]*\]\s*/g,'').replace(/\[CL-P01:[^\]]*\]\s*/g,'')).replace(/https:\/\/[^\s<]+/g,url=>`<a href="${url}" target="_blank" rel="noopener noreferrer">Ver fuente ↗</a>`);
@@ -116,9 +116,8 @@ renderAccount();
  <path d="${samples.map((p,i)=>`${i&&p[3]===samples[i-1][3]?'L':'M'}${X(p[0]).toFixed(2)},${Y(p[1]).toFixed(2)}`).join(' ')}" fill="none" stroke="#447e6d" stroke-width="2" stroke-dasharray="5 5" opacity=".65"/>
  <g fill="none" stroke="#676d61" stroke-width="7" stroke-linecap="square"><path d="M40 524V${Y(11.502)}H${X(-3)} M40 524H304 M436 524H524"/></g>
  <g font-family="system-ui,sans-serif" fill="#31483d"><text x="235" y="190" text-anchor="middle" font-size="13" font-weight="600">Césped</text><text x="235" y="207" text-anchor="middle" font-size="11">10,18 m² · Descubierto</text><text x="145" y="194" text-anchor="middle" font-size="10" transform="rotate(-90 145 194)">Camino1,20m</text><text x="120" y="254" text-anchor="middle" font-size="12">Moto</text><text x="200" y="391" text-anchor="middle" font-size="12">Auto</text><text x="480" y="108" text-anchor="middle" font-size="12">Baño social</text><text x="480" y="129" text-anchor="middle" font-size="11">3 × 3 m existentes</text><text x="414" y="109" text-anchor="middle" font-size="11" transform="rotate(-90 414 109)">Huella conservada</text><text x="366" y="155" text-anchor="middle" font-size="11" transform="rotate(-90 366 155)">Calle3m / fondo2m</text><text x="566" y="286" text-anchor="middle" font-size="14" transform="rotate(90 566 286)">CASA · FACHADA</text><text x="480" y="448" text-anchor="middle" font-size="11">Cocina +</text><text x="480" y="464" text-anchor="middle" font-size="11">comedor</text><text x="460" y="345" font-size="11" transform="rotate(-90 460 345)">Paso hacia la casa</text><text x="372" y="550" text-anchor="middle" font-size="15" font-weight="600">Entrada · 3 m</text><text x="372" y="725" text-anchor="middle" font-size="12">Llegada desde la calle</text><text x="172" y="7" text-anchor="middle" font-size="12">PATIO · AUTO Y MOTO CUBIERTOS</text></g>
- <g id="parking-fence-fixed" aria-label="Malla fija de1m" stroke="#243f37" stroke-width="3"><path d="M${X(-5.015)} ${Y(6.45)}V${Y(11.452)}"/></g>
- <g id="parking-fence-a" aria-label="Hoja corrediza A" stroke="#243f37" stroke-width="3"><path d="M${X(-5.055)} ${Y(.05)}V${Y(3.25)}"/></g>
- <g id="parking-fence-b" aria-label="Hoja corrediza B con puertita de90cm" stroke="#243f37" stroke-width="3"><path d="M${X(-5.1)} ${Y(3.2)}V${Y(4.15)} M${X(-5.1)} ${Y(5.05)}V${Y(6.4)}"/><path d="M${X(-5.1)} ${Y(4.15)}V${Y(5.05)}" stroke="#8a6541" stroke-width="4"/></g>
+ <g id="parking-gate-returns" aria-label="Encuentros de portón con muro frontal y casa" stroke="#243f37" stroke-width="3"><path d="M${X(-5.13)} ${Y(0)}V${Y(.39)} M${X(-2.04)} ${Y(.51)}H${X(-1.806)}"/></g>
+ <g id="parking-gate-front" aria-label="Corredera de entrada3m con puertita90cm" stroke="#243f37" stroke-width="3"><path d="M${X(-5.175)} ${Y(.435)}H${X(-2.075)}"/><path d="M${X(-3.08)} ${Y(.435)}H${X(-2.18)}" stroke="#8a6541" stroke-width="4"/></g>
  <g id="parking-moto" transform="translate(${X(-9.20)},${Y(4.90)})"><rect x="-37" y="-5" width="18" height="10" rx="4" fill="#303a38"/><rect x="18" y="-5" width="18" height="10" rx="4" fill="#303a38"/><path d="M-28 0H28" stroke="#253f35" stroke-width="8"/><ellipse rx="11" ry="7" fill="#9baaa0"/><path d="M22 -16V16" stroke="#303a38" stroke-width="3"/></g>
  <g fill="#303b39">${[[-10.94,.08],[-10.94,3.25],[-10.94,6.45],[-10.94,8.70],[-10.94,10.82],[-5.15,.08],[-7,3.25],[-8.10,6.45],[-8.10,8.70],[-8.10,10.82]].map(([x,y])=>box(x-.06,y-.06,.12,.12,'#303b39')).join('')}</g><g id="parking-car"><rect x="-41.49" y="-47.3" width="204.6" height="94.6" fill="none" stroke="#527468" stroke-width="1" stroke-dasharray="3 3" rx="9"/><rect x="-41.49" y="-40.7" width="201.34" height="81.4" rx="17" fill="#aab6b3" stroke="#53675f" stroke-width="2"/><rect x="-20" y="-33" width="120" height="66" rx="13" fill="#dde3dd" stroke="#65786e"/><path d="M92 -30L112 -25V25L92 30Z" fill="#496a6e"/><path d="M-20 -28L-28 -23V23L-20 28Z" fill="#496a6e"/><rect x="144" y="-30" width="9" height="17" rx="3" fill="#fff0c7"/><rect x="144" y="13" width="9" height="17" rx="3" fill="#fff0c7"/><path d="M38 -29H84 M38 29H84" stroke="#71857a" stroke-width="4"/><path d="M125 -7L137 0L125 7" fill="none" stroke="#355849" stroke-width="3"/></g></svg>`;
  const slider=document.querySelector('#parking-progress'),button=document.querySelector('#parking-play'),label=document.querySelector('#parking-phase'),instruction=document.querySelector('#parking-instruction'),car=map.querySelector('#parking-car');
@@ -129,11 +128,10 @@ renderAccount();
  function draw(){
   const i=+slider.value,s=samples[i],last=i===samples.length-1;
   car.setAttribute('transform',transform(s));
-  map.querySelector('#parking-fence-a').setAttribute('transform',`translate(0 ${last?0:-6.4*44})`);
-  map.querySelector('#parking-fence-b').setAttribute('transform',`translate(0 ${last?0:-3.25*44})`);
+  map.querySelector('#parking-gate-front').setAttribute('transform',`translate(${last?0:-3.14*44} 0)`);
   const next=samples[Math.min(i+1,samples.length-1)];const forward=(next[0]-s[0])*Math.cos(s[2])+(next[1]-s[1])*Math.sin(s[2])>=0;
   label.textContent=last?'Auto y moto estacionados, bajo cubierta':`Auto · ${forward?'Adelante':'Reversa'}`;
-  instruction.textContent=last?'Auto y moto siguen cubiertos. Jardín y camino descubiertos hacia el asadero y la bodega; sin baño exterior.':'Entrada del auto con la moto estacionada. La maniobra usa avances y reversa; confirmar el giro real en sitio.';
+  instruction.textContent=last?'Auto y moto cubiertos. Corredera de3m cerrada en la entrada; jardín sin reja lateral. Asadero y bodega conservados.':'Corredera recogida hacia el parqueadero, dejando3m libres. Entrada con avances y reversa; confirmar el giro real en sitio.';
   document.querySelector('#parking-percent').textContent=Math.round(i/(samples.length-1)*100)+'%';
  }
  slider.addEventListener('input',()=>{stop();draw();});button.addEventListener('click',()=>{if(timer){stop();return;}slider.value=0;draw();button.textContent='Pausar recorrido';timer=setInterval(()=>{slider.value=Math.min(+slider.value+1,samples.length-1);draw();if(+slider.value>=samples.length-1)stop();},45);});
